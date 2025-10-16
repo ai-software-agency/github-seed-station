@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { TopNav } from "@/components/TopNav";
 import { CheckCircle2, Key, Shield, Eraser, RefreshCw, ExternalLink } from "lucide-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -72,8 +73,12 @@ const Activity2 = () => {
   const isCurrentFixSelected = selectedFixes.has(currentFix.id);
 
   return (
-    <div className="min-h-screen bg-background pt-20 md:pt-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 animate-fade-in">
+    <div className="min-h-screen bg-background">
+      {/* Navigation */}
+      <TopNav />
+      
+      <div className="pt-20 md:pt-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 animate-fade-in">
         {/* Header */}
         <div className="mb-6">
           <h1 className="text-3xl font-semibold font-display text-foreground mb-2">
@@ -236,6 +241,7 @@ const Activity2 = () => {
         </Card>
       </div>
     </div>
+  </div>
   );
 };
 
