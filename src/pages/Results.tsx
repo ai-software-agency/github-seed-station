@@ -85,7 +85,7 @@ const ScanComplete2 = () => {
             return (
               <Card
                 key={issue.id}
-                className="p-6 bg-card border-border hover:shadow-md transition-shadow"
+                className="p-6 bg-card border-border hover:border-accent/50 transition-all"
               >
                 <div className="flex items-start gap-4">
                   <div className={`w-10 h-10 rounded-lg bg-secondary flex items-center justify-center flex-shrink-0 ${issue.iconColor}`}>
