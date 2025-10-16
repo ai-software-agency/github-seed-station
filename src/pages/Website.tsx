@@ -28,7 +28,7 @@ const Website = () => {
               </div>
 
               <h1 className="text-4xl sm:text-6xl font-extrabold font-display leading-[1.05] tracking-tight">
-                Shit vibe‑coded apps with{" "}
+                Ship vibe‑coded apps with{" "}
                 <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
                   production‑grade confidence
                 </span>
