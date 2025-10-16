@@ -74,56 +74,57 @@ const Aisec = () => {
         </div>
       </section>
 
-      {/* Scanners logos */}
-      <section id="scanners" className="py-14 md:py-20 bg-muted/30">
+      {/* Integration logos */}
+      <section id="integrations" className="py-14 md:py-20 bg-muted/30">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <h2 className="text-2xl font-bold font-display text-center mb-8">Kreyo works seamlessly with</h2>
           <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
-            {/* Semgrep */}
+            {/* Vercel */}
             <div className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
               <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
+                <path d="M12 1.5l12 21H0z"/>
               </svg>
-              <span className="font-semibold">Semgrep</span>
+              <span className="font-semibold">Vercel</span>
             </div>
 
-            {/* Snyk */}
+            {/* Cursor */}
             <div className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
               <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                <path d="M3 3h18v18H3V3zm2 2v14h14V5H5zm3 3h8v8H8V8z"/>
               </svg>
-              <span className="font-semibold">Snyk</span>
+              <span className="font-semibold">Cursor</span>
             </div>
 
-            {/* OWASP ZAP */}
+            {/* Figma */}
             <div className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
               <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M13 3h-2v10h2V3zm4.83 2.17l-1.42 1.42C17.99 7.86 19 9.81 19 12c0 3.87-3.13 7-7 7s-7-3.13-7-7c0-2.19 1.01-4.14 2.58-5.42L6.17 5.17C4.23 6.82 3 9.26 3 12c0 4.97 4.03 9 9 9s9-4.03 9-9c0-2.74-1.23-5.18-3.17-6.83z"/>
+                <path d="M8 2a3 3 0 0 0 0 6 3 3 0 0 0 0 6 3 3 0 0 0 3 3V8a3 3 0 1 0 3-3H8zm0 0h5a3 3 0 1 1 0 6H8a3 3 0 0 1 0-6z"/>
               </svg>
-              <span className="font-semibold">OWASP ZAP</span>
+              <span className="font-semibold">Figma</span>
             </div>
 
-            {/* Trivy */}
+            {/* Replit */}
             <div className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
               <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M20 2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 3c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm4 12H8v-1c0-1.33 2.67-2 4-2s4 .67 4 2v1z"/>
+                <path d="M7 3.5h5.5v5.5H7V3.5zm0 11.5h5.5V21H7v-6zm11.5 0v6H13v-6h5.5zM13 3.5h5.5v5.5H13V3.5z"/>
               </svg>
-              <span className="font-semibold">Trivy</span>
+              <span className="font-semibold">Replit</span>
             </div>
 
-            {/* ESLint Security */}
+            {/* GitHub */}
             <div className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
               <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2L1 12l11 10 11-10L12 2zm0 3.84L19.53 12 12 18.16 4.47 12 12 5.84z"/>
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
               </svg>
-              <span className="font-semibold">ESLint Security</span>
+              <span className="font-semibold">GitHub</span>
             </div>
 
-            {/* GitLeaks */}
+            {/* Lovable */}
             <div className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
               <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM7.07 18.28c.43-.9 3.05-1.78 4.93-1.78s4.51.88 4.93 1.78C15.57 19.36 13.86 20 12 20s-3.57-.64-4.93-1.72zm11.29-1.45c-1.43-1.74-4.9-2.33-6.36-2.33s-4.93.59-6.36 2.33C4.62 15.49 4 13.82 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8c0 1.82-.62 3.49-1.64 4.83zM12 6c-1.94 0-3.5 1.56-3.5 3.5S10.06 13 12 13s3.5-1.56 3.5-3.5S13.94 6 12 6zm0 5c-.83 0-1.5-.67-1.5-1.5S11.17 8 12 8s1.5.67 1.5 1.5S12.83 11 12 11z"/>
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
               </svg>
-              <span className="font-semibold">GitLeaks</span>
+              <span className="font-semibold">Lovable</span>
             </div>
           </div>
         </div>
