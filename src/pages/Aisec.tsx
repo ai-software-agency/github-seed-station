@@ -74,106 +74,57 @@ const Aisec = () => {
         </div>
       </section>
 
-      {/* Scanners carousel/grid */}
-      <section id="scanners" className="py-14 md:py-20">
+      {/* Scanners logos */}
+      <section id="scanners" className="py-14 md:py-20 bg-muted/30">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="flex items-end justify-between gap-6 flex-wrap">
-            <div>
-              <h2 className="text-3xl font-bold font-display">Powered by proven scanners</h2>
-              <p className="mt-2 text-muted-foreground">
-                Kreyo orchestrates multiple engines in parallel and normalizes results.
-              </p>
-            </div>
-            <div className="text-sm text-muted-foreground">
-              Semgrep • Snyk • OWASP ZAP • Trivy • ESLint Security • GitLeaks
-            </div>
-          </div>
-          
-          <div className="mt-8 grid md:grid-cols-3 gap-5">
+          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
             {/* Semgrep */}
-            <article className="rounded-xl p-5 bg-card border border-border hover:border-primary/50 transition-all">
-              <div className="bg-gradient-to-r from-primary to-purple bg-clip-text text-transparent text-xs font-semibold">Semgrep</div>
-              <h3 className="mt-1 font-semibold font-display">Static rules for insecure patterns</h3>
-              <p className="mt-2 text-sm text-muted-foreground">
-                Checks for: XSS, SQLi, SSRF, auth bypass, unsafe eval
-              </p>
-              <pre className="font-mono mt-3 text-xs leading-6 bg-muted rounded-lg p-3 overflow-auto">
-{`rule: no-eval
-file: pages/api/users.ts:14
-issue: Dangerous eval() detected
-fix: Replace with JSON.parse and whitelist keys`}
-              </pre>
-            </article>
+            <div className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
+              <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
+              </svg>
+              <span className="font-semibold">Semgrep</span>
+            </div>
 
             {/* Snyk */}
-            <article className="rounded-xl p-5 bg-card border border-border hover:border-primary/50 transition-all">
-              <div className="bg-gradient-to-r from-primary to-purple bg-clip-text text-transparent text-xs font-semibold">Snyk</div>
-              <h3 className="mt-1 font-semibold font-display">Dependency & supply‑chain risk</h3>
-              <p className="mt-2 text-sm text-muted-foreground">
-                Checks for: vulnerable packages, CVEs, transitive risks
-              </p>
-              <pre className="font-mono mt-3 text-xs leading-6 bg-muted rounded-lg p-3 overflow-auto">
-{`pkg: axios@0.21.1 (CVE‑2023‑…)
-issue: SSRF risk via proxy handling
-fix: Upgrade to ≥0.27.0`}
-              </pre>
-            </article>
+            <div className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
+              <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+              <span className="font-semibold">Snyk</span>
+            </div>
 
             {/* OWASP ZAP */}
-            <article className="rounded-xl p-5 bg-card border border-border hover:border-primary/50 transition-all">
-              <div className="bg-gradient-to-r from-primary to-purple bg-clip-text text-transparent text-xs font-semibold">OWASP ZAP</div>
-              <h3 className="mt-1 font-semibold font-display">Active web app testing</h3>
-              <p className="mt-2 text-sm text-muted-foreground">
-                Checks for: missing headers, weak TLS, exposed routes
-              </p>
-              <pre className="font-mono mt-3 text-xs leading-6 bg-muted rounded-lg p-3 overflow-auto">
-{`target: https://my-app.vercel.app
-issue: Missing HSTS header
-fix: add Strict-Transport-Security: max-age=63072000; includeSubDomains; preload`}
-              </pre>
-            </article>
+            <div className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
+              <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M13 3h-2v10h2V3zm4.83 2.17l-1.42 1.42C17.99 7.86 19 9.81 19 12c0 3.87-3.13 7-7 7s-7-3.13-7-7c0-2.19 1.01-4.14 2.58-5.42L6.17 5.17C4.23 6.82 3 9.26 3 12c0 4.97 4.03 9 9 9s9-4.03 9-9c0-2.74-1.23-5.18-3.17-6.83z"/>
+              </svg>
+              <span className="font-semibold">OWASP ZAP</span>
+            </div>
 
             {/* Trivy */}
-            <article className="rounded-xl p-5 bg-card border border-border hover:border-primary/50 transition-all">
-              <div className="bg-gradient-to-r from-primary to-purple bg-clip-text text-transparent text-xs font-semibold">Trivy</div>
-              <h3 className="mt-1 font-semibold font-display">Containers & misconfig</h3>
-              <p className="mt-2 text-sm text-muted-foreground">
-                Checks for: base image CVEs, Dockerfile issues
-              </p>
-              <pre className="font-mono mt-3 text-xs leading-6 bg-muted rounded-lg p-3 overflow-auto">
-{`Dockerfile: node:16
-issue: High CVE openssl‑1.1
-fix: Use node:18‑alpine`}
-              </pre>
-            </article>
+            <div className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
+              <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20 2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 3c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm4 12H8v-1c0-1.33 2.67-2 4-2s4 .67 4 2v1z"/>
+              </svg>
+              <span className="font-semibold">Trivy</span>
+            </div>
 
             {/* ESLint Security */}
-            <article className="rounded-xl p-5 bg-card border border-border hover:border-primary/50 transition-all">
-              <div className="bg-gradient-to-r from-primary to-purple bg-clip-text text-transparent text-xs font-semibold">ESLint Security</div>
-              <h3 className="mt-1 font-semibold font-display">Lint rules for unsafe JS</h3>
-              <p className="mt-2 text-sm text-muted-foreground">
-                Checks for: insecure regex, unsafe new Function
-              </p>
-              <pre className="font-mono mt-3 text-xs leading-6 bg-muted rounded-lg p-3 overflow-auto">
-{`file: lib/search.ts
-issue: ReDoS risk in /.*(a+)+$/
-fix: Use bounded quantifiers`}
-              </pre>
-            </article>
+            <div className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
+              <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2L1 12l11 10 11-10L12 2zm0 3.84L19.53 12 12 18.16 4.47 12 12 5.84z"/>
+              </svg>
+              <span className="font-semibold">ESLint Security</span>
+            </div>
 
             {/* GitLeaks */}
-            <article className="rounded-xl p-5 bg-card border border-border hover:border-primary/50 transition-all">
-              <div className="bg-gradient-to-r from-primary to-purple bg-clip-text text-transparent text-xs font-semibold">GitLeaks</div>
-              <h3 className="mt-1 font-semibold font-display">Secret detection</h3>
-              <p className="mt-2 text-sm text-muted-foreground">
-                Checks for: API keys, tokens, credentials in repo
-              </p>
-              <pre className="font-mono mt-3 text-xs leading-6 bg-muted rounded-lg p-3 overflow-auto">
-{`file: .env.local
-issue: Potential OpenAI_API_KEY exposed
-fix: Remove from repo and rotate key`}
-              </pre>
-            </article>
+            <div className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
+              <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM7.07 18.28c.43-.9 3.05-1.78 4.93-1.78s4.51.88 4.93 1.78C15.57 19.36 13.86 20 12 20s-3.57-.64-4.93-1.72zm11.29-1.45c-1.43-1.74-4.9-2.33-6.36-2.33s-4.93.59-6.36 2.33C4.62 15.49 4 13.82 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8c0 1.82-.62 3.49-1.64 4.83zM12 6c-1.94 0-3.5 1.56-3.5 3.5S10.06 13 12 13s3.5-1.56 3.5-3.5S13.94 6 12 6zm0 5c-.83 0-1.5-.67-1.5-1.5S11.17 8 12 8s1.5.67 1.5 1.5S12.83 11 12 11z"/>
+              </svg>
+              <span className="font-semibold">GitLeaks</span>
+            </div>
           </div>
         </div>
       </section>
