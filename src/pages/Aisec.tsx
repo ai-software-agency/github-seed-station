@@ -136,7 +136,7 @@ const Aisec = () => {
           <div className="mt-8 relative">
             <div className="flex gap-5 animate-scroll-left">
               {/* First set of cards */}
-              <article className="rounded-xl p-5 bg-card border border-border min-w-[224px] flex-shrink-0">
+              <article className="rounded-xl p-5 bg-card border border-border min-w-[224px] flex-shrink-0 hover:border-accent/50 transition-all">
                 <h3 className="font-semibold font-display">Hardcoded Secrets</h3>
                 <p className="mt-2 text-sm text-muted-foreground">What it is: keys/tokens committed to code.</p>
                 <p className="mt-2 text-sm text-muted-foreground">
@@ -144,7 +144,7 @@ const Aisec = () => {
                 </p>
               </article>
 
-              <article className="rounded-xl p-5 bg-card border border-border min-w-[224px] flex-shrink-0">
+              <article className="rounded-xl p-5 bg-card border border-border min-w-[224px] flex-shrink-0 hover:border-accent/50 transition-all">
                 <h3 className="font-semibold font-display">Broken Auth / Access Control</h3>
                 <p className="mt-2 text-sm text-muted-foreground">What it is: missing checks, privilege escalation.</p>
                 <p className="mt-2 text-sm text-muted-foreground">
@@ -152,7 +152,7 @@ const Aisec = () => {
                 </p>
               </article>
 
-              <article className="rounded-xl p-5 bg-card border border-border min-w-[224px] flex-shrink-0">
+              <article className="rounded-xl p-5 bg-card border border-border min-w-[224px] flex-shrink-0 hover:border-accent/50 transition-all">
                 <h3 className="font-semibold font-display">Input Validation (XSS / SQLi)</h3>
                 <p className="mt-2 text-sm text-muted-foreground">What it is: unsafe inputs reach sinks.</p>
                 <p className="mt-2 text-sm text-muted-foreground">
@@ -160,7 +160,7 @@ const Aisec = () => {
                 </p>
               </article>
 
-              <article className="rounded-xl p-5 bg-card border border-border min-w-[224px] flex-shrink-0">
+              <article className="rounded-xl p-5 bg-card border border-border min-w-[224px] flex-shrink-0 hover:border-accent/50 transition-all">
                 <h3 className="font-semibold font-display">Outdated Dependencies</h3>
                 <p className="mt-2 text-sm text-muted-foreground">What it is: known CVEs in your deps.</p>
                 <p className="mt-2 text-sm text-muted-foreground">
@@ -168,7 +168,7 @@ const Aisec = () => {
                 </p>
               </article>
 
-              <article className="rounded-xl p-5 bg-card border border-border min-w-[224px] flex-shrink-0">
+              <article className="rounded-xl p-5 bg-card border border-border min-w-[224px] flex-shrink-0 hover:border-accent/50 transition-all">
                 <h3 className="font-semibold font-display">Missing Security Headers</h3>
                 <p className="mt-2 text-sm text-muted-foreground">What it is: CSP, HSTS, frameguard, etc.</p>
                 <p className="mt-2 text-sm text-muted-foreground">
@@ -176,7 +176,7 @@ const Aisec = () => {
                 </p>
               </article>
 
-              <article className="rounded-xl p-5 bg-card border border-border min-w-[224px] flex-shrink-0">
+              <article className="rounded-xl p-5 bg-card border border-border min-w-[224px] flex-shrink-0 hover:border-accent/50 transition-all">
                 <h3 className="font-semibold font-display">Misconfigurations</h3>
                 <p className="mt-2 text-sm text-muted-foreground">What it is: debug mode, public buckets, weak TLS.</p>
                 <p className="mt-2 text-sm text-muted-foreground">
@@ -184,7 +184,7 @@ const Aisec = () => {
                 </p>
               </article>
 
-              <article className="rounded-xl p-5 bg-card border border-border min-w-[224px] flex-shrink-0">
+              <article className="rounded-xl p-5 bg-card border border-border min-w-[224px] flex-shrink-0 hover:border-accent/50 transition-all">
                 <h3 className="font-semibold font-display">Package Supply Chain</h3>
                 <p className="mt-2 text-sm text-muted-foreground">What it is: typosquats, compromised libs.</p>
                 <p className="mt-2 text-sm text-muted-foreground">
@@ -192,7 +192,7 @@ const Aisec = () => {
                 </p>
               </article>
 
-              <article className="rounded-xl p-5 bg-card border border-border min-w-[224px] flex-shrink-0">
+              <article className="rounded-xl p-5 bg-card border border-border min-w-[224px] flex-shrink-0 hover:border-accent/50 transition-all">
                 <h3 className="font-semibold font-display">Rate Limit & DDoS</h3>
                 <p className="mt-2 text-sm text-muted-foreground">What it is: abuse of public endpoints.</p>
                 <p className="mt-2 text-sm text-muted-foreground">
@@ -201,7 +201,7 @@ const Aisec = () => {
               </article>
 
               {/* Duplicate set for seamless loop */}
-              <article className="rounded-xl p-5 bg-card border border-border min-w-[224px] flex-shrink-0">
+              <article className="rounded-xl p-5 bg-card border border-border min-w-[224px] flex-shrink-0 hover:border-accent/50 transition-all">
                 <h3 className="font-semibold font-display">Hardcoded Secrets</h3>
                 <p className="mt-2 text-sm text-muted-foreground">What it is: keys/tokens committed to code.</p>
                 <p className="mt-2 text-sm text-muted-foreground">
@@ -209,7 +209,7 @@ const Aisec = () => {
                 </p>
               </article>
 
-              <article className="rounded-xl p-5 bg-card border border-border min-w-[224px] flex-shrink-0">
+              <article className="rounded-xl p-5 bg-card border border-border min-w-[224px] flex-shrink-0 hover:border-accent/50 transition-all">
                 <h3 className="font-semibold font-display">Broken Auth / Access Control</h3>
                 <p className="mt-2 text-sm text-muted-foreground">What it is: missing checks, privilege escalation.</p>
                 <p className="mt-2 text-sm text-muted-foreground">
@@ -217,7 +217,7 @@ const Aisec = () => {
                 </p>
               </article>
 
-              <article className="rounded-xl p-5 bg-card border border-border min-w-[224px] flex-shrink-0">
+              <article className="rounded-xl p-5 bg-card border border-border min-w-[224px] flex-shrink-0 hover:border-accent/50 transition-all">
                 <h3 className="font-semibold font-display">Input Validation (XSS / SQLi)</h3>
                 <p className="mt-2 text-sm text-muted-foreground">What it is: unsafe inputs reach sinks.</p>
                 <p className="mt-2 text-sm text-muted-foreground">
@@ -225,7 +225,7 @@ const Aisec = () => {
                 </p>
               </article>
 
-              <article className="rounded-xl p-5 bg-card border border-border min-w-[224px] flex-shrink-0">
+              <article className="rounded-xl p-5 bg-card border border-border min-w-[224px] flex-shrink-0 hover:border-accent/50 transition-all">
                 <h3 className="font-semibold font-display">Outdated Dependencies</h3>
                 <p className="mt-2 text-sm text-muted-foreground">What it is: known CVEs in your deps.</p>
                 <p className="mt-2 text-sm text-muted-foreground">
@@ -233,7 +233,7 @@ const Aisec = () => {
                 </p>
               </article>
 
-              <article className="rounded-xl p-5 bg-card border border-border min-w-[224px] flex-shrink-0">
+              <article className="rounded-xl p-5 bg-card border border-border min-w-[224px] flex-shrink-0 hover:border-accent/50 transition-all">
                 <h3 className="font-semibold font-display">Missing Security Headers</h3>
                 <p className="mt-2 text-sm text-muted-foreground">What it is: CSP, HSTS, frameguard, etc.</p>
                 <p className="mt-2 text-sm text-muted-foreground">
@@ -241,7 +241,7 @@ const Aisec = () => {
                 </p>
               </article>
 
-              <article className="rounded-xl p-5 bg-card border border-border min-w-[224px] flex-shrink-0">
+              <article className="rounded-xl p-5 bg-card border border-border min-w-[224px] flex-shrink-0 hover:border-accent/50 transition-all">
                 <h3 className="font-semibold font-display">Misconfigurations</h3>
                 <p className="mt-2 text-sm text-muted-foreground">What it is: debug mode, public buckets, weak TLS.</p>
                 <p className="mt-2 text-sm text-muted-foreground">
@@ -249,7 +249,7 @@ const Aisec = () => {
                 </p>
               </article>
 
-              <article className="rounded-xl p-5 bg-card border border-border min-w-[224px] flex-shrink-0">
+              <article className="rounded-xl p-5 bg-card border border-border min-w-[224px] flex-shrink-0 hover:border-accent/50 transition-all">
                 <h3 className="font-semibold font-display">Package Supply Chain</h3>
                 <p className="mt-2 text-sm text-muted-foreground">What it is: typosquats, compromised libs.</p>
                 <p className="mt-2 text-sm text-muted-foreground">
@@ -257,7 +257,7 @@ const Aisec = () => {
                 </p>
               </article>
 
-              <article className="rounded-xl p-5 bg-card border border-border min-w-[224px] flex-shrink-0">
+              <article className="rounded-xl p-5 bg-card border border-border min-w-[224px] flex-shrink-0 hover:border-accent/50 transition-all">
                 <h3 className="font-semibold font-display">Rate Limit & DDoS</h3>
                 <p className="mt-2 text-sm text-muted-foreground">What it is: abuse of public endpoints.</p>
                 <p className="mt-2 text-sm text-muted-foreground">

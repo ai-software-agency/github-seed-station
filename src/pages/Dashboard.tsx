@@ -169,7 +169,7 @@ const Dashboard = () => {
             )}
 
             {/* Add New Project CTA */}
-            <Card className="border-dashed border-2 hover:border-primary/50 transition-colors cursor-pointer">
+            <Card className="border-dashed border-2 hover:border-accent/50 transition-colors cursor-pointer">
               <CardContent className="flex items-center justify-center py-12">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -351,7 +351,7 @@ const ProjectCard = ({
   getStatusBadge 
 }: ProjectCardProps) => {
   return (
-    <Card className="hover:border-primary/50 transition-colors group">
+    <Card className="hover:border-accent/50 transition-colors group">
       <CardHeader>
         <div className="flex items-start justify-between mb-3">
           <div className="flex items-center gap-2">
