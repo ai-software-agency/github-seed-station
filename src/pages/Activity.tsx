@@ -94,7 +94,7 @@ const Activity2 = () => {
           {/* Left Panel - Fix List with Selection */}
           <Card className="lg:col-span-2 p-6 bg-card border-border">
             <h2 className="text-lg font-semibold font-display text-foreground mb-4">Fixes Ready to Apply</h2>
-            <ScrollArea className="max-h-[400px] pr-4">
+            <ScrollArea className="max-h-[500px] pr-4">
               <div className="space-y-3">
                 {allFixes.map((fix) => {
                 const isSelected = selectedFixes.has(fix.id);
