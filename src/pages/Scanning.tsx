@@ -54,8 +54,8 @@ const Scanning2 = () => {
   return (
     <>
       <TopNav />
-      <div className="min-h-screen bg-background flex items-center justify-center p-4 pt-20">
-      <div className="w-full max-w-2xl animate-fade-in">
+      <div className="min-h-screen bg-background flex items-center justify-center pt-20">
+      <div className="mx-auto w-full max-w-2xl px-4 sm:px-6 animate-fade-in">
         {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-2xl font-semibold font-display text-foreground mb-2">

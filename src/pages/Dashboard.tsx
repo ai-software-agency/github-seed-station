@@ -98,7 +98,7 @@ const Dashboard = () => {
       <TopNav />
       <div className="min-h-screen bg-background pt-16">
         {/* Main Content */}
-        <main className="container mx-auto px-4 py-12">
+        <main className="mx-auto max-w-7xl px-4 sm:px-6 py-12">
         {/* Page Title */}
         <div className="mb-8">
           <h2 className="text-3xl font-bold font-display text-foreground mb-2">Your Projects</h2>

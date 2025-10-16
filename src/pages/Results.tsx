@@ -61,8 +61,8 @@ const ScanComplete2 = () => {
   return (
     <>
       <TopNav />
-      <div className="min-h-screen bg-background flex items-center justify-center p-4 pt-20">
-      <div className="w-full max-w-3xl animate-fade-in">
+      <div className="min-h-screen bg-background flex items-center justify-center pt-20">
+      <div className="mx-auto w-full max-w-3xl px-4 sm:px-6 animate-fade-in">
         {/* Header */}
         <div className="text-center mb-8">
           <div className="flex items-center justify-center mb-4">

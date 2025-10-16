@@ -58,8 +58,8 @@ const Done = () => {
   return (
     <>
       <TopNav />
-      <div className="min-h-screen bg-gradient-to-b from-background to-accent/5 flex items-center justify-center p-4 pt-20">
-      <div className="w-full max-w-4xl">
+      <div className="min-h-screen bg-gradient-to-b from-background to-accent/5 flex items-center justify-center pt-20">
+      <div className="mx-auto w-full max-w-4xl px-4 sm:px-6">
         {/* Hero Section */}
         <div className="text-center mb-12 animate-fade-in">
           <div className="relative inline-block mb-6 mt-8">

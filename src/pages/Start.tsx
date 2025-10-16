@@ -15,8 +15,8 @@ const Connect = () => {
   return (
     <>
       <TopNav />
-      <div className="min-h-screen bg-gradient-to-b from-primary/5 to-background flex items-center justify-center p-4 pt-20">
-      <div className="w-full max-w-2xl animate-fade-in">
+      <div className="min-h-screen bg-gradient-to-b from-primary/5 to-background flex items-center justify-center pt-20">
+      <div className="mx-auto w-full max-w-2xl px-4 sm:px-6 animate-fade-in">
         {/* Hero Section with Animated Shield */}
         <div className="flex flex-col items-center justify-center mb-8">
           <div className="relative mb-8">
