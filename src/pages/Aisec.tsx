@@ -269,34 +269,6 @@ const Aisec = () => {
         </div>
       </section>
 
-      {/* Live demo preview */}
-      <section id="demo" className="py-14 md:py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="grid md:grid-cols-12 gap-8 items-center">
-            <div className="md:col-span-6">
-              <h2 className="text-3xl font-bold font-display">Watch Kreyo Block an Attack — Live.</h2>
-              <p className="mt-3 text-muted-foreground">
-                Attacker floods endpoint → Agent blocks IP → Log:{" "}
-                <span className="font-mono text-sm">Blocked 1.2.3.4 after 300 failed requests</span>.
-              </p>
-              <div className="mt-5 rounded-xl border border-border bg-card p-4">
-                <pre className="font-mono text-xs leading-6 text-muted-foreground overflow-x-auto">
-                  <code>{`[12:01:10] WARN  /api/login 429s spiked (ip 1.2.3.4)
-[12:01:11] ACTION add ban 1.2.3.4 (900s)
-[12:01:11] OK     rate‑limit policy applied (login)
-[12:01:12] INFO   service healthy — no downtime`}</code>
-                </pre>
-              </div>
-            </div>
-            <div className="md:col-span-6">
-              {/* Placeholder video box */}
-              <div className="aspect-video rounded-xl border border-border bg-card grid place-items-center text-muted-foreground">
-                Demo video / GIF placeholder
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* How it works */}
       <section id="how" className="py-14 md:py-20">
