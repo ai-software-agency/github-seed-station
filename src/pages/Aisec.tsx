@@ -179,73 +179,141 @@ fix: Remove from repo and rotate key`}
       </section>
 
       {/* Security categories */}
-      <section id="categories" className="py-14 md:py-20">
+      <section id="categories" className="py-14 md:py-20 overflow-hidden">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <h2 className="text-3xl font-bold font-display">Top security categories we fix</h2>
-          <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 text-sm">
-            <article className="rounded-xl p-5 bg-card border border-border">
-              <h3 className="font-semibold font-display">Hardcoded Secrets</h3>
-              <p className="mt-2 text-muted-foreground">What it is: keys/tokens committed to code.</p>
-              <p className="mt-2 text-muted-foreground">
-                Kreyo: detects, quarantines, and guides rotation; adds secret scanning to CI.
-              </p>
-            </article>
+          <div className="mt-8 relative">
+            <div className="flex gap-5 animate-scroll-left">
+              {/* First set of cards */}
+              <article className="rounded-xl p-5 bg-card border border-border min-w-[320px] flex-shrink-0">
+                <h3 className="font-semibold font-display">Hardcoded Secrets</h3>
+                <p className="mt-2 text-sm text-muted-foreground">What it is: keys/tokens committed to code.</p>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  Kreyo: detects, quarantines, and guides rotation; adds secret scanning to CI.
+                </p>
+              </article>
 
-            <article className="rounded-xl p-5 bg-card border border-border">
-              <h3 className="font-semibold font-display">Broken Auth / Access Control</h3>
-              <p className="mt-2 text-muted-foreground">What it is: missing checks, privilege escalation.</p>
-              <p className="mt-2 text-muted-foreground">
-                Kreyo: enforces session rules, RBAC hints, and sensible defaults.
-              </p>
-            </article>
+              <article className="rounded-xl p-5 bg-card border border-border min-w-[320px] flex-shrink-0">
+                <h3 className="font-semibold font-display">Broken Auth / Access Control</h3>
+                <p className="mt-2 text-sm text-muted-foreground">What it is: missing checks, privilege escalation.</p>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  Kreyo: enforces session rules, RBAC hints, and sensible defaults.
+                </p>
+              </article>
 
-            <article className="rounded-xl p-5 bg-card border border-border">
-              <h3 className="font-semibold font-display">Input Validation (XSS / SQLi)</h3>
-              <p className="mt-2 text-muted-foreground">What it is: unsafe inputs reach sinks.</p>
-              <p className="mt-2 text-muted-foreground">
-                Kreyo: sanitizes, parameterizes, and adds tests.
-              </p>
-            </article>
+              <article className="rounded-xl p-5 bg-card border border-border min-w-[320px] flex-shrink-0">
+                <h3 className="font-semibold font-display">Input Validation (XSS / SQLi)</h3>
+                <p className="mt-2 text-sm text-muted-foreground">What it is: unsafe inputs reach sinks.</p>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  Kreyo: sanitizes, parameterizes, and adds tests.
+                </p>
+              </article>
 
-            <article className="rounded-xl p-5 bg-card border border-border">
-              <h3 className="font-semibold font-display">Outdated Dependencies</h3>
-              <p className="mt-2 text-muted-foreground">What it is: known CVEs in your deps.</p>
-              <p className="mt-2 text-muted-foreground">
-                Kreyo: upgrades with lockfile diffs and rollback plan.
-              </p>
-            </article>
+              <article className="rounded-xl p-5 bg-card border border-border min-w-[320px] flex-shrink-0">
+                <h3 className="font-semibold font-display">Outdated Dependencies</h3>
+                <p className="mt-2 text-sm text-muted-foreground">What it is: known CVEs in your deps.</p>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  Kreyo: upgrades with lockfile diffs and rollback plan.
+                </p>
+              </article>
 
-            <article className="rounded-xl p-5 bg-card border border-border">
-              <h3 className="font-semibold font-display">Missing Security Headers</h3>
-              <p className="mt-2 text-muted-foreground">What it is: CSP, HSTS, frameguard, etc.</p>
-              <p className="mt-2 text-muted-foreground">
-                Kreyo: patches headers and verifies in staging.
-              </p>
-            </article>
+              <article className="rounded-xl p-5 bg-card border border-border min-w-[320px] flex-shrink-0">
+                <h3 className="font-semibold font-display">Missing Security Headers</h3>
+                <p className="mt-2 text-sm text-muted-foreground">What it is: CSP, HSTS, frameguard, etc.</p>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  Kreyo: patches headers and verifies in staging.
+                </p>
+              </article>
 
-            <article className="rounded-xl p-5 bg-card border border-border">
-              <h3 className="font-semibold font-display">Misconfigurations</h3>
-              <p className="mt-2 text-muted-foreground">What it is: debug mode, public buckets, weak TLS.</p>
-              <p className="mt-2 text-muted-foreground">
-                Kreyo: checks envs, hardens infra, sets sane defaults.
-              </p>
-            </article>
+              <article className="rounded-xl p-5 bg-card border border-border min-w-[320px] flex-shrink-0">
+                <h3 className="font-semibold font-display">Misconfigurations</h3>
+                <p className="mt-2 text-sm text-muted-foreground">What it is: debug mode, public buckets, weak TLS.</p>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  Kreyo: checks envs, hardens infra, sets sane defaults.
+                </p>
+              </article>
 
-            <article className="rounded-xl p-5 bg-card border border-border">
-              <h3 className="font-semibold font-display">Package Supply Chain</h3>
-              <p className="mt-2 text-muted-foreground">What it is: typosquats, compromised libs.</p>
-              <p className="mt-2 text-muted-foreground">
-                Kreyo: pin/verify sources and add provenance.
-              </p>
-            </article>
+              <article className="rounded-xl p-5 bg-card border border-border min-w-[320px] flex-shrink-0">
+                <h3 className="font-semibold font-display">Package Supply Chain</h3>
+                <p className="mt-2 text-sm text-muted-foreground">What it is: typosquats, compromised libs.</p>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  Kreyo: pin/verify sources and add provenance.
+                </p>
+              </article>
 
-            <article className="rounded-xl p-5 bg-card border border-border">
-              <h3 className="font-semibold font-display">Rate Limit & DDoS</h3>
-              <p className="mt-2 text-muted-foreground">What it is: abuse of public endpoints.</p>
-              <p className="mt-2 text-muted-foreground">
-                Kreyo: sensible rate‑limits + IP banlist automation.
-              </p>
-            </article>
+              <article className="rounded-xl p-5 bg-card border border-border min-w-[320px] flex-shrink-0">
+                <h3 className="font-semibold font-display">Rate Limit & DDoS</h3>
+                <p className="mt-2 text-sm text-muted-foreground">What it is: abuse of public endpoints.</p>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  Kreyo: sensible rate‑limits + IP banlist automation.
+                </p>
+              </article>
+
+              {/* Duplicate set for seamless loop */}
+              <article className="rounded-xl p-5 bg-card border border-border min-w-[320px] flex-shrink-0">
+                <h3 className="font-semibold font-display">Hardcoded Secrets</h3>
+                <p className="mt-2 text-sm text-muted-foreground">What it is: keys/tokens committed to code.</p>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  Kreyo: detects, quarantines, and guides rotation; adds secret scanning to CI.
+                </p>
+              </article>
+
+              <article className="rounded-xl p-5 bg-card border border-border min-w-[320px] flex-shrink-0">
+                <h3 className="font-semibold font-display">Broken Auth / Access Control</h3>
+                <p className="mt-2 text-sm text-muted-foreground">What it is: missing checks, privilege escalation.</p>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  Kreyo: enforces session rules, RBAC hints, and sensible defaults.
+                </p>
+              </article>
+
+              <article className="rounded-xl p-5 bg-card border border-border min-w-[320px] flex-shrink-0">
+                <h3 className="font-semibold font-display">Input Validation (XSS / SQLi)</h3>
+                <p className="mt-2 text-sm text-muted-foreground">What it is: unsafe inputs reach sinks.</p>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  Kreyo: sanitizes, parameterizes, and adds tests.
+                </p>
+              </article>
+
+              <article className="rounded-xl p-5 bg-card border border-border min-w-[320px] flex-shrink-0">
+                <h3 className="font-semibold font-display">Outdated Dependencies</h3>
+                <p className="mt-2 text-sm text-muted-foreground">What it is: known CVEs in your deps.</p>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  Kreyo: upgrades with lockfile diffs and rollback plan.
+                </p>
+              </article>
+
+              <article className="rounded-xl p-5 bg-card border border-border min-w-[320px] flex-shrink-0">
+                <h3 className="font-semibold font-display">Missing Security Headers</h3>
+                <p className="mt-2 text-sm text-muted-foreground">What it is: CSP, HSTS, frameguard, etc.</p>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  Kreyo: patches headers and verifies in staging.
+                </p>
+              </article>
+
+              <article className="rounded-xl p-5 bg-card border border-border min-w-[320px] flex-shrink-0">
+                <h3 className="font-semibold font-display">Misconfigurations</h3>
+                <p className="mt-2 text-sm text-muted-foreground">What it is: debug mode, public buckets, weak TLS.</p>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  Kreyo: checks envs, hardens infra, sets sane defaults.
+                </p>
+              </article>
+
+              <article className="rounded-xl p-5 bg-card border border-border min-w-[320px] flex-shrink-0">
+                <h3 className="font-semibold font-display">Package Supply Chain</h3>
+                <p className="mt-2 text-sm text-muted-foreground">What it is: typosquats, compromised libs.</p>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  Kreyo: pin/verify sources and add provenance.
+                </p>
+              </article>
+
+              <article className="rounded-xl p-5 bg-card border border-border min-w-[320px] flex-shrink-0">
+                <h3 className="font-semibold font-display">Rate Limit & DDoS</h3>
+                <p className="mt-2 text-sm text-muted-foreground">What it is: abuse of public endpoints.</p>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  Kreyo: sensible rate‑limits + IP banlist automation.
+                </p>
+              </article>
+            </div>
           </div>
         </div>
       </section>

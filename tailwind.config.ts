@@ -110,6 +110,10 @@ export default {
           "50%": { transform: "translateX(0%)" },
           "100%": { transform: "translateX(100%)" },
         },
+        "scroll-left": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -117,6 +121,7 @@ export default {
         "fade-in": "fade-in 0.5s ease-out",
         "slide-up": "slide-up 0.5s ease-out",
         "progress": "progress 2s ease-in-out infinite",
+        "scroll-left": "scroll-left 40s linear infinite",
       },
     },
   },
