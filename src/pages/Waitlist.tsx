@@ -34,7 +34,10 @@ const Waitlist = () => {
           link: validatedData.link,
         });
 
-      if (error) throw error;
+      if (error) {
+        console.error('Supabase error:', error);
+        throw error;
+      }
 
       toast({
         title: "Success!",
@@ -44,6 +47,7 @@ const Waitlist = () => {
       setEmail("");
       setLink("");
     } catch (error) {
+      console.error('Form submission error:', error);
       if (error instanceof z.ZodError) {
         toast({
           title: "Validation Error",
@@ -51,9 +55,10 @@ const Waitlist = () => {
           variant: "destructive",
         });
       } else {
+        const errorMessage = error instanceof Error ? error.message : "Failed to submit. Please try again.";
         toast({
           title: "Error",
-          description: "Failed to submit. Please try again.",
+          description: errorMessage,
           variant: "destructive",
         });
       }
