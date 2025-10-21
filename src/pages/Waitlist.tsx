@@ -1,16 +1,45 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Shield, Check } from "lucide-react";
+import { Shield, Check, Settings } from "lucide-react";
 import { TopNav } from "@/components/TopNav";
 import kreyoLogo from "@/assets/kreyo-logo.svg";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useToast } from "@/hooks/use-toast";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 const Waitlist = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [webhookUrl, setWebhookUrl] = useState("");
+  const [tempWebhookUrl, setTempWebhookUrl] = useState("");
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
   const { toast } = useToast();
+
+  useEffect(() => {
+    const savedWebhook = localStorage.getItem("waitlist_webhook_url");
+    if (savedWebhook) {
+      setWebhookUrl(savedWebhook);
+      setTempWebhookUrl(savedWebhook);
+    }
+  }, []);
+
+  const saveWebhookUrl = () => {
+    localStorage.setItem("waitlist_webhook_url", tempWebhookUrl);
+    setWebhookUrl(tempWebhookUrl);
+    setIsDialogOpen(false);
+    toast({
+      title: "Webhook saved",
+      description: "Your Zapier webhook URL has been saved.",
+    });
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -24,19 +53,48 @@ const Waitlist = () => {
       return;
     }
 
+    if (!webhookUrl) {
+      toast({
+        title: "Setup required",
+        description: "Please configure your Zapier webhook URL first using the settings button.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
-    
-    // TODO: Add actual waitlist submission logic here
-    // For now, just simulate success
-    setTimeout(() => {
+
+    try {
+      const response = await fetch(webhookUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        mode: "no-cors",
+        body: JSON.stringify({
+          name,
+          email,
+          timestamp: new Date().toISOString(),
+          source: "waitlist",
+        }),
+      });
+
       toast({
         title: "You're on the list! 🎉",
         description: "We'll notify you as soon as we launch.",
       });
       setName("");
       setEmail("");
+    } catch (error) {
+      console.error("Error submitting to webhook:", error);
+      toast({
+        title: "Submission error",
+        description: "There was an issue submitting your information. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   return (
@@ -44,6 +102,46 @@ const Waitlist = () => {
       <TopNav />
       <div className="min-h-screen bg-gradient-to-b from-primary/5 to-background flex items-center justify-center pt-20">
         <div className="mx-auto w-full max-w-2xl px-4 sm:px-6 animate-fade-in">
+          {/* Settings Button */}
+          <div className="flex justify-end mb-4">
+            <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+              <DialogTrigger asChild>
+                <Button variant="outline" size="sm">
+                  <Settings className="w-4 h-4 mr-2" />
+                  Configure Webhook
+                </Button>
+              </DialogTrigger>
+              <DialogContent>
+                <DialogHeader>
+                  <DialogTitle>Configure Zapier Webhook</DialogTitle>
+                  <DialogDescription>
+                    Enter your Zapier webhook URL to send waitlist signups to Google Sheets or Notion.
+                    <br /><br />
+                    <strong>How to set this up:</strong>
+                    <ol className="list-decimal list-inside space-y-2 mt-2">
+                      <li>Go to <a href="https://zapier.com" target="_blank" rel="noopener noreferrer" className="text-primary underline">Zapier</a> and create a new Zap</li>
+                      <li>Choose "Webhooks by Zapier" as the trigger</li>
+                      <li>Select "Catch Hook" and copy the webhook URL</li>
+                      <li>Paste the webhook URL below</li>
+                      <li>Add Google Sheets or Notion as your action</li>
+                      <li>Map the fields: name, email, timestamp</li>
+                    </ol>
+                  </DialogDescription>
+                </DialogHeader>
+                <div className="space-y-4 mt-4">
+                  <Input
+                    type="url"
+                    placeholder="https://hooks.zapier.com/hooks/catch/..."
+                    value={tempWebhookUrl}
+                    onChange={(e) => setTempWebhookUrl(e.target.value)}
+                  />
+                  <Button onClick={saveWebhookUrl} className="w-full">
+                    Save Webhook URL
+                  </Button>
+                </div>
+              </DialogContent>
+            </Dialog>
+          </div>
           {/* Hero Section with Animated Shield */}
           <div className="flex flex-col items-center justify-center mb-8">
             <div className="relative mb-8">
