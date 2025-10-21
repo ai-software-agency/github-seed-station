@@ -27,16 +27,28 @@ const Waitlist = () => {
       const validatedData = waitlistSchema.parse({ email, link });
       setIsLoading(true);
 
-      const { error } = await supabase
+      const { data, error } = await supabase
         .from('waitlist')
         .insert({
           email: validatedData.email,
           link: validatedData.link,
-        });
+        })
+        .select()
+        .single();
 
       if (error) {
         console.error('Supabase error:', error);
         throw error;
+      }
+
+      // Sync to Google Sheets
+      try {
+        await supabase.functions.invoke('sync-to-google-sheets', {
+          body: { record: data }
+        });
+      } catch (syncError) {
+        console.error('Google Sheets sync error (non-blocking):', syncError);
+        // Don't throw - we still want to show success if DB insert worked
       }
 
       toast({
