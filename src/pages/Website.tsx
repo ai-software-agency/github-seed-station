@@ -150,7 +150,7 @@ const Website = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 text-sm">
+          <div className="grid md:grid-cols-3 gap-6">
             {[
               {
                 title: "Code Reviews",
