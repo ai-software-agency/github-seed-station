@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { TopNav } from "@/components/TopNav";
-import vercelLogo from "@/assets/vercel-logo.webp";
-import replitLogo from "@/assets/replit-logo.png";
-import figmaLogo from "@/assets/figma-logo.webp";
-import githubLogo from "@/assets/github-logo.webp";
-import lovableLogo from "@/assets/lovable-logo.png";
+import vercelLogo from "@/assets/vercel-new.png";
+import replitLogo from "@/assets/replit-new.png";
+import figmaLogo from "@/assets/figma-new.png";
+import githubLogo from "@/assets/github-new.png";
+import lovableLogo from "@/assets/lovable-new.png";
 
 const Aisec = () => {
   return (
@@ -81,7 +81,7 @@ const Aisec = () => {
 
       {/* Integration logos */}
       <section id="integrations" className="py-14 md:py-20 bg-muted/30">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="mx-auto max-w-7xl px-[15%]">
           <h2 className="text-2xl font-bold font-display text-center mb-12">Kreyo works seamlessly with</h2>
           <div className="flex items-center justify-between gap-6">
             <img src={vercelLogo} alt="Vercel" className="h-8 object-contain opacity-60 hover:opacity-100 transition-opacity" />
