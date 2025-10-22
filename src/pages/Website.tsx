@@ -66,7 +66,7 @@ const Website = () => {
             <div className="lg:col-span-5">
               <div className="relative rounded-2xl p-6 bg-card border border-border shadow-lg transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)]">
                 <h3 className="text-sm font-semibold font-display text-muted-foreground mb-4">
-                  From repo to readiness
+                  From Repo to Ready
                 </h3>
                 <ol className="space-y-3 text-sm">
                   {[
