@@ -153,28 +153,47 @@ const Website = () => {
           <div className="grid md:grid-cols-3 gap-6 text-sm">
             {[
               {
-                title: "Code reviews",
-                desc: "Structure, readability, tests, and maintainability for AI‑assisted codebases.",
-              },
-              { title: "QA & live testing", desc: "Automated and human QA, device/browser matrices, edge‑case hunts." },
-              {
-                title: "Security testing",
-                desc: "Dependency & secret scanning, auth/session hardening, OWASP‑minded fixes.",
+                title: "Code Reviews",
+                desc: "We read your code so you don't have to — checking that it's clean, organized, and ready for the real world.",
+                comingSoon: false,
               },
               {
-                title: "Deployment & configs",
-                desc: "Staging/prod parity, env management, rollbacks, migrations, backups.",
+                title: "Testing",
+                desc: "We try your app the way real users will — finding bugs, slow screens, and anything that breaks under pressure.",
+                comingSoon: false,
               },
-              { title: "Monitoring", desc: "Logs, metrics, tracing, uptime checks, alert hygiene." },
               {
-                title: "Incident response",
-                desc: "Runbooks, on‑call, rapid patching, post‑mortems — without the panic.",
+                title: "Security Checks",
+                desc: "We scan for hidden risks — from exposed passwords to weak logins — and make sure your customer data stays safe.",
+                comingSoon: false,
+              },
+              {
+                title: "Deployments",
+                desc: "We set up the right environments so your app runs smoothly in production — with safe backups and easy rollbacks if something goes wrong.",
+                comingSoon: true,
+              },
+              {
+                title: "Monitoring",
+                desc: "We keep an eye on your live app — tracking performance, uptime, and errors so you can focus on your business.",
+                comingSoon: true,
+              },
+              {
+                title: "Incident Response",
+                desc: "If something does break, we handle it fast — diagnose, fix, and document what happened so it doesn't happen again.",
+                comingSoon: true,
               },
             ].map((item) => (
               <div
                 key={item.title}
-                className="rounded-2xl p-6 bg-card border border-border transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)]"
+                className="rounded-2xl p-6 bg-card border border-border transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)] relative"
               >
+                {item.comingSoon && (
+                  <div className="absolute top-4 right-4">
+                    <span className="inline-flex items-center rounded-full bg-accent/10 px-2 py-0.5 text-xs font-medium text-accent border border-accent/20">
+                      Coming Soon
+                    </span>
+                  </div>
+                )}
                 <h3 className="font-semibold font-display">{item.title}</h3>
                 <p className="mt-2 text-muted-foreground font-sans">{item.desc}</p>
               </div>
