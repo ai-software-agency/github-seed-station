@@ -19,7 +19,7 @@ export const TopNav = () => {
             <a href="/#how" className="hover:text-foreground transition-colors">How it works</a>
             <a href="/#trust" className="hover:text-foreground transition-colors">Why Kreyo</a>
           </nav>
-          <Button onClick={() => navigate('/start')} variant="default" size="sm" className="rounded-full">
+          <Button onClick={() => navigate('/waitlist')} variant="default" size="sm" className="rounded-full">
             Connect with GitHub
           </Button>
         </div>
