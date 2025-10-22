@@ -1,8 +1,19 @@
 import { Shield, Check } from "lucide-react";
 import { TopNav } from "@/components/TopNav";
 import kreyoLogo from "@/assets/kreyo-logo.svg";
+import { useEffect } from "react";
 
 const Waitlist = () => {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = '//embed.typeform.com/next/embed.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
   return (
     <>
@@ -31,7 +42,6 @@ const Waitlist = () => {
           {/* Typeform Embed */}
           <div className="mb-12 bg-card border border-border rounded-2xl overflow-hidden shadow-lg">
             <div data-tf-live="01JGMB1W8HJQ57QPXGV8M3CMNH"></div>
-            <script src="//embed.typeform.com/next/embed.js"></script>
           </div>
 
           {/* Benefits Section */}
