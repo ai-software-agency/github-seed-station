@@ -57,9 +57,6 @@ const Website = () => {
                 <Button onClick={() => navigate("/waitlist")} size="lg" className="rounded-full">
                   Join Waitlist
                 </Button>
-                <p className="text-xs text-muted-foreground/60 pl-8">
-                  60‑second time‑to‑value. No sales call required.
-                </p>
               </div>
             </div>
 
