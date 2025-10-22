@@ -104,7 +104,7 @@ const Website = () => {
       </section>
 
       {/* How Kreyo fits your stack */}
-      <section id="fit" className="relative py-16 md:py-24">
+      <section id="fit" className="relative py-16 md:py-24 bg-blue-50/30">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="max-w-3xl mb-8">
             <h2 className="text-3xl font-bold font-display">How Kreyo fits your stack</h2>
@@ -178,7 +178,7 @@ const Website = () => {
       </section>
 
       {/* How it works */}
-      <section id="how" className="relative py-16 md:py-24">
+      <section id="how" className="relative py-16 md:py-24 bg-blue-50/30">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="max-w-3xl mb-8">
             <h2 className="text-3xl font-bold font-display">How it works</h2>
@@ -263,7 +263,7 @@ const Website = () => {
       </section>
 
       {/* CTA */}
-      <section id="cta" className="relative py-16 md:py-24">
+      <section id="cta" className="relative py-16 md:py-24 bg-blue-50/30">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="grid md:grid-cols-12 gap-10 items-center">
             <div className="md:col-span-6">
