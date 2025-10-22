@@ -210,7 +210,7 @@ const Website = () => {
             <p className="mt-3 text-muted-foreground font-sans">Get started in minutes — Kreyo connects, checks, and secures your app automatically.</p>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-6 text-sm">
+          <div className="grid md:grid-cols-4 gap-6">
             {[
               {
                 num: "01",
@@ -235,13 +235,13 @@ const Website = () => {
             ].map((item) => (
               <div
                 key={item.num}
-                className="rounded-2xl p-6 bg-card border border-border transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)]"
+                className="rounded-2xl p-5 bg-card border border-border transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)]"
               >
                 <div className="w-[30px] h-[30px] rounded-full bg-gradient-to-br from-primary via-secondary to-accent flex items-center justify-center mb-3">
                   <span className="text-sm font-bold text-gray-900">{item.num}</span>
                 </div>
                 <h3 className="font-semibold font-display mb-2">{item.title}</h3>
-                <p className="text-muted-foreground font-sans">{item.desc}</p>
+                <p className="text-sm text-muted-foreground font-sans">{item.desc}</p>
               </div>
             ))}
           </div>
