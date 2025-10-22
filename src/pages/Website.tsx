@@ -47,11 +47,14 @@ const Website = () => {
                 .
               </h1>
 
-              <p className="text-lg text-muted-foreground font-sans max-w-2xl">
-                You've planned in ChatGPT and designed in Figma. Cursor, Replit, v0, or Lovable got you 80% there. Kreyo
-                takes you the last mile — reviews, QA, live & security testing, deployment hardening, monitoring, and
-                incident response.
-              </p>
+              <div className="text-lg font-sans max-w-2xl space-y-1.5">
+                <p className="text-muted-foreground">
+                  You've planned in ChatGPT and designed in Figma. Cursor, Replit, v0, or Lovable got you 80% there.
+                </p>
+                <p className="font-bold text-primary">
+                  Kreyo takes you the last mile — reviews, QA, live & security testing, deployment hardening, monitoring, and incident response.
+                </p>
+              </div>
 
               <div className="flex flex-col items-start gap-2">
                 <Button onClick={() => navigate("/waitlist")} size="lg" className="rounded-full">
