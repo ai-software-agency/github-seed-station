@@ -42,8 +42,8 @@ const Website = () => {
               </p>
 
               <div className="flex flex-col items-start gap-2">
-                <Button onClick={() => navigate("/start")} size="lg" className="rounded-full">
-                  Connect with GitHub and watch Kreyo in action now
+                <Button onClick={() => navigate("/waitlist")} size="lg" className="rounded-full">
+                  Join Waitlist
                 </Button>
                 <p className="text-xs text-muted-foreground/60 pl-8">
                   60‑second time‑to‑value. No sales call required.
@@ -267,7 +267,7 @@ const Website = () => {
                   className="grid gap-3"
                   onSubmit={(e) => {
                     e.preventDefault();
-                    navigate("/start");
+                    navigate("/waitlist");
                   }}
                 >
                   <Input
@@ -282,7 +282,7 @@ const Website = () => {
                     required
                   />
                   <Button type="submit" className="rounded-xl h-12">
-                    Connect with GitHub
+                    Join Waitlist
                   </Button>
                   <a
                     className="text-sm text-muted-foreground hover:text-foreground text-center"
