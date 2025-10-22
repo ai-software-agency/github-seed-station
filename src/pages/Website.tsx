@@ -70,21 +70,21 @@ const Website = () => {
                 </h3>
                 <ol className="space-y-3 text-sm">
                   {[
-                    { num: "1️⃣", title: "Connect your app", desc: "Link your Vercel, Replit, or GitHub project — no setup needed." },
+                    { num: "1", title: "Connect your app", desc: "Link your Vercel, Replit, or GitHub project — no setup needed." },
                     {
-                      num: "2️⃣",
+                      num: "2",
                       title: "We run 150+ checks",
                       desc: "Kreyo scans everything and finds what could go wrong.",
                     },
                     {
-                      num: "3️⃣",
+                      num: "3",
                       title: "Get clear next steps",
                       desc: "See simple fixes or let Kreyo handle them for you.",
                     },
                   ].map((step) => (
                     <li key={step.num} className="flex items-start gap-3">
-                      <span className="text-lg flex-shrink-0">
-                        {step.num}
+                      <span className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-r from-primary via-secondary to-accent flex items-center justify-center">
+                        <span className="text-sm font-bold text-white">{step.num}</span>
                       </span>
                       <div className="text-muted-foreground">
                         <strong className="text-foreground block">{step.title}</strong>
@@ -237,7 +237,9 @@ const Website = () => {
                 key={item.num}
                 className="rounded-2xl p-6 bg-card border border-border transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)]"
               >
-                <div className="text-xs text-muted-foreground mb-2">{item.num}</div>
+                <div className="w-10 h-10 rounded-full bg-gradient-to-r from-primary via-secondary to-accent flex items-center justify-center mb-3">
+                  <span className="text-base font-bold text-white">{item.num}</span>
+                </div>
                 <h3 className="font-semibold font-display mb-2">{item.title}</h3>
                 <p className="text-muted-foreground font-sans">{item.desc}</p>
               </div>
