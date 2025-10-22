@@ -41,7 +41,7 @@ const Waitlist = () => {
 
           {/* Typeform Embed */}
           <div className="mb-12 bg-card border border-border rounded-2xl overflow-hidden shadow-lg">
-            <div data-tf-live="01JGMB1W8HJQ57QPXGV8M3CMNH"></div>
+            <div data-tf-live="01K83NFP5ZQCW1JAF8JGA3GDXF"></div>
           </div>
 
           {/* Benefits Section */}
