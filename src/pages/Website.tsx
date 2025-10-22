@@ -237,8 +237,8 @@ const Website = () => {
                 key={item.num}
                 className="rounded-2xl p-6 bg-card border border-border transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)]"
               >
-                <div className="w-[38px] h-[38px] rounded-full bg-gradient-to-br from-primary via-secondary to-accent flex items-center justify-center mb-3">
-                  <span className="text-base font-bold text-gray-900">{item.num}</span>
+                <div className="w-[30px] h-[30px] rounded-full bg-gradient-to-br from-primary via-secondary to-accent flex items-center justify-center mb-3">
+                  <span className="text-sm font-bold text-gray-900">{item.num}</span>
                 </div>
                 <h3 className="font-semibold font-display mb-2">{item.title}</h3>
                 <p className="text-muted-foreground font-sans">{item.desc}</p>
