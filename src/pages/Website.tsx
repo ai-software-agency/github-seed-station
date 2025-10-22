@@ -141,7 +141,7 @@ const Website = () => {
       </section>
 
       {/* What we do */}
-      <section id="services" className="relative py-16 md:py-24">
+      <section id="services" className="relative py-16 md:py-24 bg-blue-50/30">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="max-w-3xl mb-8">
             <h2 className="text-3xl font-bold font-display">What we do</h2>
@@ -158,14 +158,14 @@ const Website = () => {
                 comingSoon: false,
               },
               {
-                title: "Testing",
-                desc: "We try your app the way real users will — finding bugs, slow screens, and anything that breaks under pressure.",
-                comingSoon: false,
-              },
-              {
                 title: "Security Checks",
                 desc: "We scan for hidden risks — from exposed passwords to weak logins — and make sure your customer data stays safe.",
                 comingSoon: false,
+              },
+              {
+                title: "Testing",
+                desc: "We try your app the way real users will — finding bugs, slow screens, and anything that breaks under pressure.",
+                comingSoon: true,
               },
               {
                 title: "Deployments",
