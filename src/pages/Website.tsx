@@ -86,9 +86,10 @@ const Website = () => {
                       <span className="text-lg flex-shrink-0">
                         {step.num}
                       </span>
-                      <span className="text-muted-foreground">
-                        <strong className="text-foreground">{step.title}</strong> {step.desc}
-                      </span>
+                      <div className="text-muted-foreground">
+                        <strong className="text-foreground block">{step.title}</strong>
+                        <span>{step.desc}</span>
+                      </div>
                     </li>
                   ))}
                 </ol>
