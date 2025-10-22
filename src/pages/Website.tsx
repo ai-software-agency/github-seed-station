@@ -141,7 +141,7 @@ const Website = () => {
       </section>
 
       {/* What we do */}
-      <section id="services" className="relative py-16 md:py-24 bg-blue-50/30">
+      <section id="services" className="relative py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="max-w-3xl mb-8">
             <h2 className="text-3xl font-bold font-display">What we do</h2>
@@ -185,7 +185,7 @@ const Website = () => {
             ].map((item) => (
               <div
                 key={item.title}
-                className="rounded-2xl p-6 bg-card border border-border transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)] relative"
+                className="rounded-2xl p-6 bg-blue-50/30 border border-border transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)] relative"
               >
                 {item.comingSoon && (
                   <div className="absolute top-4 right-4">
