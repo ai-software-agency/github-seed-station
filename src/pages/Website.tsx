@@ -185,7 +185,7 @@ const Website = () => {
             ].map((item) => (
               <div
                 key={item.title}
-                className="rounded-2xl p-6 bg-blue-50/30 border border-border transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)] relative"
+                className="rounded-2xl p-5 bg-blue-50/30 border border-border transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)] relative"
               >
                 {item.comingSoon && (
                   <div className="absolute top-4 right-4">
