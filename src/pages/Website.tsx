@@ -269,7 +269,7 @@ const Website = () => {
             <div className="md:col-span-6">
               <h2 className="text-3xl font-bold font-display">Ready to ship with confidence?</h2>
               <p className="mt-3 text-muted-foreground font-sans">
-                Connect your repo and see Kreyo baseline, harden, and monitor your app — right away.
+                Join the waitlist — we'll help you connect your repo and secure your app in minutes.
               </p>
             </div>
 
