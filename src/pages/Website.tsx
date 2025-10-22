@@ -194,8 +194,8 @@ const Website = () => {
                     </span>
                   </div>
                 )}
-                <h3 className="font-semibold font-display">{item.title}</h3>
-                <p className="mt-2 text-muted-foreground font-sans">{item.desc}</p>
+                <h3 className="font-semibold font-display text-sm">{item.title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground font-sans">{item.desc}</p>
               </div>
             ))}
           </div>
