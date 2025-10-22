@@ -2,9 +2,21 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { TopNav } from "@/components/TopNav";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const Website = () => {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = '//embed.typeform.com/next/embed.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -262,39 +274,8 @@ const Website = () => {
             </div>
 
             <div className="md:col-span-6">
-              <div className="rounded-2xl p-6 bg-card border border-border transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)]">
-                <form
-                  className="grid gap-3"
-                  onSubmit={(e) => {
-                    e.preventDefault();
-                    navigate("/waitlist");
-                  }}
-                >
-                  <Input
-                    className="bg-muted border-border rounded-xl px-4 py-3 h-12"
-                    placeholder="Work email"
-                    type="email"
-                    required
-                  />
-                  <Input
-                    className="bg-muted border-border rounded-xl px-4 py-3 h-12"
-                    placeholder="GitHub org or repo URL"
-                    required
-                  />
-                  <Button type="submit" className="rounded-xl h-12">
-                    Join Waitlist
-                  </Button>
-                  <a
-                    className="text-sm text-muted-foreground hover:text-foreground text-center"
-                    href="#how"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      document.getElementById("how")?.scrollIntoView({ behavior: "smooth" });
-                    }}
-                  >
-                    Or watch Kreyo build in real time →
-                  </a>
-                </form>
+              <div className="rounded-2xl overflow-hidden bg-card border border-border transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)]">
+                <div data-tf-live="01K83NFP5ZQCW1JAF8JGA3GDXF"></div>
               </div>
             </div>
           </div>
