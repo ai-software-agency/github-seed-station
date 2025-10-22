@@ -49,10 +49,10 @@ const Website = () => {
 
               <div className="text-lg font-sans max-w-2xl space-y-1.5">
                 <p className="text-muted-foreground">
-                  You've planned in ChatGPT and designed in Figma. Cursor, Replit, v0, or Lovable got you 80% there.
+                  You've planned, designed, and coded with AI tools — ChatGPT, Figma, Cursor, Replit, v0, Lovable. Now it's time to ship.
                 </p>
                 <p className="font-bold text-primary">
-                  Kreyo takes you the last mile — reviews, QA, live & security testing, deployment hardening, monitoring, and incident response.
+                  Kreyo makes your app production-ready — tested, secured, monitored, and maintained.
                 </p>
               </div>
 
