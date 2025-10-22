@@ -83,8 +83,8 @@ const Website = () => {
                     },
                   ].map((step) => (
                     <li key={step.num} className="flex items-start gap-3">
-                      <span className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-r from-primary via-secondary to-accent flex items-center justify-center">
-                        <span className="text-sm font-bold text-white">{step.num}</span>
+                      <span className="flex-shrink-0 w-[30px] h-[30px] rounded-full bg-gradient-to-br from-primary via-secondary to-accent flex items-center justify-center">
+                        <span className="text-sm font-bold text-gray-900">{step.num}</span>
                       </span>
                       <div className="text-muted-foreground">
                         <strong className="text-foreground block">{step.title}</strong>
@@ -237,8 +237,8 @@ const Website = () => {
                 key={item.num}
                 className="rounded-2xl p-6 bg-card border border-border transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)]"
               >
-                <div className="w-10 h-10 rounded-full bg-gradient-to-r from-primary via-secondary to-accent flex items-center justify-center mb-3">
-                  <span className="text-base font-bold text-white">{item.num}</span>
+                <div className="w-[38px] h-[38px] rounded-full bg-gradient-to-br from-primary via-secondary to-accent flex items-center justify-center mb-3">
+                  <span className="text-base font-bold text-gray-900">{item.num}</span>
                 </div>
                 <h3 className="font-semibold font-display mb-2">{item.title}</h3>
                 <p className="text-muted-foreground font-sans">{item.desc}</p>
