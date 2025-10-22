@@ -70,25 +70,20 @@ const Website = () => {
                 </h3>
                 <ol className="space-y-3 text-sm">
                   {[
-                    { num: "1", title: "Connect GitHub.", desc: "We scan your repo(s) and environment." },
+                    { num: "1️⃣", title: "Connect your app", desc: "Link your Vercel, Replit, or GitHub project — no setup needed." },
                     {
-                      num: "2",
-                      title: "Automated checks + human review.",
-                      desc: "Static analysis, dependency & secret checks, test coverage and usability QA.",
+                      num: "2️⃣",
+                      title: "We run 150+ checks",
+                      desc: "Kreyo scans everything and finds what could go wrong.",
                     },
                     {
-                      num: "3",
-                      title: "Harden & ship.",
-                      desc: "Security testing, live testing, prod‑safe configs, rollbacks.",
-                    },
-                    {
-                      num: "4",
-                      title: "Monitor & respond.",
-                      desc: "Ongoing maintenance, observability, and incident response.",
+                      num: "3️⃣",
+                      title: "Get clear next steps",
+                      desc: "See simple fixes or let Kreyo handle them for you.",
                     },
                   ].map((step) => (
                     <li key={step.num} className="flex items-start gap-3">
-                      <span className="h-6 w-6 rounded-full bg-gradient-to-r from-primary to-secondary text-[10px] font-bold grid place-items-center flex-shrink-0">
+                      <span className="text-lg flex-shrink-0">
                         {step.num}
                       </span>
                       <span className="text-muted-foreground">
