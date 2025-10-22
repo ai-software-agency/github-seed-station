@@ -111,11 +111,20 @@ const Website = () => {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
-              { title: "Plan & Design", desc: "ChatGPT • Figma • Canva • Lovable" },
-              { title: "Code & Compose", desc: "Cursor • Replit • v0 • Lovable" },
+              { 
+                title: "Plan & Design", 
+                tools: "ChatGPT · Figma · Canva · Lovable",
+                desc: "Turn your idea into a clear plan — describe what you want and visualize how it should look."
+              },
+              { 
+                title: "Code & Compose", 
+                tools: "Cursor · Replit · v0 · Lovable",
+                desc: "Build the first working version of your app using simple AI-powered coding tools."
+              },
               {
                 title: "Production Readiness",
-                desc: "Kreyo layers QA, security, live testing, and monitoring on top — so you can ship with confidence.",
+                tools: "Kreyo",
+                desc: "Make your app safe, stable, and ready for real customers — with reviews, testing, and monitoring built in.",
               },
             ].map((item) => (
               <article
@@ -123,7 +132,8 @@ const Website = () => {
                 className="rounded-2xl p-5 bg-card border border-border transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)]"
               >
                 <h3 className="font-semibold font-display">{item.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground font-sans">{item.desc}</p>
+                <p className="text-sm text-muted-foreground font-sans">{item.tools}</p>
+                <p className="mt-1.5 text-sm text-muted-foreground font-sans">{item.desc}</p>
               </article>
             ))}
           </div>
