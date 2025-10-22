@@ -207,30 +207,30 @@ const Website = () => {
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="max-w-3xl mb-8">
             <h2 className="text-3xl font-bold font-display">How it works</h2>
-            <p className="mt-3 text-muted-foreground font-sans">SaaS onboarding with a 60‑second time‑to‑value.</p>
+            <p className="mt-3 text-muted-foreground font-sans">Get started in minutes — Kreyo connects, checks, and secures your app automatically.</p>
           </div>
 
           <div className="grid md:grid-cols-4 gap-6 text-sm">
             {[
               {
                 num: "01",
-                title: "Connect GitHub",
-                desc: "OAuth into Kreyo, select repos, set scopes. We create a safe read path.",
+                title: "Connect your app",
+                desc: "Sign in with your GitHub, Replit, or Vercel account. We only read your project — nothing changes without your OK.",
               },
               {
                 num: "02",
-                title: "Baseline checks",
-                desc: "Static analysis, dependencies, tests, secrets, perf budget, accessibility.",
+                title: "Run automatic checks",
+                desc: "Kreyo runs over 150 quality and security tests — spotting risks and weak points before launch.",
               },
               {
                 num: "03",
-                title: "Harden & validate",
-                desc: "Security testing, live test runs, staging approvals, release notes.",
+                title: "Review & prepare to launch",
+                desc: "You'll see a clear report with suggested fixes. We help you lock down what matters — performance, security, and reliability.",
               },
               {
                 num: "04",
-                title: "Monitor & respond",
-                desc: "Observability dashboards, alerts, on‑call, incident response.",
+                title: "Stay protected",
+                desc: "After launch, Kreyo monitors your app 24/7 and alerts you if something breaks or needs updating.",
               },
             ].map((item) => (
               <div
@@ -252,22 +252,21 @@ const Website = () => {
           <div className="grid md:grid-cols-12 gap-10 items-start">
             <div className="md:col-span-6">
               <h2 className="text-3xl font-bold font-display mb-5">Why Kreyo</h2>
+              <p className="text-muted-foreground font-sans mb-5">
+                Kreyo helps small teams ship confidently — without needing a full dev or security team.
+              </p>
               <ul className="space-y-3 text-sm text-muted-foreground font-sans">
                 <li>
-                  <strong className="text-foreground">Built for the serious builder.</strong> Not enterprise bloat, not
-                  hobby‑toy. Just production‑grade craft.
+                  <strong className="text-foreground">Made for serious builders.</strong> Not hobby projects, not enterprise red tape — just practical production-grade protection.
                 </li>
                 <li>
-                  <strong className="text-foreground">Calm, intentional, human.</strong> Minimal UI, clear guidance, no
-                  hype — just intelligent flow.
+                  <strong className="text-foreground">Clear and human.</strong> No dashboards full of jargon. You get plain-English reports and one-click actions.
                 </li>
                 <li>
-                  <strong className="text-foreground">Own your stack.</strong> Keep your tools and repos. We add the
-                  layer that makes them safe to ship.
+                  <strong className="text-foreground">Works with what you already use.</strong> Kreyo plugs into your existing tools — you keep your setup, we make it safer.
                 </li>
                 <li>
-                  <strong className="text-foreground">From 0→Prod fast.</strong> Time‑to‑first‑value in 60 seconds.
-                  Focus on outcomes: paid beta, hardened MVP, API to prod.
+                  <strong className="text-foreground">Fast to value.</strong> From sign-up to first scan in under a minute. Turn your working prototype into a version you can trust with customers.
                 </li>
               </ul>
             </div>
@@ -276,11 +275,10 @@ const Website = () => {
               <div className="rounded-2xl p-6 bg-card border border-border transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)]">
                 <h3 className="font-semibold font-display mb-4">What success looks like</h3>
                 <ul className="space-y-2 text-sm text-muted-foreground font-sans">
-                  <li>✔ Paid beta‑ready release with auth/payments configured</li>
-                  <li>✔ Hardened MVP with rollback/versioning and observability</li>
-                  <li>✔ API wrapper shipped to production with incident playbooks</li>
+                  <li>✔ Your app passes a full security scan before launch</li>
+                  <li>✔ You can share it with customers confidently</li>
+                  <li>✔ You stay protected — with auto-checks, updates, and peace of mind</li>
                 </ul>
-                <p className="mt-3 text-xs text-muted-foreground/70">Case studies and demos coming soon.</p>
               </div>
             </div>
           </div>
