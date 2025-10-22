@@ -1,5 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { TopNav } from "@/components/TopNav";
+import vercelLogo from "@/assets/vercel-logo.webp";
+import replitLogo from "@/assets/replit-logo.png";
+import figmaLogo from "@/assets/figma-logo.webp";
+import githubLogo from "@/assets/github-logo.webp";
+import lovableLogo from "@/assets/lovable-logo.png";
 
 const Aisec = () => {
   return (
@@ -77,55 +82,13 @@ const Aisec = () => {
       {/* Integration logos */}
       <section id="integrations" className="py-14 md:py-20 bg-muted/30">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <h2 className="text-2xl font-bold font-display text-center mb-8">Kreyo works seamlessly with</h2>
-          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
-            {/* Vercel */}
-            <div className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
-              <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 1.5l12 21H0z"/>
-              </svg>
-              <span className="font-semibold">Vercel</span>
-            </div>
-
-            {/* Cursor */}
-            <div className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
-              <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M3 3h18v18H3V3zm2 2v14h14V5H5zm3 3h8v8H8V8z"/>
-              </svg>
-              <span className="font-semibold">Cursor</span>
-            </div>
-
-            {/* Figma */}
-            <div className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
-              <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M8 2a3 3 0 0 0 0 6 3 3 0 0 0 0 6 3 3 0 0 0 3 3V8a3 3 0 1 0 3-3H8zm0 0h5a3 3 0 1 1 0 6H8a3 3 0 0 1 0-6z"/>
-              </svg>
-              <span className="font-semibold">Figma</span>
-            </div>
-
-            {/* Replit */}
-            <div className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
-              <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M7 3.5h5.5v5.5H7V3.5zm0 11.5h5.5V21H7v-6zm11.5 0v6H13v-6h5.5zM13 3.5h5.5v5.5H13V3.5z"/>
-              </svg>
-              <span className="font-semibold">Replit</span>
-            </div>
-
-            {/* GitHub */}
-            <div className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
-              <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-              </svg>
-              <span className="font-semibold">GitHub</span>
-            </div>
-
-            {/* Lovable */}
-            <div className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
-              <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-              </svg>
-              <span className="font-semibold">Lovable</span>
-            </div>
+          <h2 className="text-2xl font-bold font-display text-center mb-12">Kreyo works seamlessly with</h2>
+          <div className="flex items-center justify-between gap-6">
+            <img src={vercelLogo} alt="Vercel" className="h-8 object-contain opacity-60 hover:opacity-100 transition-opacity" />
+            <img src={replitLogo} alt="Replit" className="h-8 object-contain opacity-60 hover:opacity-100 transition-opacity" />
+            <img src={figmaLogo} alt="Figma" className="h-8 object-contain opacity-60 hover:opacity-100 transition-opacity" />
+            <img src={githubLogo} alt="GitHub" className="h-8 object-contain opacity-60 hover:opacity-100 transition-opacity" />
+            <img src={lovableLogo} alt="Lovable" className="h-8 object-contain opacity-60 hover:opacity-100 transition-opacity" />
           </div>
         </div>
       </section>
