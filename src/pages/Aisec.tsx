@@ -80,7 +80,7 @@ const Aisec = () => {
       </section>
 
       {/* Integration logos */}
-      <section id="integrations" className="py-14 md:py-20 bg-muted/30">
+      <section id="integrations" className="py-7 md:py-10 bg-muted/30">
         <div className="mx-auto max-w-7xl px-[15%]">
           <h2 className="text-2xl font-bold font-display text-center mb-12">Kreyo works seamlessly with</h2>
           <div className="flex items-center justify-between gap-6">
