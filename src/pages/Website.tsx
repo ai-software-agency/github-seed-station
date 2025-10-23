@@ -274,22 +274,22 @@ const Website = () => {
             {/* Left side: 2×2 grid of mini-cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="rounded-2xl p-5 bg-blue-50/30 border border-border transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)] hover:-translate-y-0.5">
-                <h3 className="font-semibold font-display mb-2">Made for serious builders</h3>
+                <h3 className="font-semibold font-display mb-2">🏗️ Made for serious builders</h3>
                 <p className="text-sm text-muted-foreground font-sans">Practical production-grade protection</p>
               </div>
 
               <div className="rounded-2xl p-5 bg-blue-50/30 border border-border transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)] hover:-translate-y-0.5">
-                <h3 className="font-semibold font-display mb-2">Clear and human</h3>
+                <h3 className="font-semibold font-display mb-2">💬 Clear and human</h3>
                 <p className="text-sm text-muted-foreground font-sans">Plain-English reports and one-click actions</p>
               </div>
 
               <div className="rounded-2xl p-5 bg-blue-50/30 border border-border transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)] hover:-translate-y-0.5">
-                <h3 className="font-semibold font-display mb-2">Works with what you use</h3>
+                <h3 className="font-semibold font-display mb-2">🔌 Works with what you use</h3>
                 <p className="text-sm text-muted-foreground font-sans">Plugs into your existing tools seamlessly</p>
               </div>
 
               <div className="rounded-2xl p-5 bg-blue-50/30 border border-border transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)] hover:-translate-y-0.5">
-                <h3 className="font-semibold font-display mb-2">Fast to value</h3>
+                <h3 className="font-semibold font-display mb-2">⚡ Fast to value</h3>
                 <p className="text-sm text-muted-foreground font-sans">From sign-up to first scan in under a minute</p>
               </div>
             </div>
