@@ -119,22 +119,29 @@ const Website = () => {
               { 
                 title: "Plan & Design", 
                 tools: "ChatGPT · Figma · Canva · Lovable",
-                desc: "Turn your idea into a clear plan — describe what you want and visualize how it should look."
+                desc: "Turn your idea into a clear plan — describe what you want and visualize how it should look.",
+                isHighlighted: false
               },
               { 
                 title: "Code & Compose", 
                 tools: "Cursor · Replit · v0 · Lovable",
-                desc: "Build the first working version of your app using simple AI-powered coding tools."
+                desc: "Build the first working version of your app using simple AI-powered coding tools.",
+                isHighlighted: false
               },
               {
                 title: "Production Readiness",
                 tools: "Kreyo",
                 desc: "Make your app safe, stable, and ready for real customers — with reviews, testing, and monitoring built in.",
+                isHighlighted: true
               },
             ].map((item) => (
               <article
                 key={item.title}
-                className="rounded-2xl p-5 bg-card border border-border transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)]"
+                className={`rounded-2xl p-5 border border-border transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)] ${
+                  item.isHighlighted 
+                    ? 'bg-gradient-to-br from-accent/5 via-accent/3 to-transparent' 
+                    : 'bg-card'
+                }`}
               >
                 <h3 className="font-semibold font-display">{item.title}</h3>
                 <p className="text-sm text-muted-foreground font-sans">{item.tools}</p>
