@@ -256,37 +256,58 @@ const Website = () => {
       {/* Why Kreyo / Trust */}
       <section id="trust" className="relative py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="grid md:grid-cols-12 gap-10 items-start">
-            <div className="md:col-span-6">
-              <h2 className="text-3xl font-bold font-display mb-5">Why Kreyo</h2>
-              <p className="text-muted-foreground font-sans mb-5">
-                Kreyo helps small teams ship confidently — without needing a full dev or security team.
-              </p>
-              <ul className="space-y-3 text-sm text-muted-foreground font-sans">
-                <li>
-                  <strong className="text-foreground">Made for serious builders.</strong> Not hobby projects, not enterprise red tape — just practical production-grade protection.
-                </li>
-                <li>
-                  <strong className="text-foreground">Clear and human.</strong> No dashboards full of jargon. You get plain-English reports and one-click actions.
-                </li>
-                <li>
-                  <strong className="text-foreground">Works with what you already use.</strong> Kreyo plugs into your existing tools — you keep your setup, we make it safer.
-                </li>
-                <li>
-                  <strong className="text-foreground">Fast to value.</strong> From sign-up to first scan in under a minute. Turn your working prototype into a version you can trust with customers.
-                </li>
-              </ul>
+          <div className="max-w-3xl mb-8">
+            <h2 className="text-3xl font-bold font-display">Why Kreyo</h2>
+            <p className="mt-3 text-muted-foreground font-sans">
+              Kreyo helps small teams ship confidently — without needing a full dev or security team.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-6">
+            {/* Left side: 2×2 grid of mini-cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="rounded-2xl p-5 bg-card border border-border transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)] hover:-translate-y-0.5">
+                <div className="w-2 h-2 rounded-full bg-gradient-to-r from-primary to-secondary mb-3"></div>
+                <h3 className="font-semibold font-display text-sm mb-1.5">Made for serious builders</h3>
+                <p className="text-sm text-muted-foreground font-sans">Practical production-grade protection</p>
+              </div>
+
+              <div className="rounded-2xl p-5 bg-card border border-border transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)] hover:-translate-y-0.5">
+                <div className="w-2 h-2 rounded-full bg-gradient-to-r from-secondary to-accent mb-3"></div>
+                <h3 className="font-semibold font-display text-sm mb-1.5">Clear and human</h3>
+                <p className="text-sm text-muted-foreground font-sans">Plain-English reports and one-click actions</p>
+              </div>
+
+              <div className="rounded-2xl p-5 bg-card border border-border transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)] hover:-translate-y-0.5">
+                <div className="w-2 h-2 rounded-full bg-gradient-to-r from-accent to-primary mb-3"></div>
+                <h3 className="font-semibold font-display text-sm mb-1.5">Works with what you use</h3>
+                <p className="text-sm text-muted-foreground font-sans">Plugs into your existing tools seamlessly</p>
+              </div>
+
+              <div className="rounded-2xl p-5 bg-card border border-border transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)] hover:-translate-y-0.5">
+                <div className="w-2 h-2 rounded-full bg-gradient-to-r from-primary via-secondary to-accent mb-3"></div>
+                <h3 className="font-semibold font-display text-sm mb-1.5">Fast to value</h3>
+                <p className="text-sm text-muted-foreground font-sans">From sign-up to first scan in under a minute</p>
+              </div>
             </div>
 
-            <div className="md:col-span-6">
-              <div className="rounded-2xl p-6 bg-card border border-border transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)]">
-                <h3 className="font-semibold font-display mb-4">What success looks like</h3>
-                <ul className="space-y-2 text-sm text-muted-foreground font-sans">
-                  <li>✔ Your app passes a full security scan before launch</li>
-                  <li>✔ You can share it with customers confidently</li>
-                  <li>✔ You stay protected — with auto-checks, updates, and peace of mind</li>
-                </ul>
-              </div>
+            {/* Right side: Outcome card */}
+            <div className="rounded-2xl p-6 bg-blue-50/30 border border-border transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)] flex flex-col justify-center">
+              <h3 className="font-semibold font-display text-lg mb-4">What success looks like</h3>
+              <ul className="space-y-3 text-sm text-muted-foreground font-sans">
+                <li className="flex items-start gap-2">
+                  <span className="text-primary mt-0.5">✔</span>
+                  <span>Your app passes a full security scan before launch</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary mt-0.5">✔</span>
+                  <span>You can share it with customers confidently</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary mt-0.5">✔</span>
+                  <span>You stay protected — with auto-checks, updates, and peace of mind</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
