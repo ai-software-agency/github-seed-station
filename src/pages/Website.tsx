@@ -299,7 +299,7 @@ const Website = () => {
             </div>
 
             {/* Right side: Outcome card */}
-            <div className="rounded-2xl p-6 bg-blue-50/30 border border-border transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)] flex flex-col justify-center">
+            <div className="rounded-2xl p-6 bg-gradient-to-br from-accent/20 via-secondary/15 to-primary/10 border border-border transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)] flex flex-col justify-center">
               <h3 className="font-semibold font-display text-lg mb-4">What success looks like</h3>
               <ul className="space-y-3 text-sm text-muted-foreground font-sans">
                 <li className="flex items-start gap-2">
