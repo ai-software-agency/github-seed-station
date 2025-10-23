@@ -139,7 +139,7 @@ const Website = () => {
                 key={item.title}
                 className={`rounded-2xl p-5 border border-border transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)] ${
                   item.isHighlighted 
-                    ? 'bg-gradient-to-br from-accent/5 via-accent/3 to-transparent' 
+                    ? 'bg-gradient-to-br from-accent/20 via-secondary/15 to-primary/10' 
                     : 'bg-card'
                 }`}
               >
