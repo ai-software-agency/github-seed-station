@@ -291,12 +291,6 @@ const Dashboard3 = () => {
             {/* Left Navigation Sidebar */}
             <Sidebar className="border-r border-border w-44 flex-shrink-0 h-[calc(100vh-4rem)] sticky top-16 bg-muted/20">
             <SidebarContent>
-              {/* Logo Area */}
-              <div className="px-6 py-6 pb-4">
-                <img src="/src/assets/kreyo-logo.svg" alt="Kreyo" className="h-6" />
-              </div>
-              <div className="border-b border-border/40 mb-4" />
-              
               <SidebarGroup>
                 <SidebarGroupContent>
                   <SidebarMenu>
