@@ -281,15 +281,16 @@ const Dashboard2 = () => {
 
           {/* Main Content Area */}
           <div className="flex-1 flex ml-64">
-            <main className="flex-1 px-4 sm:px-6 py-8 overflow-auto">
-              {/* Page Title */}
-              <div className="mb-6">
-                <h2 className="text-3xl font-bold font-display text-foreground mb-2">Dashboard</h2>
-                <p className="text-muted-foreground font-sans">Monitor your security posture and recent activity</p>
-              </div>
-
-              {/* Top Metrics Summary */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+            <main className="flex-1 px-8 py-8 overflow-auto">
+              {/* Header with Metrics - Combined Section */}
+              <div className="mb-8 pb-6 border-b border-border">
+                <div className="mb-6">
+                  <h2 className="text-3xl font-bold font-display text-foreground mb-2">Dashboard</h2>
+                  <p className="text-muted-foreground font-sans">Monitor your security posture and recent activity</p>
+                </div>
+                
+                {/* Top Metrics Summary */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <Card>
                   <CardHeader className="pb-3">
                     <CardTitle className="text-sm font-medium text-muted-foreground">Projects Scanned</CardTitle>
@@ -333,13 +334,15 @@ const Dashboard2 = () => {
                     <p className="text-xs text-muted-foreground mt-1">Secure / Needs Review</p>
                   </CardContent>
                 </Card>
+                </div>
               </div>
 
-              {/* Filters */}
-              <div className="flex items-center gap-3 mb-6">
+              {/* Unified Filter Bar */}
+              <div className="flex items-center gap-3 mb-6 p-4 bg-muted/30 rounded-lg border border-border">
                 <Filter className="w-4 h-4 text-muted-foreground" />
+                <span className="text-sm font-medium text-muted-foreground">Filter by:</span>
                 <Select value={statusFilter} onValueChange={setStatusFilter}>
-                  <SelectTrigger className="w-[180px]">
+                  <SelectTrigger className="w-[160px] bg-background">
                     <SelectValue placeholder="Status" />
                   </SelectTrigger>
                   <SelectContent>
@@ -351,7 +354,7 @@ const Dashboard2 = () => {
                 </Select>
 
                 <Select value={scanFilter} onValueChange={setScanFilter}>
-                  <SelectTrigger className="w-[180px]">
+                  <SelectTrigger className="w-[160px] bg-background">
                     <SelectValue placeholder="Last Scan" />
                   </SelectTrigger>
                   <SelectContent>
@@ -381,7 +384,7 @@ const Dashboard2 = () => {
               ) : (
                 <>
                   {/* Projects Grid */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 mb-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 mb-8 auto-rows-fr">
                     {filteredProjects.map((project) => (
                       <ProjectCard
                         key={project.id}
@@ -418,8 +421,8 @@ const Dashboard2 = () => {
             </main>
 
             {/* Right Sidebar - Activity Feed */}
-            <aside className="w-80 border-l border-border bg-background overflow-hidden flex flex-col">
-              <div className="p-6 border-b border-border">
+            <aside className="w-80 border-l border-border bg-muted/20 overflow-hidden flex flex-col">
+              <div className="px-8 py-8 pb-6 border-b border-border bg-background">
                 <div className="flex items-center gap-2 mb-1">
                   <Activity className="w-5 h-5 text-primary" />
                   <h3 className="text-lg font-semibold font-display">Activity Feed</h3>
@@ -427,8 +430,8 @@ const Dashboard2 = () => {
                 <p className="text-xs text-muted-foreground">Recent security actions</p>
               </div>
               
-              <ScrollArea className="flex-1">
-                <div className="p-4 space-y-3">
+              <ScrollArea className="flex-1 bg-background">
+                <div className="px-8 py-6 space-y-3">
                   {activityLog.map((activity) => (
                     <button
                       key={activity.id}
@@ -661,8 +664,8 @@ const ProjectCard = ({
   getStatusBadge 
 }: ProjectCardProps) => {
   return (
-    <Card className="hover:border-accent/50 transition-colors group">
-      <CardHeader>
+    <Card className="hover:border-accent/50 transition-colors group flex flex-col h-full">
+      <CardHeader className="flex-1">
         <div className="flex items-start justify-between mb-2">
           <div className="flex items-center gap-2">
             <Github className="w-5 h-5 text-muted-foreground" />
@@ -738,8 +741,8 @@ const ProjectCard = ({
         </div>
       </CardHeader>
       
-      <CardContent>
-        <Button 
+      <CardContent className="pt-0 pb-6">
+        <Button
           className="w-full" 
           onClick={() => navigate('/scanning')}
           disabled={project.status === "scanning"}
