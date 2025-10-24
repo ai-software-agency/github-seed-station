@@ -235,7 +235,7 @@ const Dashboard2 = () => {
         <SidebarProvider>
           <div className="min-h-screen flex w-full bg-background">
             {/* Left Navigation Sidebar */}
-            <Sidebar className="border-r border-border fixed top-16 left-0 bottom-0">
+            <Sidebar className="border-r border-border w-64 flex-shrink-0">
             <SidebarContent>
               <SidebarGroup>
                 <SidebarGroupContent>
@@ -280,8 +280,8 @@ const Dashboard2 = () => {
           </Sidebar>
 
           {/* Main Content Area */}
-          <div className="flex-1 flex ml-64">
-            <main className="flex-1 px-8 py-8 overflow-auto">
+          <div className="flex-1 flex">
+            <main className="flex-1 px-8 py-8 overflow-auto max-w-[1400px]">
               {/* Header with Metrics - Combined Section */}
               <div className="mb-8 pb-6 border-b border-border">
                 <div className="mb-6">
