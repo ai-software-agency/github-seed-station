@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Start from "./pages/Start";
 import Waitlist from "./pages/Waitlist";
 import Dashboard from "./pages/Dashboard";
+import Dashboard2 from "./pages/Dashboard2";
 import Scanning from "./pages/Scanning";
 import Results from "./pages/Results";
 import Activity from "./pages/Activity";
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/waitlist" element={<Waitlist />} />
           <Route path="/aisec" element={<Aisec />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard2" element={<Dashboard2 />} />
           <Route path="/scanning" element={<Scanning />} />
           <Route path="/results" element={<Results />} />
           <Route path="/activity" element={<Activity />} />
