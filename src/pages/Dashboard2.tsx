@@ -231,10 +231,11 @@ const Dashboard2 = () => {
   return (
     <>
       <TopNav />
-      <SidebarProvider>
-        <div className="min-h-screen flex w-full bg-background pt-16">
-          {/* Left Navigation Sidebar */}
-          <Sidebar className="border-r border-border">
+      <div className="pt-16">
+        <SidebarProvider>
+          <div className="min-h-screen flex w-full bg-background">
+            {/* Left Navigation Sidebar */}
+            <Sidebar className="border-r border-border">
             <SidebarContent>
               <SidebarGroup>
                 <SidebarGroupContent>
@@ -467,7 +468,8 @@ const Dashboard2 = () => {
             </aside>
           </div>
         </div>
-      </SidebarProvider>
+        </SidebarProvider>
+      </div>
 
       {/* Connect Repository Modal */}
       <ConnectRepositoryModal open={connectModalOpen} onOpenChange={setConnectModalOpen} />
