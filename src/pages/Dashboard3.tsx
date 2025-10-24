@@ -289,7 +289,7 @@ const Dashboard3 = () => {
         <SidebarProvider>
           <div className="min-h-screen flex w-full bg-background">
             {/* Left Navigation Sidebar */}
-            <Sidebar className="border-r border-gray-200 w-44 flex-shrink-0 h-[calc(100vh-4rem)] sticky top-16 bg-transparent [&_[data-sidebar=sidebar]]:bg-transparent">
+            <Sidebar className="border-r border-gray-200 w-52 flex-shrink-0 h-[calc(100vh-4rem)] sticky top-16 bg-transparent [&_[data-sidebar=sidebar]]:bg-transparent pl-3">
             <SidebarContent className="pt-6 bg-transparent">
               <SidebarGroup>
                 <SidebarGroupContent>
