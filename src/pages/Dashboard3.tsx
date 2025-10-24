@@ -289,8 +289,14 @@ const Dashboard3 = () => {
         <SidebarProvider>
           <div className="min-h-screen flex w-full bg-background">
             {/* Left Navigation Sidebar */}
-            <Sidebar className="border-r border-border w-44 flex-shrink-0 h-[calc(100vh-4rem)] sticky top-16">
+            <Sidebar className="border-r border-border w-44 flex-shrink-0 h-[calc(100vh-4rem)] sticky top-16 bg-muted/20">
             <SidebarContent>
+              {/* Logo Area */}
+              <div className="px-6 py-6 pb-4">
+                <img src="/src/assets/kreyo-logo.svg" alt="Kreyo" className="h-6" />
+              </div>
+              <div className="border-b border-border/40 mb-4" />
+              
               <SidebarGroup>
                 <SidebarGroupContent>
                   <SidebarMenu>
@@ -298,10 +304,10 @@ const Dashboard3 = () => {
                       <SidebarMenuButton asChild>
                         <button
                           onClick={() => navigate('/dashboard3')}
-                          className="flex items-center gap-3 w-full px-3 py-2 text-sidebar-foreground hover:bg-sidebar-accent rounded-md"
+                          className="flex items-center gap-3 w-full px-3 py-2 text-sidebar-foreground bg-sidebar-accent rounded-md"
                         >
-                          <LayoutDashboard className="w-5 h-5" />
-                          <span>Dashboard</span>
+                          <LayoutDashboard className="w-4 h-4" />
+                          <span className="text-sm">Dashboard</span>
                         </button>
                       </SidebarMenuButton>
                     </SidebarMenuItem>
@@ -311,8 +317,8 @@ const Dashboard3 = () => {
                           onClick={() => navigate('/results')}
                           className="flex items-center gap-3 w-full px-3 py-2 text-sidebar-foreground hover:bg-sidebar-accent rounded-md"
                         >
-                          <FileSearch className="w-5 h-5" />
-                          <span>Scan Reports</span>
+                          <FileSearch className="w-4 h-4" />
+                          <span className="text-sm">Scan Reports</span>
                         </button>
                       </SidebarMenuButton>
                     </SidebarMenuItem>
@@ -322,8 +328,8 @@ const Dashboard3 = () => {
                           onClick={() => navigate('/activity')}
                           className="flex items-center gap-3 w-full px-3 py-2 text-sidebar-foreground hover:bg-sidebar-accent rounded-md"
                         >
-                          <Settings className="w-5 h-5" />
-                          <span>Settings</span>
+                          <Settings className="w-4 h-4" />
+                          <span className="text-sm">Settings</span>
                         </button>
                       </SidebarMenuButton>
                     </SidebarMenuItem>
@@ -335,7 +341,7 @@ const Dashboard3 = () => {
 
           {/* Main Content Area */}
           <div className="flex-1 flex">
-            <main className="flex-1 px-8 py-8 overflow-auto max-w-[1400px]">
+            <main className="flex-1 pl-4 pr-8 py-8 overflow-auto max-w-[1400px]">
               {/* Header */}
               <div className="mb-8">
                 <h2 className="text-3xl font-bold font-display text-foreground mb-2">Dashboard</h2>
