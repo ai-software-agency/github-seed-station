@@ -138,31 +138,31 @@ const mockProjects: Project[] = [
 const mockActivityLog: ActivityLogEntry[] = [
   {
     id: "1",
-    timestamp: "2 minutes ago",
+    timestamp: "2m",
     action: "Revoked leaked AWS key in my-saas-app",
     type: "security",
   },
   {
     id: "2",
-    timestamp: "15 minutes ago",
+    timestamp: "15m",
     action: "Blocked /admin request from 54.23.1.22",
     type: "security",
   },
   {
     id: "3",
-    timestamp: "1 hour ago",
+    timestamp: "1h",
     action: "Added CSP headers to xyz.vercel.app",
     type: "fix",
   },
   {
     id: "4",
-    timestamp: "2 hours ago",
+    timestamp: "2h",
     action: "Completed scan for portfolio-site",
     type: "scan",
   },
   {
     id: "5",
-    timestamp: "3 hours ago",
+    timestamp: "3h",
     action: "Fixed input validation in mobile-backend",
     type: "fix",
   },
@@ -208,6 +208,35 @@ const Dashboard3 = () => {
       case "scanning":
         return <Badge className="bg-primary/10 text-primary hover:bg-primary/20 text-xs">Scan Running</Badge>;
     }
+  };
+
+  const getIssueSummary = (project: Project) => {
+    const totalIssues = project.issueSummary.secrets + project.issueSummary.access + project.issueSummary.input;
+    if (totalIssues === 0) {
+      return "No issues found";
+    }
+    
+    const issueParts: string[] = [];
+    if (project.issueSummary.secrets > 0) issueParts.push(`${project.issueSummary.secrets} Secrets`);
+    if (project.issueSummary.access > 0) issueParts.push(`${project.issueSummary.access} Access`);
+    if (project.issueSummary.input > 0) issueParts.push(`${project.issueSummary.input} Input`);
+    
+    return `${totalIssues} issue${totalIssues > 1 ? 's' : ''}: ${issueParts.join(', ')}`;
+  };
+
+  const getRelativeTime = (dateStr: string) => {
+    const date = new Date(dateStr);
+    const now = new Date();
+    const diffMs = now.getTime() - date.getTime();
+    const diffMins = Math.floor(diffMs / 60000);
+    const diffHours = Math.floor(diffMins / 60);
+    const diffDays = Math.floor(diffHours / 24);
+
+    if (diffMins < 60) return `${diffMins}m ago`;
+    if (diffHours < 24) return `${diffHours}h ago`;
+    if (diffDays === 1) return 'Yesterday';
+    if (diffDays < 7) return `${diffDays}d ago`;
+    return dateStr;
   };
 
   const handleActivityClick = (activity: ActivityLogEntry) => {
@@ -307,100 +336,76 @@ const Dashboard3 = () => {
           {/* Main Content Area */}
           <div className="flex-1 flex">
             <main className="flex-1 px-8 py-8 overflow-auto max-w-[1400px]">
-              {/* Header with Metrics - Combined Section */}
+              {/* Header */}
+              <div className="mb-8">
+                <h2 className="text-3xl font-bold font-display text-foreground mb-2">Dashboard</h2>
+                <p className="text-muted-foreground font-sans">Monitor your security posture and recent activity</p>
+              </div>
+              
+              {/* Condensed Top Metrics */}
               <div className="mb-8 pb-6 border-b border-border">
-                <div className="mb-6">
-                  <h2 className="text-3xl font-bold font-display text-foreground mb-2">Dashboard</h2>
-                  <p className="text-muted-foreground font-sans">Monitor your security posture and recent activity</p>
-                </div>
-                
-                {/* Top Metrics Summary */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                <Card>
-                  <CardHeader className="pb-3">
-                    <CardTitle className="text-sm font-medium text-muted-foreground">Projects Scanned</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="text-3xl font-bold font-display text-foreground">{projects.length}</div>
-                    <p className="text-xs text-muted-foreground mt-1">This week</p>
-                  </CardContent>
-                </Card>
-
-                <Card>
-                  <CardHeader className="pb-3">
-                    <CardTitle className="text-sm font-medium text-muted-foreground">Issues Detected</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="text-3xl font-bold font-display text-foreground">{totalIssues}</div>
-                    <p className="text-xs text-muted-foreground mt-1">Across all projects</p>
-                  </CardContent>
-                </Card>
-
-                <Card>
-                  <CardHeader className="pb-3">
-                    <CardTitle className="text-sm font-medium text-muted-foreground">Actions Taken</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="text-3xl font-bold font-display text-foreground">{totalActionsToday}</div>
-                    <p className="text-xs text-muted-foreground mt-1">Today</p>
-                  </CardContent>
-                </Card>
-
-                <Card>
-                  <CardHeader className="pb-3">
-                    <CardTitle className="text-sm font-medium text-muted-foreground">Security Status</CardTitle>
-                  </CardHeader>
-                  <CardContent>
+                <div className="flex items-center justify-between px-6 py-4 bg-muted/20 rounded-lg border border-border">
+                  <div className="flex items-center gap-6">
                     <div className="flex items-baseline gap-2">
-                      <div className="text-3xl font-bold font-display text-green-600">{secureApps}</div>
-                      <span className="text-muted-foreground">/</span>
-                      <div className="text-xl font-semibold text-yellow-600">{needsReviewApps}</div>
+                      <span className="text-sm font-medium text-muted-foreground">Projects:</span>
+                      <span className="text-2xl font-bold font-display text-foreground">{projects.length}</span>
                     </div>
-                    <p className="text-xs text-muted-foreground mt-1">Secure / Needs Review</p>
-                  </CardContent>
-                </Card>
+                    <Separator orientation="vertical" className="h-8" />
+                    <div className="flex items-baseline gap-2">
+                      <span className="text-sm font-medium text-muted-foreground">Issues:</span>
+                      <span className="text-2xl font-bold font-display text-foreground">{totalIssues}</span>
+                    </div>
+                    <Separator orientation="vertical" className="h-8" />
+                    <div className="flex items-baseline gap-2">
+                      <span className="text-sm font-medium text-muted-foreground">Actions:</span>
+                      <span className="text-2xl font-bold font-display text-foreground">{totalActionsToday}</span>
+                    </div>
+                    <Separator orientation="vertical" className="h-8" />
+                    <div className="flex items-baseline gap-2">
+                      <span className="text-sm font-medium text-muted-foreground">Secure:</span>
+                      <span className="text-xl font-bold font-display text-green-600">{secureApps}</span>
+                      <span className="text-muted-foreground">/</span>
+                      <span className="text-xl font-bold font-display text-yellow-600">{needsReviewApps}</span>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              {/* Global Scan Banner */}
+              {/* Lightweight Scan Status Bar */}
               {scanningProjects.length > 0 && (
-                <div className="mb-6 p-4 bg-primary/5 border border-primary/20 rounded-lg">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <div className="relative flex h-3 w-3">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
-                      </div>
-                      <div>
-                        <p className="text-sm font-medium text-foreground">
-                          Scan running for: <span className="font-semibold">{scanningProjects[0].name}</span>
-                          {scanningProjects.length > 1 && <span className="text-muted-foreground"> and {scanningProjects.length - 1} other{scanningProjects.length > 2 ? 's' : ''}</span>}
-                        </p>
-                        <p className="text-xs text-muted-foreground mt-0.5">In progress...</p>
-                      </div>
+                <div className="mb-8 px-4 py-2 bg-primary/5 border-l-4 border-primary rounded flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <div className="relative flex h-2 w-2">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <Button 
-                        variant="outline" 
-                        size="sm"
-                        onClick={() => navigate('/scanning')}
-                      >
-                        View Progress
-                      </Button>
-                      <Button 
-                        variant="ghost" 
-                        size="sm"
-                        onClick={() => handleCancelScan(scanningProjects[0].id)}
-                      >
-                        Cancel Scan
-                      </Button>
-                    </div>
+                    <span className="text-sm text-foreground">
+                      Scanning <span className="font-semibold">{scanningProjects[0].name}</span> — 45% complete
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Button 
+                      variant="ghost" 
+                      size="sm"
+                      className="h-7 text-xs"
+                      onClick={() => navigate('/scanning')}
+                    >
+                      View Progress
+                    </Button>
+                    <Button 
+                      variant="ghost" 
+                      size="sm"
+                      className="h-7 text-xs"
+                      onClick={() => handleCancelScan(scanningProjects[0].id)}
+                    >
+                      Cancel
+                    </Button>
                   </div>
                 </div>
               )}
 
               {/* Unified Filter Bar */}
-              <div className="flex items-center gap-3 mb-6 p-4 bg-muted/30 rounded-lg border border-border">
+              <div className="flex items-center gap-3 mb-8 p-3 bg-muted/20 rounded-lg border border-border">
                 <Filter className="w-4 h-4 text-muted-foreground" />
                 <span className="text-sm font-medium text-muted-foreground">Filter by:</span>
                 <Select value={statusFilter} onValueChange={setStatusFilter}>
@@ -457,6 +462,8 @@ const Dashboard3 = () => {
                         onRemove={handleRemoveProject}
                         navigate={navigate}
                         getStatusBadge={getStatusBadge}
+                        getIssueSummary={getIssueSummary}
+                        getRelativeTime={getRelativeTime}
                       />
                     ))}
                   </div>
@@ -485,7 +492,7 @@ const Dashboard3 = () => {
 
             {/* Right Sidebar - Activity Feed */}
             <aside className="w-80 border-l border-border bg-muted/20 overflow-hidden flex flex-col">
-              <div className="px-8 py-8 pb-6 border-b border-border bg-background">
+              <div className="px-6 py-6 pb-4 border-b border-border bg-background">
                 <div className="flex items-center gap-2 mb-2">
                   <Activity className="w-5 h-5 text-primary" />
                   <h3 className="text-lg font-semibold font-display">Activity Feed</h3>
@@ -509,46 +516,52 @@ const Dashboard3 = () => {
               </div>
               
               <ScrollArea className="flex-1 bg-background">
-                <div className="px-8 py-6 space-y-3">
-                  {filteredActivityLog.length === 0 ? (
+                <div className="px-6 py-4">
+                  {/* Today Section */}
+                  <div className="mb-6">
+                    <h4 className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-3 px-1">Today</h4>
+                    <div className="space-y-2">
+                      {filteredActivityLog.filter(a => ['2m', '15m', '1h', '2h', '3h'].includes(a.timestamp)).map((activity) => (
+                        <button
+                          key={activity.id}
+                          onClick={() => handleActivityClick(activity)}
+                          className="w-full text-left p-3 rounded-lg border border-border hover:border-accent/50 hover:bg-accent/5 transition-all group"
+                        >
+                          <div className="flex items-start gap-3">
+                            <div className={`p-1.5 rounded-md flex-shrink-0 ${
+                              activity.type === "security" 
+                                ? "bg-red-500/10 text-red-600" 
+                                : activity.type === "fix"
+                                ? "bg-green-500/10 text-green-600"
+                                : "bg-primary/10 text-primary"
+                            }`}>
+                              {activity.type === "security" ? (
+                                <Shield className="w-3.5 h-3.5" />
+                              ) : activity.type === "fix" ? (
+                                <CheckCircle className="w-3.5 h-3.5" />
+                              ) : (
+                                <FileSearch className="w-3.5 h-3.5" />
+                              )}
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <p className="text-sm font-medium text-foreground line-clamp-2 group-hover:text-primary transition-colors">
+                                {activity.action}
+                              </p>
+                              <p className="text-xs text-muted-foreground mt-1">
+                                {activity.timestamp}
+                              </p>
+                            </div>
+                            <ChevronRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0 mt-0.5" />
+                          </div>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  {filteredActivityLog.length === 0 && (
                     <div className="text-center py-8">
                       <p className="text-sm text-muted-foreground">No activity for this project</p>
                     </div>
-                  ) : (
-                    filteredActivityLog.map((activity) => (
-                    <button
-                      key={activity.id}
-                      onClick={() => handleActivityClick(activity)}
-                      className="w-full text-left p-3 rounded-lg border border-border hover:border-accent/50 hover:bg-accent/5 transition-all group"
-                    >
-                      <div className="flex items-start gap-3">
-                        <div className={`p-2 rounded-md flex-shrink-0 ${
-                          activity.type === "security" 
-                            ? "bg-red-500/10 text-red-600" 
-                            : activity.type === "fix"
-                            ? "bg-green-500/10 text-green-600"
-                            : "bg-primary/10 text-primary"
-                        }`}>
-                          {activity.type === "security" ? (
-                            <Shield className="w-4 h-4" />
-                          ) : activity.type === "fix" ? (
-                            <CheckCircle className="w-4 h-4" />
-                          ) : (
-                            <FileSearch className="w-4 h-4" />
-                          )}
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <p className="text-sm font-medium text-foreground line-clamp-2 group-hover:text-primary transition-colors">
-                            {activity.action}
-                          </p>
-                          <p className="text-xs text-muted-foreground mt-1">
-                            {activity.timestamp}
-                          </p>
-                        </div>
-                        <ChevronRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0" />
-                      </div>
-                    </button>
-                    ))
                   )}
                 </div>
               </ScrollArea>
@@ -795,6 +808,8 @@ interface ProjectCardProps {
   onRemove: (projectId: string) => void;
   navigate: (path: string) => void;
   getStatusBadge: (status: Project["status"]) => JSX.Element;
+  getIssueSummary: (project: Project) => string;
+  getRelativeTime: (dateStr: string) => string;
 }
 
 const ProjectCard = ({ 
@@ -804,51 +819,51 @@ const ProjectCard = ({
   onToggleFavorite, 
   onRemove, 
   navigate, 
-  getStatusBadge 
+  getStatusBadge,
+  getIssueSummary,
+  getRelativeTime
 }: ProjectCardProps) => {
   const isScanning = project.status === "scanning";
   return (
     <Card 
       className={`hover:border-accent/50 transition-colors group flex flex-col h-full ${
-        isScanning ? 'ring-2 ring-primary/20 animate-pulse' : ''
+        isScanning ? 'ring-2 ring-primary/20 animate-pulse cursor-pointer' : ''
       }`}
       onClick={isScanning ? () => navigate('/scanning') : undefined}
-      style={{ cursor: isScanning ? 'pointer' : 'default' }}
     >
-      <CardHeader className="flex-1">
-        <div className="flex items-start justify-between mb-2">
-          <div className="flex items-center gap-2">
-            <Github className="w-5 h-5 text-muted-foreground" />
-            <CardTitle className="text-lg font-display">{project.name}</CardTitle>
-            <a 
-              href={project.repoUrl} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="opacity-0 group-hover:opacity-100 transition-opacity"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <ExternalLink className="w-4 h-4 text-muted-foreground hover:text-foreground" />
-            </a>
+      <CardHeader className="flex-1 pb-4">
+        {/* Top Row: Project Name + Status Badge */}
+        <div className="flex items-start justify-between mb-4">
+          <div className="flex items-center gap-3 flex-1">
+            <CardTitle className="text-lg font-display text-foreground">{project.name}</CardTitle>
+            {getStatusBadge(project.status)}
           </div>
           
           {/* Three-dot menu */}
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <button className="text-muted-foreground hover:text-foreground transition-colors p-1 rounded-md hover:bg-muted">
-                <MoreVertical className="w-5 h-5" />
+              <button 
+                className="text-muted-foreground hover:text-foreground transition-colors p-1 rounded-md hover:bg-muted"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <MoreVertical className="w-4 h-4" />
               </button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="w-56 bg-popover z-50">
-              <DropdownMenuItem onClick={() => onViewHistory(project)}>
+              <DropdownMenuItem onClick={(e) => { e.stopPropagation(); onViewProjectHistory(project); }}>
                 <FileText className="w-4 h-4 mr-2" />
+                View History
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={(e) => { e.stopPropagation(); onViewHistory(project); }}>
+                <FileSearch className="w-4 h-4 mr-2" />
                 View Logs
               </DropdownMenuItem>
-              <DropdownMenuItem>
+              <DropdownMenuItem onClick={(e) => e.stopPropagation()}>
                 <Settings className="w-4 h-4 mr-2" />
                 Settings
               </DropdownMenuItem>
               <DropdownMenuItem 
-                onClick={() => onRemove(project.id)}
+                onClick={(e) => { e.stopPropagation(); onRemove(project.id); }}
                 className="text-red-600 focus:text-red-600"
               >
                 <Trash2 className="w-4 h-4 mr-2" />
@@ -858,65 +873,42 @@ const ProjectCard = ({
           </DropdownMenu>
         </div>
         
-        {/* Status badge */}
-        <div className="mb-3 flex items-center gap-2">
-          {getStatusBadge(project.status)}
-          {isScanning && (
-            <span className="text-xs text-muted-foreground italic">Click card to view</span>
-          )}
-        </div>
-        
-        {/* Last Scan */}
-        <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
-          <Clock className="w-4 h-4" />
-          <span>Last scan: {project.lastScan}</span>
-        </div>
-
-        {/* Scan Summary */}
-        <div className="flex items-center gap-4 text-sm mb-4">
-          <div className="flex items-center gap-1.5">
-            <Key className="w-4 h-4 text-purple" />
-            <span className="text-muted-foreground">Secrets:</span>
-            <span className="font-semibold text-foreground">{project.issueSummary.secrets}</span>
-          </div>
-          <Separator orientation="vertical" className="h-4" />
-          <div className="flex items-center gap-1.5">
-            <Lock className="w-4 h-4 text-coral" />
-            <span className="text-muted-foreground">Access:</span>
-            <span className="font-semibold text-foreground">{project.issueSummary.access}</span>
-          </div>
-          <Separator orientation="vertical" className="h-4" />
-          <div className="flex items-center gap-1.5">
-            <Code className="w-4 h-4 text-accent" />
-            <span className="text-muted-foreground">Input:</span>
-            <span className="font-semibold text-foreground">{project.issueSummary.input}</span>
-          </div>
+        {/* Middle Row: Last Scanned + Issue Summary */}
+        <div className="space-y-2">
+          <p className="text-sm text-muted-foreground">
+            Last scanned {getRelativeTime(project.lastScan)}
+          </p>
+          <p className="text-sm font-medium text-foreground">
+            {getIssueSummary(project)}
+          </p>
         </div>
       </CardHeader>
       
-      <CardContent className="pt-0 pb-6 space-y-2">
+      {/* Bottom Row: Primary Action Button */}
+      <CardContent className="pt-0 pb-6">
         <Button
           className="w-full" 
           onClick={(e) => {
             e.stopPropagation();
-            navigate('/scanning');
+            navigate(isScanning ? '/scanning' : '/scanning');
           }}
-          disabled={project.status === "scanning"}
+          disabled={isScanning}
         >
-          <Zap className="w-4 h-4 mr-2" />
-          {project.status === "scanning" ? "Scan Running..." : "Run Quick Scan"}
+          {isScanning ? (
+            <>
+              <div className="relative flex h-4 w-4 mr-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-background opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-4 w-4 bg-background"></span>
+              </div>
+              View Progress
+            </>
+          ) : (
+            <>
+              <Zap className="w-4 h-4 mr-2" />
+              Run Quick Scan
+            </>
+          )}
         </Button>
-        
-        <button
-          onClick={(e) => {
-            e.stopPropagation();
-            onViewProjectHistory(project);
-          }}
-          className="w-full text-sm text-muted-foreground hover:text-primary transition-colors flex items-center justify-center gap-1 py-1"
-        >
-          <span>View History</span>
-          <ChevronRight className="w-3 h-3" />
-        </button>
       </CardContent>
     </Card>
   );
