@@ -290,7 +290,7 @@ const Dashboard3 = () => {
           <div className="min-h-screen flex w-full bg-background">
             {/* Left Navigation Sidebar */}
             <Sidebar className="border-r border-border w-44 flex-shrink-0 h-[calc(100vh-4rem)] sticky top-16 bg-muted/20">
-            <SidebarContent>
+            <SidebarContent className="pt-6">
               <SidebarGroup>
                 <SidebarGroupContent>
                   <SidebarMenu>
