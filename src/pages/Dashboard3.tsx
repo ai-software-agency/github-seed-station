@@ -300,7 +300,7 @@ const Dashboard3 = () => {
                           onClick={() => navigate('/dashboard3')}
                           className="flex items-center gap-3 w-full px-3 py-2 text-sidebar-foreground bg-sidebar-accent rounded-md"
                         >
-                          <LayoutDashboard className="w-4 h-4" />
+                          <LayoutDashboard className="w-5 h-5 text-primary" />
                           <span className="text-sm">Dashboard</span>
                         </button>
                       </SidebarMenuButton>
@@ -311,7 +311,7 @@ const Dashboard3 = () => {
                           onClick={() => navigate('/results')}
                           className="flex items-center gap-3 w-full px-3 py-2 text-sidebar-foreground hover:bg-sidebar-accent rounded-md"
                         >
-                          <FileSearch className="w-4 h-4" />
+                          <FileSearch className="w-5 h-5 text-primary" />
                           <span className="text-sm">Scan Reports</span>
                         </button>
                       </SidebarMenuButton>
@@ -322,7 +322,7 @@ const Dashboard3 = () => {
                           onClick={() => navigate('/activity')}
                           className="flex items-center gap-3 w-full px-3 py-2 text-sidebar-foreground hover:bg-sidebar-accent rounded-md"
                         >
-                          <Settings className="w-4 h-4" />
+                          <Settings className="w-5 h-5 text-primary" />
                           <span className="text-sm">Settings</span>
                         </button>
                       </SidebarMenuButton>
