@@ -173,12 +173,14 @@ const Dashboard3 = () => {
   const [projects, setProjects] = useState<Project[]>(mockProjects);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [historyOpen, setHistoryOpen] = useState(false);
+  const [projectHistoryOpen, setProjectHistoryOpen] = useState(false);
   const [connectModalOpen, setConnectModalOpen] = useState(false);
   const [activityLog] = useState<ActivityLogEntry[]>(mockActivityLog);
   const [selectedActivity, setSelectedActivity] = useState<ActivityLogEntry | null>(null);
   const [activityDetailOpen, setActivityDetailOpen] = useState(false);
   const [statusFilter, setStatusFilter] = useState<string>("all");
   const [scanFilter, setScanFilter] = useState<string>("all");
+  const [activityProjectFilter, setActivityProjectFilter] = useState<string>("all");
 
   const handleViewHistory = (project: Project) => {
     setSelectedProject(project);
@@ -227,6 +229,29 @@ const Dashboard3 = () => {
   const needsReviewApps = projects.filter(p => p.status === "needs-review").length;
   const totalIssues = projects.reduce((sum, p) => sum + p.issueSummary.secrets + p.issueSummary.access + p.issueSummary.input, 0);
   const totalActionsToday = 3; // Mock data
+
+  // Get currently scanning projects
+  const scanningProjects = projects.filter(p => p.status === "scanning");
+  
+  // Filter activity log by project
+  const filteredActivityLog = activityProjectFilter === "all" 
+    ? activityLog 
+    : activityLog.filter(activity => 
+        activity.action.toLowerCase().includes(activityProjectFilter.toLowerCase())
+      );
+
+  const handleViewProjectHistory = (project: Project) => {
+    setSelectedProject(project);
+    setProjectHistoryOpen(true);
+  };
+
+  const handleCancelScan = (projectId: string) => {
+    if (confirm('Are you sure you want to cancel this scan?')) {
+      setProjects(projects.map(p => 
+        p.id === projectId ? { ...p, status: "secure" as const } : p
+      ));
+    }
+  };
 
   return (
     <>
@@ -337,6 +362,43 @@ const Dashboard3 = () => {
                 </div>
               </div>
 
+              {/* Global Scan Banner */}
+              {scanningProjects.length > 0 && (
+                <div className="mb-6 p-4 bg-primary/5 border border-primary/20 rounded-lg">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className="relative flex h-3 w-3">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium text-foreground">
+                          Scan running for: <span className="font-semibold">{scanningProjects[0].name}</span>
+                          {scanningProjects.length > 1 && <span className="text-muted-foreground"> and {scanningProjects.length - 1} other{scanningProjects.length > 2 ? 's' : ''}</span>}
+                        </p>
+                        <p className="text-xs text-muted-foreground mt-0.5">In progress...</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Button 
+                        variant="outline" 
+                        size="sm"
+                        onClick={() => navigate('/scanning')}
+                      >
+                        View Progress
+                      </Button>
+                      <Button 
+                        variant="ghost" 
+                        size="sm"
+                        onClick={() => handleCancelScan(scanningProjects[0].id)}
+                      >
+                        Cancel Scan
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              )}
+
               {/* Unified Filter Bar */}
               <div className="flex items-center gap-3 mb-6 p-4 bg-muted/30 rounded-lg border border-border">
                 <Filter className="w-4 h-4 text-muted-foreground" />
@@ -390,6 +452,7 @@ const Dashboard3 = () => {
                         key={project.id}
                         project={project}
                         onViewHistory={handleViewHistory}
+                        onViewProjectHistory={handleViewProjectHistory}
                         onToggleFavorite={toggleFavorite}
                         onRemove={handleRemoveProject}
                         navigate={navigate}
@@ -423,16 +486,36 @@ const Dashboard3 = () => {
             {/* Right Sidebar - Activity Feed */}
             <aside className="w-80 border-l border-border bg-muted/20 overflow-hidden flex flex-col">
               <div className="px-8 py-8 pb-6 border-b border-border bg-background">
-                <div className="flex items-center gap-2 mb-1">
+                <div className="flex items-center gap-2 mb-2">
                   <Activity className="w-5 h-5 text-primary" />
                   <h3 className="text-lg font-semibold font-display">Activity Feed</h3>
                 </div>
-                <p className="text-xs text-muted-foreground">Recent security actions</p>
+                <p className="text-xs text-muted-foreground mb-3">Recent security actions</p>
+                
+                {/* Activity Filter */}
+                <Select value={activityProjectFilter} onValueChange={setActivityProjectFilter}>
+                  <SelectTrigger className="w-full bg-background">
+                    <SelectValue placeholder="All Projects" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">All Projects</SelectItem>
+                    {projects.map(project => (
+                      <SelectItem key={project.id} value={project.name}>
+                        {project.name}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
               </div>
               
               <ScrollArea className="flex-1 bg-background">
                 <div className="px-8 py-6 space-y-3">
-                  {activityLog.map((activity) => (
+                  {filteredActivityLog.length === 0 ? (
+                    <div className="text-center py-8">
+                      <p className="text-sm text-muted-foreground">No activity for this project</p>
+                    </div>
+                  ) : (
+                    filteredActivityLog.map((activity) => (
                     <button
                       key={activity.id}
                       onClick={() => handleActivityClick(activity)}
@@ -465,7 +548,8 @@ const Dashboard3 = () => {
                         <ChevronRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0" />
                       </div>
                     </button>
-                  ))}
+                    ))
+                  )}
                 </div>
               </ScrollArea>
             </aside>
@@ -524,7 +608,64 @@ const Dashboard3 = () => {
         </DialogContent>
       </Dialog>
 
-      {/* Project History Dialog */}
+      {/* Project History Drawer - Lightweight Version */}
+      <Dialog open={projectHistoryOpen} onOpenChange={setProjectHistoryOpen}>
+        <DialogContent className="sm:max-w-lg">
+          <DialogHeader>
+            <DialogTitle className="text-lg font-semibold">
+              Scan History — {selectedProject?.name}
+            </DialogTitle>
+            <DialogDescription>
+              Recent scans for this project
+            </DialogDescription>
+          </DialogHeader>
+
+          <div className="space-y-3 mt-4">
+            {selectedProject?.scans.map((scan, index) => (
+              <button
+                key={index}
+                onClick={() => {
+                  setProjectHistoryOpen(false);
+                  handleViewHistory(selectedProject);
+                }}
+                className="w-full text-left p-4 rounded-lg border border-border hover:border-accent/50 hover:bg-accent/5 transition-all group"
+              >
+                <div className="flex items-start justify-between mb-2">
+                  <span className="text-sm font-medium text-foreground">{scan.date}</span>
+                  {scan.summary.includes("fixed") ? (
+                    <CheckCircle className="w-4 h-4 text-green-600" />
+                  ) : scan.summary.includes("No vulnerabilities") ? (
+                    <CheckCircle className="w-4 h-4 text-green-600" />
+                  ) : (
+                    <AlertTriangle className="w-4 h-4 text-yellow-600" />
+                  )}
+                </div>
+                <p className="text-sm text-muted-foreground mb-2">{scan.summary}</p>
+                <div className="flex items-center gap-2 text-xs text-muted-foreground group-hover:text-primary transition-colors">
+                  <span>View full report</span>
+                  <ChevronRight className="w-3 h-3" />
+                </div>
+              </button>
+            ))}
+          </div>
+
+          <div className="pt-4 border-t mt-4">
+            <Button 
+              variant="outline" 
+              className="w-full"
+              onClick={() => {
+                setProjectHistoryOpen(false);
+                navigate('/results');
+              }}
+            >
+              View All Reports
+              <ExternalLink className="w-4 h-4 ml-2" />
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      {/* Project History Dialog - Full Version */}
       <Dialog open={historyOpen} onOpenChange={setHistoryOpen}>
         <DialogContent className="sm:max-w-2xl max-h-[90vh] overflow-y-auto">
           <DialogHeader>
@@ -649,6 +790,7 @@ const Dashboard3 = () => {
 interface ProjectCardProps {
   project: Project;
   onViewHistory: (project: Project) => void;
+  onViewProjectHistory: (project: Project) => void;
   onToggleFavorite: (projectId: string) => void;
   onRemove: (projectId: string) => void;
   navigate: (path: string) => void;
@@ -657,14 +799,22 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ 
   project, 
-  onViewHistory, 
+  onViewHistory,
+  onViewProjectHistory, 
   onToggleFavorite, 
   onRemove, 
   navigate, 
   getStatusBadge 
 }: ProjectCardProps) => {
+  const isScanning = project.status === "scanning";
   return (
-    <Card className="hover:border-accent/50 transition-colors group flex flex-col h-full">
+    <Card 
+      className={`hover:border-accent/50 transition-colors group flex flex-col h-full ${
+        isScanning ? 'ring-2 ring-primary/20 animate-pulse' : ''
+      }`}
+      onClick={isScanning ? () => navigate('/scanning') : undefined}
+      style={{ cursor: isScanning ? 'pointer' : 'default' }}
+    >
       <CardHeader className="flex-1">
         <div className="flex items-start justify-between mb-2">
           <div className="flex items-center gap-2">
@@ -709,8 +859,11 @@ const ProjectCard = ({
         </div>
         
         {/* Status badge */}
-        <div className="mb-3">
+        <div className="mb-3 flex items-center gap-2">
           {getStatusBadge(project.status)}
+          {isScanning && (
+            <span className="text-xs text-muted-foreground italic">Click card to view</span>
+          )}
         </div>
         
         {/* Last Scan */}
@@ -741,15 +894,29 @@ const ProjectCard = ({
         </div>
       </CardHeader>
       
-      <CardContent className="pt-0 pb-6">
+      <CardContent className="pt-0 pb-6 space-y-2">
         <Button
           className="w-full" 
-          onClick={() => navigate('/scanning')}
+          onClick={(e) => {
+            e.stopPropagation();
+            navigate('/scanning');
+          }}
           disabled={project.status === "scanning"}
         >
           <Zap className="w-4 h-4 mr-2" />
           {project.status === "scanning" ? "Scan Running..." : "Run Quick Scan"}
         </Button>
+        
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            onViewProjectHistory(project);
+          }}
+          className="w-full text-sm text-muted-foreground hover:text-primary transition-colors flex items-center justify-center gap-1 py-1"
+        >
+          <span>View History</span>
+          <ChevronRight className="w-3 h-3" />
+        </button>
       </CardContent>
     </Card>
   );
