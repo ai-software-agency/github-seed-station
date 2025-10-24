@@ -289,8 +289,8 @@ const Dashboard3 = () => {
         <SidebarProvider>
           <div className="min-h-screen flex w-full bg-background">
             {/* Left Navigation Sidebar */}
-            <Sidebar className="border-r border-border w-44 flex-shrink-0 h-[calc(100vh-4rem)] sticky top-16">
-            <SidebarContent className="pt-6">
+            <Sidebar className="border-r border-border/60 w-44 flex-shrink-0 h-[calc(100vh-4rem)] sticky top-16 bg-transparent [&_[data-sidebar=sidebar]]:bg-transparent">
+            <SidebarContent className="pt-6 bg-transparent">
               <SidebarGroup>
                 <SidebarGroupContent>
                   <SidebarMenu>
@@ -301,7 +301,7 @@ const Dashboard3 = () => {
                           className="flex items-center gap-3 w-full px-3 py-2 text-sidebar-foreground bg-sidebar-accent rounded-md"
                         >
                           <LayoutDashboard className="w-5 h-5 text-primary" />
-                          <span className="text-sm">Dashboard</span>
+                          <span className="text-sm">Home</span>
                         </button>
                       </SidebarMenuButton>
                     </SidebarMenuItem>
