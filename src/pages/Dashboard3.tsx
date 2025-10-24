@@ -289,7 +289,7 @@ const Dashboard3 = () => {
         <SidebarProvider>
           <div className="min-h-screen flex w-full bg-background">
             {/* Left Navigation Sidebar */}
-            <Sidebar className="border-r border-border w-44 flex-shrink-0 h-[calc(100vh-4rem)] sticky top-16 bg-muted/20">
+            <Sidebar className="border-r border-border w-44 flex-shrink-0 h-[calc(100vh-4rem)] sticky top-16">
             <SidebarContent className="pt-6">
               <SidebarGroup>
                 <SidebarGroupContent>
