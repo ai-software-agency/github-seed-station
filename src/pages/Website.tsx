@@ -8,6 +8,7 @@ import replitLogo from "@/assets/replit-new.png";
 import figmaLogo from "@/assets/figma-new.png";
 import githubLogo from "@/assets/github-new.png";
 import lovableLogo from "@/assets/lovable-new.png";
+import wavesOpacity from "@/assets/waves-opacity.svg";
 
 const Website = () => {
   const navigate = useNavigate();
@@ -103,6 +104,11 @@ const Website = () => {
           </div>
         </div>
       </section>
+
+      {/* Wave Divider */}
+      <div className="relative w-full -mt-1">
+        <img src={wavesOpacity} alt="" className="w-full h-auto block" />
+      </div>
 
       {/* How Kreyo fits your stack */}
       <section id="fit" className="relative py-16 md:py-24 bg-blue-50/30">
