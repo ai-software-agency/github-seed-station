@@ -40,9 +40,6 @@ All colors MUST be HSL.
     /* Purple */
     --purple: 265 40% 67%;
 
-    /* Hero section */
-    --hero-bg: 259 53% 69%;
-
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
@@ -105,9 +102,6 @@ All colors MUST be HSL.
     
     /* Purple */
     --purple: 265 40% 67%;
-
-    /* Hero section */
-    --hero-bg: 259 53% 69%;
 
     --destructive: 0 62% 30%;
     --destructive-foreground: 0 0% 98%;
