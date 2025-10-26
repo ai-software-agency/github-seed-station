@@ -107,7 +107,7 @@ const Website = () => {
 
       {/* Wave separator */}
       <div className="w-full overflow-hidden leading-[0]">
-        <img src={curveWave} alt="" className="w-full h-auto block" />
+        <img src={curveWave} alt="" className="w-full h-[50%] block" />
       </div>
 
       {/* How Kreyo fits your stack */}
