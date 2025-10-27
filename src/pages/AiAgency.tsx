@@ -30,364 +30,94 @@ const AiAgency = () => {
       <TopNav />
 
       {/* Hero Section */}
-      <section id="top" className="relative isolate pt-28 md:pt-36 pb-16 md:pb-24 overflow-hidden">
+      <section id="top" className="relative isolate pt-28 md:pt-36 pb-24 md:pb-32 overflow-hidden">
         {/* Background gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-secondary/5 to-transparent pointer-events-none" />
 
         {/* Grid pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(transparent_23px,rgba(255,255,255,.03)_24px),linear-gradient(90deg,transparent_23px,rgba(255,255,255,.03)_24px)] bg-[length:24px_24px] [mask-image:radial-gradient(65%_55%_at_50%_0%,black,transparent_70%)] pointer-events-none" />
 
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 relative">
-          <div className="grid lg:grid-cols-12 gap-10 items-center">
-            <div className="lg:col-span-7 space-y-6">
-              <div className="inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-3 py-1 text-xs">
-                <span className="inline-block h-1.5 w-1.5 rounded-full bg-gradient-to-r from-primary to-secondary"></span>
-                <span className="text-muted-foreground">AI partner for serious builders</span>
-              </div>
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 relative text-center">
+          <h1 className="text-5xl sm:text-7xl font-extrabold font-display leading-[1.05] tracking-tight mb-6">
+            Keep your app{" "}
+            <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+              alive after launch.
+            </span>
+          </h1>
 
-              <h1 className="text-4xl sm:text-6xl font-extrabold font-display leading-[1.05] tracking-tight">
-                Your AI-built app.{" "}
-                <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-                  Actually works.
-                </span>
-              </h1>
-
-              <div className="text-lg font-sans max-w-2xl space-y-3">
-                <p className="text-muted-foreground">
-                  Kreyo runs your code reviews, live smoke tests, and regression QA automatically — so every deploy works the way you expect.
-                </p>
-                <p className="text-sm text-muted-foreground italic">
-                  "Your app shouldn't break just because your AI got creative."
-                </p>
-              </div>
-
-              <div className="flex flex-col sm:flex-row items-start gap-3">
-                <Button onClick={() => navigate("/waitlist")} size="lg" className="rounded-full">
-                  Test My App
-                </Button>
-                <Button onClick={() => navigate("#how")} variant="outline" size="lg" className="rounded-full">
-                  See How It Works
-                </Button>
-              </div>
-            </div>
-
-            <div className="lg:col-span-5">
-              <div className="relative rounded-2xl p-6 bg-card border border-border shadow-lg transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)]">
-                <h3 className="text-sm font-semibold font-display text-muted-foreground mb-4">
-                  Prompt → Code → Test → Fix → Pass ✅
-                </h3>
-                <div className="space-y-3 text-sm">
-                  <div className="flex items-center gap-2 text-muted-foreground">
-                    <span className="text-foreground">→</span>
-                    <span>Code Review ✅</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-muted-foreground">
-                    <span className="text-foreground">→</span>
-                    <span>QA Tests ✅</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-muted-foreground">
-                    <span className="text-foreground">→</span>
-                    <span>Rollback ✅</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Wave separator */}
-      <div className="w-full overflow-hidden leading-[0]">
-        <img src={curveWave} alt="" className="w-full h-[50%] block" />
-      </div>
-
-      {/* The Problem */}
-      <section id="problem" className="relative py-16 md:py-24" style={{ backgroundColor: '#a084dc' }}>
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="max-w-3xl mb-8">
-            <h2 className="text-3xl font-bold font-display text-white">Vibe coding made building easy — but not reliable.</h2>
-            <p className="mt-3 text-white font-sans">
-              AI-built apps ship fast but break just as fast — missing tests, leaking secrets, and failing silently when users click. You don't need a dashboard. You need something that watches your app and proves it still works.
-            </p>
-          </div>
-
-          <div className="rounded-2xl p-8 bg-gradient-to-br from-accent/20 via-secondary/15 to-primary/10 border border-white/20">
-            <p className="text-xl md:text-2xl font-semibold text-white text-center font-display">
-              "You ship the app. Kreyo makes sure it survives."
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* The Solution */}
-      <section id="solution" className="relative py-16 md:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="max-w-3xl mb-8">
-            <h2 className="text-3xl font-bold font-display">Your AI Agency for Production Confidence.</h2>
-            <p className="mt-3 text-muted-foreground font-sans">
-              Kreyo connects to your Vercel or Replit project and runs an end-to-end safety net: AI code reviews, live smoke testing, and regression automation — all without setup.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6 mb-6">
-            {[
-              {
-                stage: "Build",
-                what: "Reviews your code, finds leaks, writes tests",
-                why: "Prevents dumb mistakes before deploy"
-              },
-              {
-                stage: "Run",
-                what: "Simulates real users and watches for breakage",
-                why: "Catches problems before your customers do"
-              },
-              {
-                stage: "Grow",
-                what: "Runs regression tests and rolls back bad pushes",
-                why: "Lets you scale safely without fear"
-              },
-            ].map((item) => (
-              <div
-                key={item.stage}
-                className="rounded-2xl p-5 bg-blue-50/30 border border-border transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)]"
-              >
-                <h3 className="font-semibold font-display text-lg mb-2">{item.stage}</h3>
-                <p className="text-sm text-foreground font-sans mb-2">{item.what}</p>
-                <p className="text-sm text-muted-foreground font-sans italic">{item.why}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center">
-            <Button size="lg" className="rounded-full" onClick={() => navigate("#how")}>
-              Watch the Demo
-            </Button>
-          </div>
+          <p className="text-xl font-sans text-muted-foreground max-w-2xl mx-auto mb-8">
+            Building is easy. Keeping your app secure, stable, and bug-free isn't. Kreyo is your AI team that watches your app and tells you what to fix — before it breaks.
+          </p>
         </div>
       </section>
 
       {/* How it works */}
       <section id="how" className="relative py-16 md:py-24 bg-blue-50/30">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="max-w-3xl mb-8">
-            <h2 className="text-3xl font-bold font-display">How Kreyo keeps your AI app alive.</h2>
-            <p className="mt-3 text-muted-foreground font-sans">
-              From first deploy to daily traffic, Kreyo runs the QA and security discipline you don't have time for.
-            </p>
-          </div>
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 text-center">
+          <h2 className="text-4xl font-bold font-display mb-4">No dashboards. No setup. Just results.</h2>
 
-          <div className="grid md:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-3 gap-8 mt-12">
             {[
               {
-                num: "01",
-                title: "Connect",
-                desc: "Link your app from Replit, Vercel, or Lovable — no installs, no setup. Takes 30 seconds.",
+                num: "1",
+                title: "Connect your repo",
+                desc: "Kreyo scans your code."
               },
               {
-                num: "02",
-                title: "Review & Test",
-                desc: "Kreyo reviews your code and auto-generates Cypress smoke tests to cover your app's key flows. Think: instant QA team.",
+                num: "2",
+                title: "Get a report",
+                desc: "You'll receive a .md file with clear \"what to fix\" notes."
               },
               {
-                num: "03",
-                title: "Watch & Protect",
-                desc: "Continuous testing simulates users and monitors dependencies. Kreyo alerts you when something breaks — or quietly fixes it.",
-              },
-              {
-                num: "04",
-                title: "Recover & Learn",
-                desc: "Bad deploy? Rollback happens automatically. You get a clear explanation and improved tests for next time.",
+                num: "3",
+                title: "Fix it fast",
+                desc: "Copy the suggestions straight into Replit, Lovable, or V0."
               },
             ].map((item) => (
-              <div
-                key={item.num}
-                className="rounded-2xl p-5 bg-card border border-border transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)]"
-              >
-                <div className="w-[30px] h-[30px] rounded-full bg-gradient-to-br from-primary via-secondary to-accent flex items-center justify-center mb-3">
-                  <span className="text-sm font-bold text-gray-900">{item.num}</span>
+              <div key={item.num} className="space-y-3">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary via-secondary to-accent flex items-center justify-center mx-auto">
+                  <span className="text-lg font-bold text-gray-900">{item.num}</span>
                 </div>
-                <h3 className="font-semibold font-display mb-2">{item.title}</h3>
+                <h3 className="font-semibold font-display text-lg">{item.title}</h3>
                 <p className="text-sm text-muted-foreground font-sans">{item.desc}</p>
               </div>
             ))}
           </div>
-
-          <div className="mt-8 text-center">
-            <Button size="lg" className="rounded-full" onClick={() => navigate("/waitlist")}>
-              See It in Action
-            </Button>
-          </div>
         </div>
       </section>
 
-      {/* Features */}
-      <section id="features" className="relative py-16 md:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="max-w-3xl mb-8">
-            <h2 className="text-3xl font-bold font-display">Everything your app needs to stay alive.</h2>
-            <p className="mt-3 text-muted-foreground font-sans">
-              Kreyo runs your code reviews, QA, and security automatically — catching the stuff AI and humans miss.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-            {[
-              {
-                title: "AI Code Reviews",
-                desc: "Reviews every change, flags logic errors, insecure code, and missing tests before you hit deploy."
-              },
-              {
-                title: "Live Smoke Testing",
-                desc: "Runs real user-journey tests (like \"signup,\" \"checkout,\" \"send email\") every few minutes — and alerts you when something breaks."
-              },
-              {
-                title: "Automated Regression",
-                desc: "Re-tests your whole app before every push — no setup, no QA team needed."
-              },
-              {
-                title: "Security Scans",
-                desc: "Checks for hardcoded secrets, weak dependencies, and unsafe inputs — and auto-fixes when possible."
-              },
-              {
-                title: "Safe Rollbacks",
-                desc: "Bad deploy? Kreyo rolls you back instantly and tells you what failed — no DevOps required."
-              },
-              {
-                title: "Plain-English Logs",
-                desc: "Every test, scan, and fix explained like a teammate would: \"Blocked 12 failed login attempts. Rolled back v1.3 safely.\""
-              },
-            ].map((item) => (
-              <div
-                key={item.title}
-                className="rounded-2xl p-5 bg-blue-50/30 border border-border transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)]"
-              >
-                <h3 className="font-semibold font-display mb-2">{item.title}</h3>
-                <p className="text-sm text-muted-foreground font-sans">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center">
-            <Button size="lg" className="rounded-full" onClick={() => navigate("/waitlist")}>
-              Test My App Now
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section id="testimonials" className="relative py-16 md:py-24 bg-blue-50/30">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="rounded-2xl p-6 bg-card border border-border transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)]">
-              <p className="text-lg font-sans text-foreground mb-4">"I built my first SaaS app in Replit. Kreyo keeps it alive."</p>
-              <p className="text-sm text-muted-foreground font-sans italic">— Jason L., SaaS Founder</p>
-            </div>
-            <div className="rounded-2xl p-6 bg-card border border-border transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)]">
-              <p className="text-lg font-sans text-foreground mb-4">"Feels like having a QA and security team on call."</p>
-              <p className="text-sm text-muted-foreground font-sans italic">— Bhaskar, Indie Builder</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Who It's For */}
-      <section id="who" className="relative py-16 md:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="max-w-3xl mb-8">
-            <h2 className="text-3xl font-bold font-display">Who it's for</h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6 mb-6">
-            {[
-              {
-                icon: "🧑‍💻",
-                persona: "Prosumer Founders",
-                useCase: "Shipping their first real SaaS product"
-              },
-              {
-                icon: "🧑‍🎓",
-                persona: "Indie Builders",
-                useCase: "Need automated QA and security"
-              },
-              {
-                icon: "🧑‍💼",
-                persona: "Small Agencies",
-                useCase: "Managing multiple client apps safely"
-              },
-            ].map((item) => (
-              <div
-                key={item.persona}
-                className="rounded-2xl p-5 bg-blue-50/30 border border-border transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)]"
-              >
-                <div className="text-3xl mb-3">{item.icon}</div>
-                <h3 className="font-semibold font-display mb-2">{item.persona}</h3>
-                <p className="text-sm text-muted-foreground font-sans">{item.useCase}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center">
-            <Button size="lg" className="rounded-full" onClick={() => navigate("/waitlist")}>
-              Join Early Access
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Partners */}
-      <section id="partners" className="py-4 md:py-6 bg-muted/30">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <p className="text-center text-sm text-muted-foreground font-sans mb-4">
-            Powered by: <strong>Semgrep · Snyk · Cypress · Datadog · Harness · Drata</strong>
+      {/* Try It Now - VibeSec */}
+      <section id="vibesec" className="relative py-16 md:py-24">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 text-center">
+          <h2 className="text-4xl font-bold font-display mb-4">Try VibeSec — free beta</h2>
+          <p className="text-lg text-muted-foreground font-sans mb-8 max-w-2xl mx-auto">
+            Instantly see what to fix in your code. Connect your GitHub repo and get a ready-to-use report.
           </p>
+          
+          <Button size="lg" className="rounded-full" onClick={() => navigate("/waitlist")}>
+            Connect with GitHub
+          </Button>
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section id="cta" className="relative py-16 md:py-24 bg-blue-50/30">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="text-center max-w-3xl mx-auto space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold font-display">Don't just ship. Stay up.</h2>
-            <p className="text-lg text-muted-foreground font-sans">
-              Kreyo runs your code reviews, QA, and security — automatically.<br />
-              Build like a creator. Run like an engineer.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-              <Button size="lg" className="rounded-full" onClick={() => navigate("/waitlist")}>
-                Run a Free Scan
-              </Button>
-              <Button variant="outline" size="lg" className="rounded-full" onClick={() => navigate("/waitlist")}>
-                Talk to the Team
-              </Button>
-            </div>
-          </div>
+      {/* Coming Soon */}
+      <section id="coming-soon" className="relative py-16 md:py-24 bg-blue-50/30">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 text-center">
+          <h2 className="text-4xl font-bold font-display mb-4">Your full AI Agency for Production Apps</h2>
+          <p className="text-lg text-muted-foreground font-sans mb-8 max-w-2xl mx-auto">
+            Soon, Kreyo will review every change, test your live app, and safely roll back bad updates.
+          </p>
+          
+          <Button size="lg" className="rounded-full" onClick={() => navigate("/waitlist")}>
+            Join the Waitlist
+          </Button>
         </div>
       </section>
 
       {/* Footer */}
       <footer className="relative border-t border-border">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-          <div className="flex items-center gap-2">
-            <span>Kreyo — The AI Agency for Production Apps</span>
-          </div>
-          <div className="flex items-center gap-4">
-            <a className="hover:text-foreground" href="#problem">
-              The Problem
-            </a>
-            <a className="hover:text-foreground" href="#solution">
-              Solution
-            </a>
-            <a className="hover:text-foreground" href="#how">
-              How it Works
-            </a>
-            <a className="hover:text-foreground" href="#features">
-              Features
-            </a>
-            <a className="hover:text-foreground" href="#who">
-              Who It's For
-            </a>
-          </div>
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 py-10 text-center text-sm text-muted-foreground">
+          <p>Kreyo — Keep your app alive.</p>
         </div>
       </footer>
     </div>
