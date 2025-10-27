@@ -90,9 +90,9 @@ const Activity2 = () => {
         </div>
 
         {/* Two-column Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 flex-1 mb-6">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 flex-1 mb-6 h-[calc(100vh-350px)] min-h-[600px]">
           {/* Left Panel - Fix List with Selection */}
-          <Card className="lg:col-span-2 p-6 bg-card border-border h-[calc(100vh-350px)] min-h-[600px] flex flex-col">
+          <Card className="lg:col-span-2 p-6 bg-card border-border h-full flex flex-col">
             <h2 className="text-lg font-semibold font-display text-foreground mb-4">Fixes Ready to Apply</h2>
             <ScrollArea className="flex-1 pr-4">
               <div className="space-y-3">
@@ -151,7 +151,7 @@ const Activity2 = () => {
           </Card>
 
           {/* Right Panel - Selected Fix Detail */}
-          <Card className="lg:col-span-3 p-6 bg-card border-border h-[calc(100vh-350px)] min-h-[600px] flex flex-col overflow-auto">
+          <Card className="lg:col-span-3 p-6 bg-card border-border h-full flex flex-col overflow-y-auto">
             <div className="mb-6">
               <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-medium mb-4 ${
                 isCurrentFixSelected 
