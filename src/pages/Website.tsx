@@ -114,8 +114,8 @@ const Website = () => {
       <section id="fit" className="relative py-16 md:py-24" style={{ backgroundColor: '#a084dc' }}>
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="max-w-3xl mb-8">
-            <h2 className="text-3xl font-bold font-display">How Kreyo fits your stack</h2>
-            <p className="mt-3 text-muted-foreground font-sans">
+            <h2 className="text-3xl font-bold font-display text-white">How Kreyo fits your stack</h2>
+            <p className="mt-3 text-white font-sans">
               Bring your existing tools — we meet you where you build.
             </p>
           </div>
@@ -138,7 +138,8 @@ const Website = () => {
                 title: "Production Readiness",
                 tools: "Kreyo",
                 desc: "Make your app safe, stable, and ready for real customers — with reviews, testing, and monitoring built in.",
-                isHighlighted: true
+                isHighlighted: true,
+                whiteText: true
               },
             ].map((item) => (
               <article
@@ -149,9 +150,9 @@ const Website = () => {
                     : 'bg-card'
                 }`}
               >
-                <h3 className="font-semibold font-display">{item.title}</h3>
-                <p className="text-sm text-muted-foreground font-sans">{item.tools}</p>
-                <p className="mt-1.5 text-sm text-muted-foreground font-sans">{item.desc}</p>
+                <h3 className={`font-semibold font-display ${item.whiteText ? 'text-white' : ''}`}>{item.title}</h3>
+                <p className={`text-sm font-sans ${item.whiteText ? 'text-white' : 'text-muted-foreground'}`}>{item.tools}</p>
+                <p className={`mt-1.5 text-sm font-sans ${item.whiteText ? 'text-white' : 'text-muted-foreground'}`}>{item.desc}</p>
               </article>
             ))}
           </div>
