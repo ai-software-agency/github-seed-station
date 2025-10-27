@@ -46,21 +46,24 @@ const AiAgency = () => {
               </div>
 
               <h1 className="text-4xl sm:text-6xl font-extrabold font-display leading-[1.05] tracking-tight">
-                Build fast. Run safe.{" "}
+                Your AI-built app.{" "}
                 <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-                  Grow confidently.
+                  Actually works.
                 </span>
               </h1>
 
-              <div className="text-lg font-sans max-w-2xl">
+              <div className="text-lg font-sans max-w-2xl space-y-3">
                 <p className="text-muted-foreground">
-                  Kreyo adds AI-powered QA and security to your vibe-coded app — automated code reviews, live smoke testing, and regression runs — so you can ship fast without fear.
+                  Kreyo runs your code reviews, live smoke tests, and regression QA automatically — so every deploy works the way you expect.
+                </p>
+                <p className="text-sm text-muted-foreground italic">
+                  "Your app shouldn't break just because your AI got creative."
                 </p>
               </div>
 
               <div className="flex flex-col sm:flex-row items-start gap-3">
                 <Button onClick={() => navigate("/waitlist")} size="lg" className="rounded-full">
-                  Run a Free Scan
+                  Test My App
                 </Button>
                 <Button onClick={() => navigate("#how")} variant="outline" size="lg" className="rounded-full">
                   See How It Works
@@ -71,7 +74,7 @@ const AiAgency = () => {
             <div className="lg:col-span-5">
               <div className="relative rounded-2xl p-6 bg-card border border-border shadow-lg transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)]">
                 <h3 className="text-sm font-semibold font-display text-muted-foreground mb-4">
-                  You → Replit / Vercel / Lovable → Kreyo
+                  Prompt → Code → Test → Fix → Pass ✅
                 </h3>
                 <div className="space-y-3 text-sm">
                   <div className="flex items-center gap-2 text-muted-foreground">
@@ -102,15 +105,15 @@ const AiAgency = () => {
       <section id="problem" className="relative py-16 md:py-24" style={{ backgroundColor: '#a084dc' }}>
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="max-w-3xl mb-8">
-            <h2 className="text-3xl font-bold font-display text-white">Vibe coding made building easy — not reliable.</h2>
+            <h2 className="text-3xl font-bold font-display text-white">Vibe coding made building easy — but not reliable.</h2>
             <p className="mt-3 text-white font-sans">
-              Vibe-coded apps ship with zero QA and no guardrails. One hallucinated prompt or bad dependency can break production or leak data. You need something that keeps your app working after you deploy it.
+              AI-built apps ship fast but break just as fast — missing tests, leaking secrets, and failing silently when users click. You don't need a dashboard. You need something that watches your app and proves it still works.
             </p>
           </div>
 
           <div className="rounded-2xl p-8 bg-gradient-to-br from-accent/20 via-secondary/15 to-primary/10 border border-white/20">
             <p className="text-xl md:text-2xl font-semibold text-white text-center font-display">
-              "We make sure your app still works after you ship it."
+              "You ship the app. Kreyo makes sure it survives."
             </p>
           </div>
         </div>
@@ -120,9 +123,9 @@ const AiAgency = () => {
       <section id="solution" className="relative py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="max-w-3xl mb-8">
-            <h2 className="text-3xl font-bold font-display">The AI Agency for Production Apps</h2>
+            <h2 className="text-3xl font-bold font-display">Your AI Agency for Production Confidence.</h2>
             <p className="mt-3 text-muted-foreground font-sans">
-              Kreyo connects to your Vercel or Replit app and runs a full production confidence stack: code reviews, live smoke tests, regression testing, and auto rollback.
+              Kreyo connects to your Vercel or Replit project and runs an end-to-end safety net: AI code reviews, live smoke testing, and regression automation — all without setup.
             </p>
           </div>
 
@@ -130,18 +133,18 @@ const AiAgency = () => {
             {[
               {
                 stage: "Build",
-                what: "AI code reviews, security scans, auto-generated smoke tests",
-                why: "Catch bugs and leaks before deploy"
+                what: "Reviews your code, finds leaks, writes tests",
+                why: "Prevents dumb mistakes before deploy"
               },
               {
                 stage: "Run",
-                what: "Continuous QA and dependency checks",
-                why: "Stay online and error-free"
+                what: "Simulates real users and watches for breakage",
+                why: "Catches problems before your customers do"
               },
               {
                 stage: "Grow",
-                what: "Automated regression and rollback",
-                why: "Scale safely without downtime"
+                what: "Runs regression tests and rolls back bad pushes",
+                why: "Lets you scale safely without fear"
               },
             ].map((item) => (
               <div
