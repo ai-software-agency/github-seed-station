@@ -170,7 +170,10 @@ const AiAgency = () => {
       <section id="how" className="relative py-16 md:py-24 bg-blue-50/30">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="max-w-3xl mb-8">
-            <h2 className="text-3xl font-bold font-display">How it works</h2>
+            <h2 className="text-3xl font-bold font-display">How Kreyo keeps your AI app alive.</h2>
+            <p className="mt-3 text-muted-foreground font-sans">
+              From first deploy to daily traffic, Kreyo runs the QA and security discipline you don't have time for.
+            </p>
           </div>
 
           <div className="grid md:grid-cols-4 gap-6">
@@ -178,22 +181,22 @@ const AiAgency = () => {
               {
                 num: "01",
                 title: "Connect",
-                desc: "Link your Replit, Lovable, or Vercel project.",
+                desc: "Link your app from Replit, Vercel, or Lovable — no installs, no setup. Takes 30 seconds.",
               },
               {
                 num: "02",
-                title: "Review",
-                desc: "Kreyo inspects your code for logic and security issues.",
+                title: "Review & Test",
+                desc: "Kreyo reviews your code and auto-generates Cypress smoke tests to cover your app's key flows. Think: instant QA team.",
               },
               {
                 num: "03",
-                title: "Test & Watch",
-                desc: "Live Cypress-style tests run automatically.",
+                title: "Watch & Protect",
+                desc: "Continuous testing simulates users and monitors dependencies. Kreyo alerts you when something breaks — or quietly fixes it.",
               },
               {
                 num: "04",
-                title: "Recover & Improve",
-                desc: "Auto rollback on failure with plain-English logs.",
+                title: "Recover & Learn",
+                desc: "Bad deploy? Rollback happens automatically. You get a clear explanation and improved tests for next time.",
               },
             ].map((item) => (
               <div
@@ -209,8 +212,10 @@ const AiAgency = () => {
             ))}
           </div>
 
-          <div className="mt-8 text-center text-sm text-muted-foreground font-sans">
-            <p>Flow: build → test → detect issue → rollback → success</p>
+          <div className="mt-8 text-center">
+            <Button size="lg" className="rounded-full" onClick={() => navigate("/waitlist")}>
+              See It in Action
+            </Button>
           </div>
         </div>
       </section>
@@ -219,34 +224,37 @@ const AiAgency = () => {
       <section id="features" className="relative py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="max-w-3xl mb-8">
-            <h2 className="text-3xl font-bold font-display">Features</h2>
+            <h2 className="text-3xl font-bold font-display">Everything your app needs to stay alive.</h2>
+            <p className="mt-3 text-muted-foreground font-sans">
+              Kreyo runs your code reviews, QA, and security automatically — catching the stuff AI and humans miss.
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
             {[
               {
                 title: "AI Code Reviews",
-                desc: "Detect logic and security flaws before release."
+                desc: "Reviews every change, flags logic errors, insecure code, and missing tests before you hit deploy."
               },
               {
                 title: "Live Smoke Testing",
-                desc: "Continuous user-journey tests with Cypress or Playwright."
+                desc: "Runs real user-journey tests (like \"signup,\" \"checkout,\" \"send email\") every few minutes — and alerts you when something breaks."
               },
               {
                 title: "Automated Regression",
-                desc: "Full UI and API test suites on every deploy."
+                desc: "Re-tests your whole app before every push — no setup, no QA team needed."
               },
               {
                 title: "Security Scans",
-                desc: "Check code and dependencies for vulnerabilities."
+                desc: "Checks for hardcoded secrets, weak dependencies, and unsafe inputs — and auto-fixes when possible."
               },
               {
                 title: "Safe Rollbacks",
-                desc: "Instant restore when a deploy fails."
+                desc: "Bad deploy? Kreyo rolls you back instantly and tells you what failed — no DevOps required."
               },
               {
                 title: "Plain-English Logs",
-                desc: "Explains what happened — no dashboards needed."
+                desc: "Every test, scan, and fix explained like a teammate would: \"Blocked 12 failed login attempts. Rolled back v1.3 safely.\""
               },
             ].map((item) => (
               <div
@@ -261,7 +269,7 @@ const AiAgency = () => {
 
           <div className="text-center">
             <Button size="lg" className="rounded-full" onClick={() => navigate("/waitlist")}>
-              Run My First Scan
+              Test My App Now
             </Button>
           </div>
         </div>
