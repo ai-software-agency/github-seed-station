@@ -220,7 +220,7 @@ const Activity2 = () => {
                 className="whitespace-nowrap"
                 onClick={() => navigate("/results")}
               >
-                Skip deployment for now
+                Back to Summary
               </Button>
               <Button 
                 size="lg" 
@@ -228,7 +228,7 @@ const Activity2 = () => {
                 disabled={selectedCount === 0}
                 onClick={() => navigate("/done")}
               >
-                Deploy Selected Fixes to Vercel
+                Download Fix Plan
               </Button>
             </div>
           </div>
