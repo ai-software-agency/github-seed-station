@@ -18,6 +18,7 @@ const allFixes = [
     description: "Removed hardcoded AWS key from config.js and moved it to environment variables.",
     affectedFile: "config.js",
     status: "Verified successfully",
+    severity: "Critical" as const,
   },
   {
     id: 2,
@@ -28,6 +29,7 @@ const allFixes = [
     description: "Added authentication middleware to protect admin routes from unauthorized access.",
     affectedFile: "/routes/admin.js",
     status: "Verified successfully",
+    severity: "Critical" as const,
   },
   {
     id: 3,
@@ -38,6 +40,7 @@ const allFixes = [
     description: "Implemented input sanitization to prevent XSS vulnerabilities in user-submitted content.",
     affectedFile: "/controllers/user.js",
     status: "Verified successfully",
+    severity: "Major" as const,
   },
   {
     id: 4,
@@ -48,6 +51,7 @@ const allFixes = [
     description: "Updated outdated packages with known security vulnerabilities to their latest secure versions.",
     affectedFile: "package.json",
     status: "Verified successfully",
+    severity: "Minor" as const,
   },
 ];
 
@@ -172,6 +176,18 @@ const Activity2 = () => {
             </div>
 
             <div className="space-y-4 mb-6">
+              <div className="flex items-center gap-2">
+                <span className="text-sm font-medium text-foreground">Severity:</span>
+                <span className={`text-sm inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full font-medium ${
+                  currentFix.severity === "Critical" 
+                    ? "bg-destructive/10 text-destructive" 
+                    : currentFix.severity === "Major"
+                    ? "bg-yellow-500/10 text-yellow-600 dark:text-yellow-500"
+                    : "bg-green-500/10 text-green-600 dark:text-green-500"
+                }`}>
+                  {currentFix.severity}
+                </span>
+              </div>
               <div className="flex items-center gap-2">
                 <span className="text-sm font-medium text-foreground">Affected File:</span>
                 <code className="text-sm bg-secondary px-2 py-1 rounded text-foreground">
