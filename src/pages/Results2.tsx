@@ -12,7 +12,8 @@ import { useNavigate } from "react-router-dom";
 const highPriorityIssues = [
   {
     id: 1,
-    text: "Secure how logins and passwords are handled.",
+    emoji: "🔑",
+    text: "Secure how logins and passwords are handled",
     details: {
       problem: "Your authentication system stores passwords without proper encryption. This means if someone gains access to your database, they could read all user passwords.",
       solution: "We implemented bcrypt hashing for all passwords and added secure session management. User credentials are now protected even if the database is compromised.",
@@ -23,7 +24,8 @@ const highPriorityIssues = [
   },
   {
     id: 2,
-    text: "Restrict admin access to trusted users only.",
+    emoji: "🛡️",
+    text: "Restrict admin access to trusted users only",
     details: {
       problem: "Your admin panel is accessible to anyone who knows the URL. There's no verification that the user should have admin privileges.",
       solution: "We added role-based access control (RBAC) that checks user permissions before allowing access to admin features. Only authorized users can now access sensitive functions.",
@@ -34,7 +36,8 @@ const highPriorityIssues = [
   },
   {
     id: 3,
-    text: "Add expiration rules for active sessions.",
+    emoji: "⏱️",
+    text: "Add expiration rules for active sessions",
     details: {
       problem: "User sessions never expire, meaning a stolen session token could be used indefinitely to access an account.",
       solution: "We implemented 24-hour session expiration with automatic token refresh. Sessions now expire after inactivity, and users are safely logged out.",
@@ -48,7 +51,8 @@ const highPriorityIssues = [
 const laterImprovements = [
   {
     id: 4,
-    text: "End sessions after logout to keep things tidy.",
+    emoji: "🧹",
+    text: "End sessions after logout to keep things tidy",
     details: {
       problem: "When users log out, their session tokens remain valid in the system. This creates unnecessary data accumulation and potential security risks.",
       solution: "We added automatic session cleanup on logout. Tokens are immediately invalidated and removed from the server, keeping your session store clean.",
@@ -59,7 +63,8 @@ const laterImprovements = [
   },
   {
     id: 5,
-    text: "Add basic limits to repeated logins.",
+    emoji: "🚦",
+    text: "Add basic limits to repeated logins",
     details: {
       problem: "Unlimited login attempts allow attackers to try thousands of password combinations (brute force attacks) without any restriction.",
       solution: "We implemented rate limiting that temporarily blocks IP addresses after 5 failed login attempts. This protects against automated password guessing.",
@@ -70,7 +75,8 @@ const laterImprovements = [
   },
   {
     id: 6,
-    text: "Review privacy settings for smoother compliance.",
+    emoji: "🔒",
+    text: "Review privacy settings for smoother compliance",
     details: {
       problem: "Your app collects user data without clear privacy policies or consent mechanisms, which could violate GDPR and other privacy regulations.",
       solution: "We added a privacy policy page, cookie consent banner, and data export functionality. Users now have transparency and control over their data.",
@@ -163,22 +169,16 @@ const ScanComplete2 = () => {
                   </div>
                 </CollapsibleTrigger>
                 <CollapsibleContent>
-                  <div className="px-6 pb-6 space-y-4">
+                  <div className="px-6 pb-6 space-y-3">
                     {highPriorityIssues.map((issue) => (
-                      <div key={issue.id} className="flex items-start gap-3 p-4 rounded-lg bg-muted/50 border border-border hover:border-destructive/30 transition-colors">
-                        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-destructive/10 flex items-center justify-center mt-0.5">
-                          <span className="text-xs font-bold text-destructive">{issue.id}</span>
-                        </div>
-                        <div className="flex-1">
-                          <p className="text-sm font-sans text-foreground mb-2">{issue.text}</p>
-                          <button 
-                            onClick={() => setSelectedIssue(issue)}
-                            className="text-xs text-primary hover:text-primary/80 font-medium inline-flex items-center gap-1 transition-colors"
-                          >
-                            View Details →
-                          </button>
-                        </div>
-                      </div>
+                      <button
+                        key={issue.id}
+                        onClick={() => setSelectedIssue(issue)}
+                        className="w-full flex items-center gap-3 p-3 rounded-lg bg-muted/50 border border-border hover:border-destructive/30 hover:bg-muted transition-colors text-left"
+                      >
+                        <span className="text-2xl flex-shrink-0">{issue.emoji}</span>
+                        <span className="text-sm font-sans text-foreground">{issue.text}</span>
+                      </button>
                     ))}
                   </div>
                 </CollapsibleContent>
@@ -203,22 +203,16 @@ const ScanComplete2 = () => {
                   </div>
                 </CollapsibleTrigger>
                 <CollapsibleContent>
-                  <div className="px-6 pb-6 space-y-4">
+                  <div className="px-6 pb-6 space-y-3">
                     {laterImprovements.map((issue) => (
-                      <div key={issue.id} className="flex items-start gap-3 p-4 rounded-lg bg-muted/50 border border-border hover:border-orange-500/30 transition-colors">
-                        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-orange-500/10 flex items-center justify-center mt-0.5">
-                          <span className="text-xs font-bold text-orange-500">✓</span>
-                        </div>
-                        <div className="flex-1">
-                          <p className="text-sm font-sans text-foreground mb-2">{issue.text}</p>
-                          <button 
-                            onClick={() => setSelectedIssue(issue)}
-                            className="text-xs text-primary hover:text-primary/80 font-medium inline-flex items-center gap-1 transition-colors"
-                          >
-                            View Details →
-                          </button>
-                        </div>
-                      </div>
+                      <button
+                        key={issue.id}
+                        onClick={() => setSelectedIssue(issue)}
+                        className="w-full flex items-center gap-3 p-3 rounded-lg bg-muted/50 border border-border hover:border-orange-500/30 hover:bg-muted transition-colors text-left"
+                      >
+                        <span className="text-2xl flex-shrink-0">{issue.emoji}</span>
+                        <span className="text-sm font-sans text-foreground">{issue.text}</span>
+                      </button>
                     ))}
                   </div>
                 </CollapsibleContent>
