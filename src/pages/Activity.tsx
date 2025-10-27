@@ -92,9 +92,9 @@ const Activity2 = () => {
         {/* Two-column Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 flex-1 mb-6">
           {/* Left Panel - Fix List with Selection */}
-          <Card className="lg:col-span-2 p-6 bg-card border-border">
+          <Card className="lg:col-span-2 p-6 bg-card border-border h-[calc(100vh-350px)] min-h-[600px] flex flex-col">
             <h2 className="text-lg font-semibold font-display text-foreground mb-4">Fixes Ready to Apply</h2>
-            <ScrollArea className="h-[calc(100vh-400px)] min-h-[500px] pr-4">
+            <ScrollArea className="flex-1 pr-4">
               <div className="space-y-3">
                 {allFixes.map((fix) => {
                 const isSelected = selectedFixes.has(fix.id);
@@ -151,7 +151,7 @@ const Activity2 = () => {
           </Card>
 
           {/* Right Panel - Selected Fix Detail */}
-          <Card className="lg:col-span-3 p-6 bg-card border-border">
+          <Card className="lg:col-span-3 p-6 bg-card border-border h-[calc(100vh-350px)] min-h-[600px] flex flex-col overflow-auto">
             <div className="mb-6">
               <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-medium mb-4 ${
                 isCurrentFixSelected 
