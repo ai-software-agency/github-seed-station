@@ -1,7 +1,5 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Switch } from "@/components/ui/switch";
-import { Label } from "@/components/ui/label";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { TopNav } from "@/components/TopNav";
 import { CheckCircle2, Key, Shield, Eraser, RefreshCw, ExternalLink } from "lucide-react";
@@ -112,40 +110,20 @@ const Activity2 = () => {
                     } ${!isSelected ? "opacity-50" : ""}`}
                     onClick={() => setCurrentFix(fix)}
                   >
-                    <div className="flex items-center gap-3 mb-2">
+                    <div className="flex items-center gap-3">
                       <span className="text-xl flex-shrink-0">{fix.icon}</span>
                       <p className="text-sm font-medium text-foreground flex-1 min-w-0">
                         {fix.title}
                       </p>
-                      <span className={`inline-flex items-center gap-1 text-xs px-2 py-0.5 rounded-full flex-shrink-0 ${
-                        isSelected 
-                          ? 'bg-accent/10 text-accent' 
-                          : 'bg-muted text-muted-foreground'
+                      <span className={`text-xs inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full font-medium flex-shrink-0 ${
+                        fix.severity === "Critical" 
+                          ? "bg-destructive/10 text-destructive" 
+                          : fix.severity === "Major"
+                          ? "bg-yellow-500/10 text-yellow-600 dark:text-yellow-500"
+                          : "bg-green-500/10 text-green-600 dark:text-green-500"
                       }`}>
-                        {isSelected ? (
-                          <>
-                            verified
-                            <CheckCircle2 className="w-3 h-3" />
-                          </>
-                        ) : (
-                          'Skipped'
-                        )}
+                        {fix.severity}
                       </span>
-                    </div>
-                    <div className="flex items-center justify-end gap-2">
-                      <Label 
-                        htmlFor={`toggle-${fix.id}`} 
-                        className="text-xs text-muted-foreground cursor-pointer"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        Include fix
-                      </Label>
-                      <Switch
-                        id={`toggle-${fix.id}`}
-                        checked={isSelected}
-                        onCheckedChange={() => toggleFix(fix.id)}
-                        onClick={(e) => e.stopPropagation()}
-                      />
                     </div>
                   </Card>
                 );
