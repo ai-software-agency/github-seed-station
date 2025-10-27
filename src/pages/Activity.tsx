@@ -77,8 +77,8 @@ const Activity2 = () => {
       {/* Navigation */}
       <TopNav />
       
-      <div className="pt-20 md:pt-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 animate-fade-in">
+      <div className="pt-20 md:pt-24 min-h-screen flex flex-col">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 animate-fade-in flex-1 flex flex-col">
         {/* Header */}
         <div className="mb-6">
           <h1 className="text-3xl font-semibold font-display text-foreground mb-2">
@@ -90,11 +90,11 @@ const Activity2 = () => {
         </div>
 
         {/* Two-column Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 mb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 flex-1 mb-6">
           {/* Left Panel - Fix List with Selection */}
           <Card className="lg:col-span-2 p-6 bg-card border-border">
             <h2 className="text-lg font-semibold font-display text-foreground mb-4">Fixes Ready to Apply</h2>
-            <ScrollArea className="max-h-[500px] pr-4">
+            <ScrollArea className="h-[calc(100vh-400px)] min-h-[500px] pr-4">
               <div className="space-y-3">
                 {allFixes.map((fix) => {
                 const isSelected = selectedFixes.has(fix.id);
@@ -199,7 +199,7 @@ const Activity2 = () => {
         </div>
 
         {/* Bottom Banner */}
-        <Card className="p-6 border-border bg-card">
+        <Card className="p-6 border-border bg-card mt-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-start gap-3">
               <div className="p-2 rounded-full bg-accent/10">
