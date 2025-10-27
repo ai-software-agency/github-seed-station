@@ -160,8 +160,8 @@ const Activity2 = () => {
               }`}>
                 <CheckCircle2 className="w-4 h-4" />
                 {isCurrentFixSelected 
-                  ? 'Fix verified — ready to deploy'
-                  : 'Fix will be skipped in deployment'}
+                  ? 'Fix will be included in Plan'
+                  : 'Fix will be skipped'}
               </div>
               <h2 className="text-xl font-semibold font-display text-foreground mb-3">
                 {currentFix.title}
