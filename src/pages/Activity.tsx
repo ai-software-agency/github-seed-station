@@ -1,5 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Switch } from "@/components/ui/switch";
+import { Label } from "@/components/ui/label";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { TopNav } from "@/components/TopNav";
 import { CheckCircle2, Key, Shield, Eraser, RefreshCw, ExternalLink } from "lucide-react";
@@ -110,7 +112,7 @@ const Activity2 = () => {
                     } ${!isSelected ? "opacity-50" : ""}`}
                     onClick={() => setCurrentFix(fix)}
                   >
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-3 mb-2">
                       <span className="text-xl flex-shrink-0">{fix.icon}</span>
                       <p className="text-sm font-medium text-foreground flex-1 min-w-0">
                         {fix.title}
@@ -124,6 +126,21 @@ const Activity2 = () => {
                       }`}>
                         {fix.severity}
                       </span>
+                    </div>
+                    <div className="flex items-center justify-end gap-2">
+                      <Label 
+                        htmlFor={`toggle-${fix.id}`} 
+                        className="text-xs text-muted-foreground cursor-pointer"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        Include fix
+                      </Label>
+                      <Switch
+                        id={`toggle-${fix.id}`}
+                        checked={isSelected}
+                        onCheckedChange={() => toggleFix(fix.id)}
+                        onClick={(e) => e.stopPropagation()}
+                      />
                     </div>
                   </Card>
                 );
