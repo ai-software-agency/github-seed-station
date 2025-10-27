@@ -82,7 +82,7 @@ const AiAgency = () => {
           <div className="flex items-center justify-between mb-8 flex-wrap gap-4">
             <h2 className="text-3xl font-bold font-display">Build → Run → Grow</h2>
             <span className="text-xs uppercase tracking-wider text-muted-foreground font-semibold">
-              Optimized for conversion: Try now or join waitlists
+              Try VibeSec now or join our waitlists
             </span>
           </div>
 
