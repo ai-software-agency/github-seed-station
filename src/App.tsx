@@ -14,6 +14,7 @@ import Results2 from "./pages/Results2";
 import Activity from "./pages/Activity";
 import Done from "./pages/Done";
 import Website from "./pages/Website";
+import AiAgency from "./pages/AiAgency";
 import Aisec from "./pages/Aisec";
 import NotFound from "./pages/NotFound";
 
@@ -27,6 +28,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Website />} />
+          <Route path="/ai-agency" element={<AiAgency />} />
           <Route path="/start" element={<Start />} />
           <Route path="/waitlist" element={<Waitlist />} />
           <Route path="/aisec" element={<Aisec />} />
