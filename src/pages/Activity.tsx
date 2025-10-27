@@ -101,38 +101,32 @@ const Activity2 = () => {
                 return (
                   <Card
                     key={fix.id}
-                    className={`p-4 transition-all cursor-pointer ${
+                    className={`p-3 transition-all cursor-pointer ${
                       currentFix.id === fix.id
                         ? "border-accent/50 shadow-sm"
                         : "bg-card border-border hover:border-accent/20"
                     } ${!isSelected ? "opacity-50" : ""}`}
                     onClick={() => setCurrentFix(fix)}
                   >
-                    <div className="flex items-start gap-3 mb-3">
+                    <div className="flex items-center gap-3 mb-2">
                       <span className="text-xl flex-shrink-0">{fix.icon}</span>
-                      <div className="flex-1 min-w-0">
-                        <p className="text-sm font-medium text-foreground mb-1">
-                          {fix.title}
-                        </p>
-                        <div className="flex items-center gap-2 text-xs">
-                          <span className={`inline-flex items-center gap-1 ${isSelected ? 'text-accent' : 'text-muted-foreground'}`}>
-                            {isSelected ? (
-                              <>
-                                verified
-                                <CheckCircle2 className="w-3 h-3" />
-                              </>
-                            ) : (
-                              'Skipped'
-                            )}
-                          </span>
-                          {isSelected && (
-                            <>
-                              <span className="text-muted-foreground">•</span>
-                              <span className="text-muted-foreground">{fix.timestamp}</span>
-                            </>
-                          )}
-                        </div>
-                      </div>
+                      <p className="text-sm font-medium text-foreground flex-1 min-w-0">
+                        {fix.title}
+                      </p>
+                      <span className={`inline-flex items-center gap-1 text-xs px-2 py-0.5 rounded-full flex-shrink-0 ${
+                        isSelected 
+                          ? 'bg-accent/10 text-accent' 
+                          : 'bg-muted text-muted-foreground'
+                      }`}>
+                        {isSelected ? (
+                          <>
+                            verified
+                            <CheckCircle2 className="w-3 h-3" />
+                          </>
+                        ) : (
+                          'Skipped'
+                        )}
+                      </span>
                     </div>
                     <div className="flex items-center justify-end gap-2">
                       <Label 
