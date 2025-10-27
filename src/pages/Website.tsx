@@ -111,7 +111,7 @@ const Website = () => {
       </div>
 
       {/* How Kreyo fits your stack */}
-      <section id="fit" className="relative py-16 md:py-24 bg-blue-50/30">
+      <section id="fit" className="relative py-16 md:py-24" style={{ backgroundColor: '#a084dc' }}>
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="max-w-3xl mb-8">
             <h2 className="text-3xl font-bold font-display">How Kreyo fits your stack</h2>
