@@ -199,7 +199,7 @@ const Activity2 = () => {
         </div>
 
         {/* Bottom Banner */}
-        <Card className="p-6 border-border bg-card mt-auto">
+        <Card className="p-6 border-border bg-card mt-auto mb-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-start gap-3">
               <div className="p-2 rounded-full bg-accent/10">
