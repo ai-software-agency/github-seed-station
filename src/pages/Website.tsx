@@ -366,14 +366,9 @@ const Website = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
             {/* Left Column - Title */}
             <div className="lg:col-span-5 space-y-3 md:space-y-4">
-              <div className="flex items-center gap-3 flex-wrap">
-                <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight text-foreground">
-                  Frequently Asked
-                </h2>
-                <Badge variant="secondary" className="bg-accent/20 text-accent border-accent/30 px-3 py-1">
-                  Q's
-                </Badge>
-              </div>
+              <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight text-foreground">
+                Frequently Asked Questions
+              </h2>
               <p className="text-base text-muted-foreground">
                 Common questions about how Kreyo works
               </p>
