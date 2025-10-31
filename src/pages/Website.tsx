@@ -1,8 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Badge } from "@/components/ui/badge";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { TopNav } from "@/components/TopNav";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import { Check } from "lucide-react";
 import vercelLogo from "@/assets/vercel-new.png";
 import replitLogo from "@/assets/replit-new.png";
 import figmaLogo from "@/assets/figma-new.png";
@@ -353,6 +356,129 @@ const Website = () => {
             <img src={figmaLogo} alt="Figma" className="h-32 object-contain opacity-60 hover:opacity-100 transition-opacity" />
             <img src={githubLogo} alt="GitHub" className="h-32 object-contain opacity-60 hover:opacity-100 transition-opacity" />
             <img src={lovableLogo} alt="Lovable" className="h-32 object-contain opacity-60 hover:opacity-100 transition-opacity" />
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section id="faq" className="relative py-20 md:py-24">
+        <div className="container mx-auto px-6 md:px-8 max-w-6xl">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+            {/* Left Column - Title */}
+            <div className="lg:col-span-5 space-y-3 md:space-y-4">
+              <div className="flex items-center gap-3 flex-wrap">
+                <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight text-foreground">
+                  Frequently Asked
+                </h2>
+                <Badge variant="secondary" className="bg-accent/20 text-accent border-accent/30 px-3 py-1">
+                  Q's
+                </Badge>
+              </div>
+              <p className="text-base text-muted-foreground">
+                Common questions about how Kreyo works
+              </p>
+            </div>
+
+            {/* Right Column - Accordion */}
+            <div className="lg:col-span-7">
+              <Accordion type="single" collapsible className="space-y-3 md:space-y-4">
+                <AccordionItem value="item-1" className="border-none">
+                  <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-4 md:py-5 hover:bg-accent/10 hover:border-accent/30 transition-all data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30 [&[data-state=open]>div>svg]:text-accent">
+                    <div className="flex items-center gap-3 text-left">
+                      <Check className="w-4 h-4 flex-shrink-0 text-muted-foreground" />
+                      <span className="text-base md:text-lg font-medium text-foreground">
+                        How does Kreyo know which alerts are relevant?
+                      </span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-5 md:px-6">
+                    <div className="mt-3 md:mt-4 text-sm md:text-base leading-relaxed text-muted-foreground max-w-prose pl-7">
+                      We've built a rule engine that takes the context of your environment into account. This allows us to easily adapt the criticality score for your environment and filter out false positives.
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-2" className="border-none">
+                  <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-4 md:py-5 hover:bg-accent/10 hover:border-accent/30 transition-all data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30 [&[data-state=open]>div>svg]:text-accent">
+                    <div className="flex items-center gap-3 text-left">
+                      <Check className="w-4 h-4 flex-shrink-0 text-muted-foreground" />
+                      <span className="text-base md:text-lg font-medium text-foreground">
+                        What happens to my data?
+                      </span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-5 md:px-6">
+                    <div className="mt-3 md:mt-4 text-sm md:text-base leading-relaxed text-muted-foreground max-w-prose pl-7">
+                      Your data is encrypted in transit and at rest. We only read your code to perform security analysis and never store your source code on our servers.
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-3" className="border-none">
+                  <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-4 md:py-5 hover:bg-accent/10 hover:border-accent/30 transition-all data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30 [&[data-state=open]>div>svg]:text-accent">
+                    <div className="flex items-center gap-3 text-left">
+                      <Check className="w-4 h-4 flex-shrink-0 text-muted-foreground" />
+                      <span className="text-base md:text-lg font-medium text-foreground">
+                        Does Kreyo make changes to my codebase?
+                      </span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-5 md:px-6">
+                    <div className="mt-3 md:mt-4 text-sm md:text-base leading-relaxed text-muted-foreground max-w-prose pl-7">
+                      No, Kreyo operates in read-only mode. It analyzes your code and provides recommendations, but never makes changes without your explicit approval.
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-4" className="border-none">
+                  <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-4 md:py-5 hover:bg-accent/10 hover:border-accent/30 transition-all data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30 [&[data-state=open]>div>svg]:text-accent">
+                    <div className="flex items-center gap-3 text-left">
+                      <Check className="w-4 h-4 flex-shrink-0 text-muted-foreground" />
+                      <span className="text-base md:text-lg font-medium text-foreground">
+                        I don't want to connect my repository. Can I try it with a test account?
+                      </span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-5 md:px-6">
+                    <div className="mt-3 md:mt-4 text-sm md:text-base leading-relaxed text-muted-foreground max-w-prose pl-7">
+                      Yes, you can create a test repository specifically for trying out Kreyo. We recommend using a public repository for testing purposes.
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-5" className="border-none">
+                  <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-4 md:py-5 hover:bg-accent/10 hover:border-accent/30 transition-all data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30 [&[data-state=open]>div>svg]:text-accent">
+                    <div className="flex items-center gap-3 text-left">
+                      <Check className="w-4 h-4 flex-shrink-0 text-muted-foreground" />
+                      <span className="text-base md:text-lg font-medium text-foreground">
+                        How is Kreyo different from other security tools?
+                      </span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-5 md:px-6">
+                    <div className="mt-3 md:mt-4 text-sm md:text-base leading-relaxed text-muted-foreground max-w-prose pl-7">
+                      Our AI-powered platform provides context-aware analysis that understands your specific environment, reducing false positives and focusing on what matters most for your application.
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-6" className="border-none">
+                  <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-4 md:py-5 hover:bg-accent/10 hover:border-accent/30 transition-all data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30 [&[data-state=open]>div>svg]:text-accent">
+                    <div className="flex items-center gap-3 text-left">
+                      <Check className="w-4 h-4 flex-shrink-0 text-muted-foreground" />
+                      <span className="text-base md:text-lg font-medium text-foreground">
+                        How can I trust Kreyo's recommendations?
+                      </span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-5 md:px-6">
+                    <div className="mt-3 md:mt-4 text-sm md:text-base leading-relaxed text-muted-foreground max-w-prose pl-7">
+                      Our recommendations are based on industry best practices and security standards. Each alert includes detailed context and references to help you understand the potential impact.
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
           </div>
         </div>
       </section>
