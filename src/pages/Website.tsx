@@ -382,13 +382,13 @@ const Website = () => {
                     <div className="flex items-center gap-3 text-left">
                       <Check className="w-4 h-4 flex-shrink-0 text-muted-foreground" />
                       <span className="text-base md:text-lg font-medium text-foreground">
-                        How does Kreyo know which alerts are relevant?
+                        What is Kreyo?
                       </span>
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="px-5 md:px-6">
                     <div className="mt-3 md:mt-4 text-sm md:text-base leading-relaxed text-muted-foreground max-w-prose pl-7">
-                      We've built a rule engine that takes the context of your environment into account. This allows us to easily adapt the criticality score for your environment and filter out false positives.
+                      Kreyo is your AI security co-pilot. It works with your coding environment to find and help fix vulnerabilities — without ever touching your code.
                     </div>
                   </AccordionContent>
                 </AccordionItem>
@@ -398,13 +398,13 @@ const Website = () => {
                     <div className="flex items-center gap-3 text-left">
                       <Check className="w-4 h-4 flex-shrink-0 text-muted-foreground" />
                       <span className="text-base md:text-lg font-medium text-foreground">
-                        What happens to my data?
+                        Who is Kreyo for?
                       </span>
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="px-5 md:px-6">
                     <div className="mt-3 md:mt-4 text-sm md:text-base leading-relaxed text-muted-foreground max-w-prose pl-7">
-                      Your data is encrypted in transit and at rest. We only read your code to perform security analysis and never store your source code on our servers.
+                      Kreyo is built for vibe coders — builders who create apps in Replit, Lovable, or any similar platform, and want to keep their code secure with minimal friction.
                     </div>
                   </AccordionContent>
                 </AccordionItem>
@@ -414,13 +414,23 @@ const Website = () => {
                     <div className="flex items-center gap-3 text-left">
                       <Check className="w-4 h-4 flex-shrink-0 text-muted-foreground" />
                       <span className="text-base md:text-lg font-medium text-foreground">
-                        Does Kreyo make changes to my codebase?
+                        How does Kreyo work?
                       </span>
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="px-5 md:px-6">
                     <div className="mt-3 md:mt-4 text-sm md:text-base leading-relaxed text-muted-foreground max-w-prose pl-7">
-                      No, Kreyo operates in read-only mode. It analyzes your code and provides recommendations, but never makes changes without your explicit approval.
+                      <ol className="list-decimal list-inside space-y-2">
+                        <li>Back up your app to GitHub (we'll guide you if you're new to that).</li>
+                        <li>Visit app.kreyo.ai and log in with your GitHub ID.</li>
+                        <li>Connect your repository with Kreyo.</li>
+                        <li>Choose your favorite AI model — OpenAI, Anthropic, Meta, or others.</li>
+                        <li>Kreyo scans your code for security vulnerabilities using AI.</li>
+                        <li>We show you what we found, along with a ready-to-use prompt.</li>
+                        <li>Copy that prompt into your coding app (Replit, Lovable, etc.) — your app will handle the fix itself.</li>
+                        <li>Once done, scan again to confirm everything's secure.</li>
+                      </ol>
+                      <p className="mt-3">No code leaves your environment. No code is ever changed by us.</p>
                     </div>
                   </AccordionContent>
                 </AccordionItem>
@@ -430,13 +440,13 @@ const Website = () => {
                     <div className="flex items-center gap-3 text-left">
                       <Check className="w-4 h-4 flex-shrink-0 text-muted-foreground" />
                       <span className="text-base md:text-lg font-medium text-foreground">
-                        I don't want to connect my repository. Can I try it with a test account?
+                        Does Kreyo change or store my code?
                       </span>
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="px-5 md:px-6">
                     <div className="mt-3 md:mt-4 text-sm md:text-base leading-relaxed text-muted-foreground max-w-prose pl-7">
-                      Yes, you can create a test repository specifically for trying out Kreyo. We recommend using a public repository for testing purposes.
+                      No. Kreyo never edits or stores your code. We only read it during a scan to analyze potential security issues. All fixes happen within your own development environment.
                     </div>
                   </AccordionContent>
                 </AccordionItem>
@@ -446,13 +456,13 @@ const Website = () => {
                     <div className="flex items-center gap-3 text-left">
                       <Check className="w-4 h-4 flex-shrink-0 text-muted-foreground" />
                       <span className="text-base md:text-lg font-medium text-foreground">
-                        How is Kreyo different from other security tools?
+                        What happens after I connect my GitHub repo?
                       </span>
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="px-5 md:px-6">
                     <div className="mt-3 md:mt-4 text-sm md:text-base leading-relaxed text-muted-foreground max-w-prose pl-7">
-                      Our AI-powered platform provides context-aware analysis that understands your specific environment, reducing false positives and focusing on what matters most for your application.
+                      Once connected, Kreyo scans your repository safely and privately. It identifies vulnerabilities and provides simple, copyable prompts that guide your coding tool to apply secure fixes.
                     </div>
                   </AccordionContent>
                 </AccordionItem>
@@ -462,13 +472,93 @@ const Website = () => {
                     <div className="flex items-center gap-3 text-left">
                       <Check className="w-4 h-4 flex-shrink-0 text-muted-foreground" />
                       <span className="text-base md:text-lg font-medium text-foreground">
-                        How can I trust Kreyo's recommendations?
+                        Which AI models can I use?
                       </span>
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="px-5 md:px-6">
                     <div className="mt-3 md:mt-4 text-sm md:text-base leading-relaxed text-muted-foreground max-w-prose pl-7">
-                      Our recommendations are based on industry best practices and security standards. Each alert includes detailed context and references to help you understand the potential impact.
+                      You can pick from top models like OpenAI, Anthropic, or Meta — whichever you trust or already use.
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-7" className="border-none">
+                  <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-4 md:py-5 hover:bg-accent/10 hover:border-accent/30 transition-all data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30 [&[data-state=open]>div>svg]:text-accent">
+                    <div className="flex items-center gap-3 text-left">
+                      <Check className="w-4 h-4 flex-shrink-0 text-muted-foreground" />
+                      <span className="text-base md:text-lg font-medium text-foreground">
+                        How does Kreyo fix vulnerabilities?
+                      </span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-5 md:px-6">
+                    <div className="mt-3 md:mt-4 text-sm md:text-base leading-relaxed text-muted-foreground max-w-prose pl-7">
+                      Kreyo doesn't directly fix your code. Instead, it generates precise, secure prompts that you can paste into your preferred AI coding assistant. This way, the fix is applied by your own coding app, keeping your workflow safe and in your control.
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-8" className="border-none">
+                  <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-4 md:py-5 hover:bg-accent/10 hover:border-accent/30 transition-all data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30 [&[data-state=open]>div>svg]:text-accent">
+                    <div className="flex items-center gap-3 text-left">
+                      <Check className="w-4 h-4 flex-shrink-0 text-muted-foreground" />
+                      <span className="text-base md:text-lg font-medium text-foreground">
+                        Can I scan again after fixing issues?
+                      </span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-5 md:px-6">
+                    <div className="mt-3 md:mt-4 text-sm md:text-base leading-relaxed text-muted-foreground max-w-prose pl-7">
+                      Absolutely. Once you've applied the fixes, you can rescan your app anytime to confirm that vulnerabilities are resolved.
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-9" className="border-none">
+                  <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-4 md:py-5 hover:bg-accent/10 hover:border-accent/30 transition-all data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30 [&[data-state=open]>div>svg]:text-accent">
+                    <div className="flex items-center gap-3 text-left">
+                      <Check className="w-4 h-4 flex-shrink-0 text-muted-foreground" />
+                      <span className="text-base md:text-lg font-medium text-foreground">
+                        Is my project safe with Kreyo?
+                      </span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-5 md:px-6">
+                    <div className="mt-3 md:mt-4 text-sm md:text-base leading-relaxed text-muted-foreground max-w-prose pl-7">
+                      Yes — fully. Kreyo runs read-only scans, never uploads or modifies your files, and never retains your code. Your project remains entirely under your control.
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-10" className="border-none">
+                  <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-4 md:py-5 hover:bg-accent/10 hover:border-accent/30 transition-all data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30 [&[data-state=open]>div>svg]:text-accent">
+                    <div className="flex items-center gap-3 text-left">
+                      <Check className="w-4 h-4 flex-shrink-0 text-muted-foreground" />
+                      <span className="text-base md:text-lg font-medium text-foreground">
+                        What do I need to get started?
+                      </span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-5 md:px-6">
+                    <div className="mt-3 md:mt-4 text-sm md:text-base leading-relaxed text-muted-foreground max-w-prose pl-7">
+                      Just a GitHub account and your app code backed up there. From there, it's as easy as logging into app.kreyo.ai and connecting your repo.
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-11" className="border-none">
+                  <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-4 md:py-5 hover:bg-accent/10 hover:border-accent/30 transition-all data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30 [&[data-state=open]>div>svg]:text-accent">
+                    <div className="flex items-center gap-3 text-left">
+                      <Check className="w-4 h-4 flex-shrink-0 text-muted-foreground" />
+                      <span className="text-base md:text-lg font-medium text-foreground">
+                        Why should I use Kreyo?
+                      </span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-5 md:px-6">
+                    <div className="mt-3 md:mt-4 text-sm md:text-base leading-relaxed text-muted-foreground max-w-prose pl-7">
+                      Because security shouldn't slow you down. Kreyo helps you find and fix vulnerabilities using AI — fast, simple, and fully in your control.
                     </div>
                   </AccordionContent>
                 </AccordionItem>
