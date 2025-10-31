@@ -366,7 +366,7 @@ const Website = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
             {/* Left Column - Title */}
             <div className="lg:col-span-5 space-y-3 md:space-y-4">
-              <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight text-foreground">
+              <h2 className="text-3xl font-bold font-display">
                 Frequently Asked Questions
               </h2>
               <p className="text-base text-muted-foreground">
