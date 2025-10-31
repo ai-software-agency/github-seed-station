@@ -376,9 +376,9 @@ const Website = () => {
 
             {/* Right Column - Accordion */}
             <div className="lg:col-span-7">
-              <Accordion type="single" collapsible className="space-y-3 md:space-y-4">
+              <Accordion type="single" collapsible className="space-y-1.5 md:space-y-2">
                 <AccordionItem value="item-1" className="border-none">
-                  <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-4 md:py-5 hover:bg-accent/10 hover:border-accent/30 transition-all data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30 [&[data-state=open]>div>svg]:text-accent">
+                  <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-3 md:py-4 hover:bg-accent/10 hover:border-accent/30 transition-all data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30 [&[data-state=open]>div>svg]:text-accent">
                     <div className="flex items-center gap-3 text-left">
                       <Check className="w-4 h-4 flex-shrink-0 text-muted-foreground" />
                       <span className="text-base md:text-lg font-medium text-foreground">
@@ -394,7 +394,7 @@ const Website = () => {
                 </AccordionItem>
 
                 <AccordionItem value="item-2" className="border-none">
-                  <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-4 md:py-5 hover:bg-accent/10 hover:border-accent/30 transition-all data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30 [&[data-state=open]>div>svg]:text-accent">
+                  <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-3 md:py-4 hover:bg-accent/10 hover:border-accent/30 transition-all data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30 [&[data-state=open]>div>svg]:text-accent">
                     <div className="flex items-center gap-3 text-left">
                       <Check className="w-4 h-4 flex-shrink-0 text-muted-foreground" />
                       <span className="text-base md:text-lg font-medium text-foreground">
@@ -410,7 +410,7 @@ const Website = () => {
                 </AccordionItem>
 
                 <AccordionItem value="item-3" className="border-none">
-                  <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-4 md:py-5 hover:bg-accent/10 hover:border-accent/30 transition-all data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30 [&[data-state=open]>div>svg]:text-accent">
+                  <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-3 md:py-4 hover:bg-accent/10 hover:border-accent/30 transition-all data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30 [&[data-state=open]>div>svg]:text-accent">
                     <div className="flex items-center gap-3 text-left">
                       <Check className="w-4 h-4 flex-shrink-0 text-muted-foreground" />
                       <span className="text-base md:text-lg font-medium text-foreground">
@@ -436,7 +436,7 @@ const Website = () => {
                 </AccordionItem>
 
                 <AccordionItem value="item-4" className="border-none">
-                  <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-4 md:py-5 hover:bg-accent/10 hover:border-accent/30 transition-all data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30 [&[data-state=open]>div>svg]:text-accent">
+                  <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-3 md:py-4 hover:bg-accent/10 hover:border-accent/30 transition-all data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30 [&[data-state=open]>div>svg]:text-accent">
                     <div className="flex items-center gap-3 text-left">
                       <Check className="w-4 h-4 flex-shrink-0 text-muted-foreground" />
                       <span className="text-base md:text-lg font-medium text-foreground">
@@ -452,7 +452,7 @@ const Website = () => {
                 </AccordionItem>
 
                 <AccordionItem value="item-5" className="border-none">
-                  <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-4 md:py-5 hover:bg-accent/10 hover:border-accent/30 transition-all data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30 [&[data-state=open]>div>svg]:text-accent">
+                  <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-3 md:py-4 hover:bg-accent/10 hover:border-accent/30 transition-all data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30 [&[data-state=open]>div>svg]:text-accent">
                     <div className="flex items-center gap-3 text-left">
                       <Check className="w-4 h-4 flex-shrink-0 text-muted-foreground" />
                       <span className="text-base md:text-lg font-medium text-foreground">
@@ -468,7 +468,7 @@ const Website = () => {
                 </AccordionItem>
 
                 <AccordionItem value="item-6" className="border-none">
-                  <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-4 md:py-5 hover:bg-accent/10 hover:border-accent/30 transition-all data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30 [&[data-state=open]>div>svg]:text-accent">
+                  <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-3 md:py-4 hover:bg-accent/10 hover:border-accent/30 transition-all data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30 [&[data-state=open]>div>svg]:text-accent">
                     <div className="flex items-center gap-3 text-left">
                       <Check className="w-4 h-4 flex-shrink-0 text-muted-foreground" />
                       <span className="text-base md:text-lg font-medium text-foreground">
@@ -484,7 +484,7 @@ const Website = () => {
                 </AccordionItem>
 
                 <AccordionItem value="item-7" className="border-none">
-                  <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-4 md:py-5 hover:bg-accent/10 hover:border-accent/30 transition-all data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30 [&[data-state=open]>div>svg]:text-accent">
+                  <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-3 md:py-4 hover:bg-accent/10 hover:border-accent/30 transition-all data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30 [&[data-state=open]>div>svg]:text-accent">
                     <div className="flex items-center gap-3 text-left">
                       <Check className="w-4 h-4 flex-shrink-0 text-muted-foreground" />
                       <span className="text-base md:text-lg font-medium text-foreground">
@@ -500,7 +500,7 @@ const Website = () => {
                 </AccordionItem>
 
                 <AccordionItem value="item-8" className="border-none">
-                  <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-4 md:py-5 hover:bg-accent/10 hover:border-accent/30 transition-all data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30 [&[data-state=open]>div>svg]:text-accent">
+                  <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-3 md:py-4 hover:bg-accent/10 hover:border-accent/30 transition-all data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30 [&[data-state=open]>div>svg]:text-accent">
                     <div className="flex items-center gap-3 text-left">
                       <Check className="w-4 h-4 flex-shrink-0 text-muted-foreground" />
                       <span className="text-base md:text-lg font-medium text-foreground">
@@ -516,7 +516,7 @@ const Website = () => {
                 </AccordionItem>
 
                 <AccordionItem value="item-9" className="border-none">
-                  <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-4 md:py-5 hover:bg-accent/10 hover:border-accent/30 transition-all data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30 [&[data-state=open]>div>svg]:text-accent">
+                  <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-3 md:py-4 hover:bg-accent/10 hover:border-accent/30 transition-all data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30 [&[data-state=open]>div>svg]:text-accent">
                     <div className="flex items-center gap-3 text-left">
                       <Check className="w-4 h-4 flex-shrink-0 text-muted-foreground" />
                       <span className="text-base md:text-lg font-medium text-foreground">
@@ -532,7 +532,7 @@ const Website = () => {
                 </AccordionItem>
 
                 <AccordionItem value="item-10" className="border-none">
-                  <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-4 md:py-5 hover:bg-accent/10 hover:border-accent/30 transition-all data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30 [&[data-state=open]>div>svg]:text-accent">
+                  <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-3 md:py-4 hover:bg-accent/10 hover:border-accent/30 transition-all data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30 [&[data-state=open]>div>svg]:text-accent">
                     <div className="flex items-center gap-3 text-left">
                       <Check className="w-4 h-4 flex-shrink-0 text-muted-foreground" />
                       <span className="text-base md:text-lg font-medium text-foreground">
@@ -548,7 +548,7 @@ const Website = () => {
                 </AccordionItem>
 
                 <AccordionItem value="item-11" className="border-none">
-                  <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-4 md:py-5 hover:bg-accent/10 hover:border-accent/30 transition-all data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30 [&[data-state=open]>div>svg]:text-accent">
+                  <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-3 md:py-4 hover:bg-accent/10 hover:border-accent/30 transition-all data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30 [&[data-state=open]>div>svg]:text-accent">
                     <div className="flex items-center gap-3 text-left">
                       <Check className="w-4 h-4 flex-shrink-0 text-muted-foreground" />
                       <span className="text-base md:text-lg font-medium text-foreground">
