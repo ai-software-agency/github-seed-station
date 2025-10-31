@@ -363,15 +363,20 @@ const Website = () => {
       {/* FAQ Section */}
       <section id="faq" className="relative py-20 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="max-w-3xl mb-8">
-            <h2 className="text-3xl font-bold font-display">Frequently Asked Questions</h2>
-            <p className="mt-3 text-muted-foreground font-sans">
-              Common questions about how Kreyo works
-            </p>
-          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+            {/* Left Column - Title */}
+            <div className="lg:col-span-5">
+              <div className="max-w-3xl">
+                <h2 className="text-3xl font-bold font-display">Frequently Asked Questions</h2>
+                <p className="mt-3 text-muted-foreground font-sans">
+                  Common questions about how Kreyo works
+                </p>
+              </div>
+            </div>
 
-          <div className="max-w-3xl">
-            <Accordion type="single" collapsible className="space-y-1.5 md:space-y-2">
+            {/* Right Column - Accordion */}
+            <div className="lg:col-span-7">
+              <Accordion type="single" collapsible className="space-y-1.5 md:space-y-2">
                 <AccordionItem value="item-1" className="border-none">
                   <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-3 md:py-4 hover:bg-accent/10 hover:border-accent/30 transition-all data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30 [&[data-state=open]>div>svg]:text-accent">
                     <div className="flex items-center gap-3 text-left">
@@ -558,6 +563,7 @@ const Website = () => {
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
+            </div>
           </div>
         </div>
       </section>
