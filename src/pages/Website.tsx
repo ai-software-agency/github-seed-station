@@ -363,18 +363,17 @@ const Website = () => {
       {/* FAQ Section */}
       <section id="faq" className="relative py-20 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="max-w-3xl mb-8">
+            <h2 className="text-3xl font-bold font-display">Get Help & Connect Kreyo</h2>
+            <p className="mt-3 text-muted-foreground font-sans">
+              Find quick guides for Replit, Lovable, and Vercel — and answers to the most common questions about how Kreyo works.
+            </p>
+          </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
             {/* Left Column - Platform Connection Guides */}
             <div className="lg:col-span-5">
-              <div>
-                <h2 className="font-display text-2xl md:text-3xl font-bold tracking-tight text-foreground">
-                  Connect Kreyo with your platform
-                </h2>
-                <p className="text-sm md:text-base text-muted-foreground mt-2">
-                  Quick guides for Replit, Lovable, and Vercel. Click a card to view steps.
-                </p>
-
-                <div className="mt-6 space-y-4">
+              <div className="space-y-4">
                   <Accordion type="single" collapsible defaultValue="replit">
                     {/* Replit Card */}
                     <AccordionItem value="replit" className="border-none">
@@ -468,18 +467,11 @@ const Website = () => {
                       </AccordionContent>
                     </AccordionItem>
                   </Accordion>
-                </div>
               </div>
             </div>
 
             {/* Right Column - FAQ Accordion */}
             <div className="lg:col-span-7">
-              <div>
-                <h2 className="text-3xl font-bold font-display mb-3">Frequently Asked Questions</h2>
-                <p className="text-muted-foreground font-sans mb-8">
-                  Common questions about how Kreyo works
-                </p>
-              </div>
               <div className="max-w-prose">
                 <Accordion type="single" collapsible className="space-y-1.5 md:space-y-2">
                 <AccordionItem value="item-1" className="border-none">
