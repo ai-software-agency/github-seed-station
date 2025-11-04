@@ -378,7 +378,7 @@ const Website = () => {
                   <AccordionItem value="replit" className="border-none">
                     <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-3 md:py-4 hover:bg-card transition data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30">
                       <div className="flex items-center gap-4">
-                        <img src={replitLogo} alt="Replit" className="w-24 h-24 object-contain" />
+                        <img src={replitLogo} alt="Replit" className="w-12 h-12 object-contain flex-shrink-0" />
                         <span className="font-medium text-base md:text-lg text-foreground">Connect Kreyo with Replit</span>
                       </div>
                     </AccordionTrigger>
@@ -405,7 +405,7 @@ const Website = () => {
                   <AccordionItem value="lovable" className="border-none">
                     <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-3 md:py-4 hover:bg-card transition data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30">
                       <div className="flex items-center gap-4">
-                        <img src={lovableLogo} alt="Lovable" className="w-24 h-24 object-contain" />
+                        <img src={lovableLogo} alt="Lovable" className="w-12 h-12 object-contain flex-shrink-0" />
                         <span className="font-medium text-base md:text-lg text-foreground">Connect Kreyo with Lovable</span>
                       </div>
                     </AccordionTrigger>
@@ -430,7 +430,7 @@ const Website = () => {
                   <AccordionItem value="vercel" className="border-none">
                     <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-3 md:py-4 hover:bg-card transition data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30">
                       <div className="flex items-center gap-4">
-                        <img src={vercelLogo} alt="Vercel" className="w-24 h-24 object-contain" />
+                        <img src={vercelLogo} alt="Vercel" className="w-12 h-12 object-contain flex-shrink-0" />
                         <span className="font-medium text-base md:text-lg text-foreground">Connect Kreyo with Vercel</span>
                       </div>
                     </AccordionTrigger>
