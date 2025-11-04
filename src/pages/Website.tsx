@@ -373,7 +373,7 @@ const Website = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
             {/* Left Column - Platform Connection Guides */}
             <div className="lg:col-span-5">
-              <Accordion type="single" collapsible defaultValue="replit" className="space-y-4">
+              <Accordion type="single" collapsible className="space-y-1.5 md:space-y-2">
                   {/* Replit Card */}
                   <AccordionItem value="replit" className="border-none">
                     <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-3 md:py-4 hover:bg-card transition data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30">
