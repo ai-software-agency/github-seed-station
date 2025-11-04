@@ -373,86 +373,84 @@ const Website = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
             {/* Left Column - Platform Connection Guides */}
             <div className="lg:col-span-5">
-              <div className="space-y-4">
-                  <Accordion type="single" collapsible defaultValue="replit">
-                    {/* Replit Card */}
-                    <AccordionItem value="replit" className="border-none">
-                      <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-4 md:py-5 hover:bg-card transition data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30">
-                        <div className="flex items-center gap-4">
-                          <img src={replitLogo} alt="Replit" className="w-24 h-24 object-contain" />
-                          <span className="font-medium text-base md:text-lg text-foreground">Connect Kreyo with Replit</span>
-                        </div>
-                      </AccordionTrigger>
-                      <AccordionContent className="px-5 md:px-6">
-                        <div className="mt-4 space-y-3 text-sm md:text-base text-muted-foreground">
-                          <ol className="list-decimal pl-5 space-y-2">
-                            <li>Sign in to Replit.</li>
-                            <li>In the left panel, open <strong>Integrations</strong> → connect <strong>GitHub</strong> and authorize access (one or all repos).</li>
-                            <li>Open your project (e.g., <em>HelloColorful</em>).</li>
-                            <li>Open <strong>Tools & Files</strong> → <strong>Git</strong>.</li>
-                            <li>Click <strong>Connect to GitHub</strong> → <strong>Install Replit</strong> on GitHub → choose the repo (or all repos).</li>
-                            <li>Back in Replit, click <strong>Create Remote Repository</strong> to link and start pushing.</li>
-                            <li>Changes you make in Replit will now sync to GitHub automatically.</li>
-                            <li>Return to Kreyo and select the new GitHub repo to start your scan.</li>
-                          </ol>
-                          <p className="text-xs text-muted-foreground mt-3">
-                            Read-only scans. We never write to your repo.
-                          </p>
-                        </div>
-                      </AccordionContent>
-                    </AccordionItem>
+              <Accordion type="single" collapsible defaultValue="replit" className="space-y-4">
+                  {/* Replit Card */}
+                  <AccordionItem value="replit" className="border-none">
+                    <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-3 md:py-4 hover:bg-card transition data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30">
+                      <div className="flex items-center gap-4">
+                        <img src={replitLogo} alt="Replit" className="w-24 h-24 object-contain" />
+                        <span className="font-medium text-base md:text-lg text-foreground">Connect Kreyo with Replit</span>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="px-5 md:px-6">
+                      <div className="mt-4 space-y-3 text-sm md:text-base text-muted-foreground">
+                        <ol className="list-decimal pl-5 space-y-2">
+                          <li>Sign in to Replit.</li>
+                          <li>In the left panel, open <strong>Integrations</strong> → connect <strong>GitHub</strong> and authorize access (one or all repos).</li>
+                          <li>Open your project (e.g., <em>HelloColorful</em>).</li>
+                          <li>Open <strong>Tools & Files</strong> → <strong>Git</strong>.</li>
+                          <li>Click <strong>Connect to GitHub</strong> → <strong>Install Replit</strong> on GitHub → choose the repo (or all repos).</li>
+                          <li>Back in Replit, click <strong>Create Remote Repository</strong> to link and start pushing.</li>
+                          <li>Changes you make in Replit will now sync to GitHub automatically.</li>
+                          <li>Return to Kreyo and select the new GitHub repo to start your scan.</li>
+                        </ol>
+                        <p className="text-xs text-muted-foreground mt-3">
+                          Read-only scans. We never write to your repo.
+                        </p>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
 
-                    {/* Lovable Card */}
-                    <AccordionItem value="lovable" className="border-none">
-                      <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-4 md:py-5 hover:bg-card transition data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30">
-                        <div className="flex items-center gap-4">
-                          <img src={lovableLogo} alt="Lovable" className="w-24 h-24 object-contain" />
-                          <span className="font-medium text-base md:text-lg text-foreground">Connect Kreyo with Lovable</span>
-                        </div>
-                      </AccordionTrigger>
-                      <AccordionContent className="px-5 md:px-6">
-                        <div className="mt-4 space-y-3 text-sm md:text-base text-muted-foreground">
-                          <p>Follow these steps to push your Lovable project to GitHub, then select the repo in Kreyo.</p>
-                          <ol className="list-decimal pl-5 space-y-2">
-                            <li>Open your Lovable project.</li>
-                            <li>Navigate to the GitHub connection settings.</li>
-                            <li>Authorize Lovable to access your GitHub account.</li>
-                            <li>Create or select a repository to connect.</li>
-                            <li>Confirm the connection and allow Lovable to push your code.</li>
-                            <li>Once synced, return to Kreyo and select the GitHub repo.</li>
-                            <li>Start your security scan and review the results.</li>
-                            <li>Apply suggested fixes within Lovable using the provided prompts.</li>
-                          </ol>
-                        </div>
-                      </AccordionContent>
-                    </AccordionItem>
+                  {/* Lovable Card */}
+                  <AccordionItem value="lovable" className="border-none">
+                    <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-3 md:py-4 hover:bg-card transition data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30">
+                      <div className="flex items-center gap-4">
+                        <img src={lovableLogo} alt="Lovable" className="w-24 h-24 object-contain" />
+                        <span className="font-medium text-base md:text-lg text-foreground">Connect Kreyo with Lovable</span>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="px-5 md:px-6">
+                      <div className="mt-4 space-y-3 text-sm md:text-base text-muted-foreground">
+                        <p>Follow these steps to push your Lovable project to GitHub, then select the repo in Kreyo.</p>
+                        <ol className="list-decimal pl-5 space-y-2">
+                          <li>Open your Lovable project.</li>
+                          <li>Navigate to the GitHub connection settings.</li>
+                          <li>Authorize Lovable to access your GitHub account.</li>
+                          <li>Create or select a repository to connect.</li>
+                          <li>Confirm the connection and allow Lovable to push your code.</li>
+                          <li>Once synced, return to Kreyo and select the GitHub repo.</li>
+                          <li>Start your security scan and review the results.</li>
+                          <li>Apply suggested fixes within Lovable using the provided prompts.</li>
+                        </ol>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
 
-                    {/* Vercel Card */}
-                    <AccordionItem value="vercel" className="border-none">
-                      <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-4 md:py-5 hover:bg-card transition data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30">
-                        <div className="flex items-center gap-4">
-                          <img src={vercelLogo} alt="Vercel" className="w-24 h-24 object-contain" />
-                          <span className="font-medium text-base md:text-lg text-foreground">Connect Kreyo with Vercel</span>
-                        </div>
-                      </AccordionTrigger>
-                      <AccordionContent className="px-5 md:px-6">
-                        <div className="mt-4 space-y-3 text-sm md:text-base text-muted-foreground">
-                          <p>Follow these steps to connect your Vercel project with GitHub, then scan with Kreyo.</p>
-                          <ol className="list-decimal pl-5 space-y-2">
-                            <li>Log in to your Vercel account.</li>
-                            <li>Navigate to your project settings.</li>
-                            <li>Find the Git integration section.</li>
-                            <li>Connect to your GitHub account if not already linked.</li>
-                            <li>Select or create a repository for your Vercel project.</li>
-                            <li>Confirm the integration and ensure code is syncing.</li>
-                            <li>Head to Kreyo and select the connected GitHub repo.</li>
-                            <li>Run your scan and review security recommendations.</li>
-                          </ol>
-                        </div>
-                      </AccordionContent>
-                    </AccordionItem>
-                  </Accordion>
-              </div>
+                  {/* Vercel Card */}
+                  <AccordionItem value="vercel" className="border-none">
+                    <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-3 md:py-4 hover:bg-card transition data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30">
+                      <div className="flex items-center gap-4">
+                        <img src={vercelLogo} alt="Vercel" className="w-24 h-24 object-contain" />
+                        <span className="font-medium text-base md:text-lg text-foreground">Connect Kreyo with Vercel</span>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="px-5 md:px-6">
+                      <div className="mt-4 space-y-3 text-sm md:text-base text-muted-foreground">
+                        <p>Follow these steps to connect your Vercel project with GitHub, then scan with Kreyo.</p>
+                        <ol className="list-decimal pl-5 space-y-2">
+                          <li>Log in to your Vercel account.</li>
+                          <li>Navigate to your project settings.</li>
+                          <li>Find the Git integration section.</li>
+                          <li>Connect to your GitHub account if not already linked.</li>
+                          <li>Select or create a repository for your Vercel project.</li>
+                          <li>Confirm the integration and ensure code is syncing.</li>
+                          <li>Head to Kreyo and select the connected GitHub repo.</li>
+                          <li>Run your scan and review security recommendations.</li>
+                        </ol>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
             </div>
 
             {/* Right Column - FAQ Accordion */}
