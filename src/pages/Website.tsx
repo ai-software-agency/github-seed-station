@@ -5,7 +5,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { TopNav } from "@/components/TopNav";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import { Check } from "lucide-react";
+import { Check, ChevronDown } from "lucide-react";
 import vercelLogo from "@/assets/vercel-new.png";
 import replitLogo from "@/assets/replit-new.png";
 import figmaLogo from "@/assets/figma-new.png";
@@ -364,19 +364,124 @@ const Website = () => {
       <section id="faq" className="relative py-20 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
-            {/* Left Column - Title */}
+            {/* Left Column - Platform Connection Guides */}
             <div className="lg:col-span-5">
-              <div className="max-w-3xl">
-                <h2 className="text-3xl font-bold font-display">Frequently Asked Questions</h2>
-                <p className="mt-3 text-muted-foreground font-sans">
-                  Common questions about how Kreyo works
+              <div>
+                <h2 className="font-display text-2xl md:text-3xl font-bold tracking-tight text-foreground">
+                  Connect Kreyo with your platform
+                </h2>
+                <p className="text-sm md:text-base text-muted-foreground mt-2">
+                  Quick guides for Replit, Lovable, and Vercel. Click a card to view steps.
                 </p>
+
+                <div className="mt-6 space-y-4">
+                  <Accordion type="single" collapsible defaultValue="replit">
+                    {/* Replit Card */}
+                    <AccordionItem value="replit" className="border-none">
+                      <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-4 md:py-5 hover:bg-card transition data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30">
+                        <div className="flex items-center justify-between gap-4 w-full">
+                          <div className="flex items-center gap-3">
+                            <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-accent/10">
+                              <img src={replitLogo} alt="Replit" className="w-6 h-6 object-contain" />
+                            </div>
+                            <span className="font-medium text-base md:text-lg text-foreground">Connect Kreyo with Replit</span>
+                          </div>
+                          <ChevronDown className="w-5 h-5 text-muted-foreground transition-transform duration-200" />
+                        </div>
+                      </AccordionTrigger>
+                      <AccordionContent className="px-5 md:px-6">
+                        <div className="mt-4 space-y-3 text-sm md:text-base text-muted-foreground">
+                          <ol className="list-decimal pl-5 space-y-2">
+                            <li>Sign in to Replit.</li>
+                            <li>In the left panel, open <strong>Integrations</strong> → connect <strong>GitHub</strong> and authorize access (one or all repos).</li>
+                            <li>Open your project (e.g., <em>HelloColorful</em>).</li>
+                            <li>Open <strong>Tools & Files</strong> → <strong>Git</strong>.</li>
+                            <li>Click <strong>Connect to GitHub</strong> → <strong>Install Replit</strong> on GitHub → choose the repo (or all repos).</li>
+                            <li>Back in Replit, click <strong>Create Remote Repository</strong> to link and start pushing.</li>
+                            <li>Changes you make in Replit will now sync to GitHub automatically.</li>
+                            <li>Return to Kreyo and select the new GitHub repo to start your scan.</li>
+                          </ol>
+                          <p className="text-xs text-muted-foreground mt-3">
+                            Read-only scans. We never write to your repo.
+                          </p>
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+
+                    {/* Lovable Card */}
+                    <AccordionItem value="lovable" className="border-none">
+                      <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-4 md:py-5 hover:bg-card transition data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30">
+                        <div className="flex items-center justify-between gap-4 w-full">
+                          <div className="flex items-center gap-3">
+                            <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-accent/10">
+                              <img src={lovableLogo} alt="Lovable" className="w-6 h-6 object-contain" />
+                            </div>
+                            <span className="font-medium text-base md:text-lg text-foreground">Connect Kreyo with Lovable</span>
+                          </div>
+                          <ChevronDown className="w-5 h-5 text-muted-foreground transition-transform duration-200" />
+                        </div>
+                      </AccordionTrigger>
+                      <AccordionContent className="px-5 md:px-6">
+                        <div className="mt-4 space-y-3 text-sm md:text-base text-muted-foreground">
+                          <p>Follow these steps to push your Lovable project to GitHub, then select the repo in Kreyo.</p>
+                          <ol className="list-decimal pl-5 space-y-2">
+                            <li>Open your Lovable project.</li>
+                            <li>Navigate to the GitHub connection settings.</li>
+                            <li>Authorize Lovable to access your GitHub account.</li>
+                            <li>Create or select a repository to connect.</li>
+                            <li>Confirm the connection and allow Lovable to push your code.</li>
+                            <li>Once synced, return to Kreyo and select the GitHub repo.</li>
+                            <li>Start your security scan and review the results.</li>
+                            <li>Apply suggested fixes within Lovable using the provided prompts.</li>
+                          </ol>
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+
+                    {/* Vercel Card */}
+                    <AccordionItem value="vercel" className="border-none">
+                      <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-4 md:py-5 hover:bg-card transition data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30">
+                        <div className="flex items-center justify-between gap-4 w-full">
+                          <div className="flex items-center gap-3">
+                            <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-accent/10">
+                              <img src={vercelLogo} alt="Vercel" className="w-6 h-6 object-contain" />
+                            </div>
+                            <span className="font-medium text-base md:text-lg text-foreground">Connect Kreyo with Vercel</span>
+                          </div>
+                          <ChevronDown className="w-5 h-5 text-muted-foreground transition-transform duration-200" />
+                        </div>
+                      </AccordionTrigger>
+                      <AccordionContent className="px-5 md:px-6">
+                        <div className="mt-4 space-y-3 text-sm md:text-base text-muted-foreground">
+                          <p>Follow these steps to connect your Vercel project with GitHub, then scan with Kreyo.</p>
+                          <ol className="list-decimal pl-5 space-y-2">
+                            <li>Log in to your Vercel account.</li>
+                            <li>Navigate to your project settings.</li>
+                            <li>Find the Git integration section.</li>
+                            <li>Connect to your GitHub account if not already linked.</li>
+                            <li>Select or create a repository for your Vercel project.</li>
+                            <li>Confirm the integration and ensure code is syncing.</li>
+                            <li>Head to Kreyo and select the connected GitHub repo.</li>
+                            <li>Run your scan and review security recommendations.</li>
+                          </ol>
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
+                </div>
               </div>
             </div>
 
-            {/* Right Column - Accordion */}
+            {/* Right Column - FAQ Accordion */}
             <div className="lg:col-span-7">
-              <Accordion type="single" collapsible className="space-y-1.5 md:space-y-2">
+              <div>
+                <h2 className="text-3xl font-bold font-display mb-3">Frequently Asked Questions</h2>
+                <p className="text-muted-foreground font-sans mb-8">
+                  Common questions about how Kreyo works
+                </p>
+              </div>
+              <div className="max-w-prose">
+                <Accordion type="single" collapsible className="space-y-1.5 md:space-y-2">
                 <AccordionItem value="item-1" className="border-none">
                   <AccordionTrigger className="rounded-xl border border-border bg-card/80 backdrop-blur px-5 md:px-6 py-3 md:py-4 hover:bg-accent/10 hover:border-accent/30 transition-all data-[state=open]:bg-accent/10 data-[state=open]:border-accent/30 [&[data-state=open]>div>svg]:text-accent">
                     <div className="flex items-center gap-3 text-left">
@@ -563,6 +668,7 @@ const Website = () => {
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
+              </div>
             </div>
           </div>
         </div>
