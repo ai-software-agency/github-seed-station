@@ -48,12 +48,11 @@ const Website = () => {
                 <span className="text-muted-foreground">AI partner for serious builders</span>
               </div>
 
-              <h1 className="text-4xl sm:text-6xl font-extrabold font-display leading-[1.05] tracking-tight">
+               <h1 className="text-4xl sm:text-6xl font-extrabold font-display leading-[1.05] tracking-tight">
                 Ship vibe‑coded apps with{" "}
                 <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
                   production‑grade confidence
                 </span>
-                .
               </h1>
 
               <div className="text-lg font-sans max-w-2xl space-y-1.5">
@@ -327,7 +326,7 @@ const Website = () => {
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="relative py-20 md:py-24">
+      <section id="faq" className="relative py-20 md:py-24 bg-blue-50/30">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="max-w-3xl mb-8">
             <h2 className="text-3xl font-bold font-display">Get Help & Connect Kreyo</h2>
@@ -616,7 +615,7 @@ const Website = () => {
       </section>
 
       {/* Integration logos */}
-      <section id="integrations" className="py-4 md:py-6 bg-muted/30">
+      <section id="integrations" className="py-4 md:py-6">
         <div className="mx-auto max-w-7xl px-[15%]">
           <h2 className="text-2xl font-bold font-display text-center mb-4">Kreyo works seamlessly with</h2>
           <div className="flex items-center justify-between gap-6">
@@ -630,11 +629,11 @@ const Website = () => {
       </section>
 
       {/* CTA */}
-      <section id="cta" className="relative py-16 md:py-24 bg-blue-50/30">
+      <section id="cta" className="relative py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="grid md:grid-cols-12 gap-10 items-center">
             <div className="md:col-span-6">
-              <h2 className="text-3xl font-bold font-display">Stay ahead of every new release.</h2>
+              <h2 className="text-3xl font-bold font-display">Stay ahead of every new release</h2>
               <p className="mt-3 text-muted-foreground font-sans">
                 Sign up to get early updates, product drops, and invite-only access when we roll out new scanning and fix tools.
               </p>
