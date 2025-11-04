@@ -331,9 +331,9 @@ const Website = () => {
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="grid md:grid-cols-12 gap-10 items-center">
             <div className="md:col-span-6">
-              <h2 className="text-3xl font-bold font-display">Ready to ship with confidence?</h2>
+              <h2 className="text-3xl font-bold font-display">Stay ahead of every new release.</h2>
               <p className="mt-3 text-muted-foreground font-sans">
-                Join the waitlist — we'll help you connect your repo and secure your app in minutes.
+                Sign up to get early updates, product drops, and invite-only access when we roll out new scanning and fix tools.
               </p>
             </div>
 
