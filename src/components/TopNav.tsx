@@ -62,9 +62,14 @@ export const TopNav = () => {
           </button>
         </nav>
 
-        {/* <Button onClick={() => navigate('/waitlist')} variant="default" size="sm" className="rounded-full">
+        <Button 
+          onClick={() => window.location.href = 'https://app.kreyo.ai'} 
+          variant="default" 
+          size="sm" 
+          className="rounded-full"
+        >
           Connect with GitHub
-        </Button> */}
+        </Button>
       </div>
     </header>
   );
