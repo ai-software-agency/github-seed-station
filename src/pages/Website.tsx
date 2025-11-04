@@ -383,8 +383,8 @@ const Website = () => {
                       </div>
                     </AccordionTrigger>
                     <AccordionContent className="px-5 md:px-6">
-                      <div className="mt-4 space-y-3 text-sm md:text-base text-muted-foreground">
-                        <ol className="list-decimal pl-5 space-y-2">
+                      <div className="mt-3 md:mt-4 text-sm md:text-base leading-relaxed text-muted-foreground pl-7">
+                        <ol className="list-decimal list-inside space-y-2">
                           <li>Sign in to Replit.</li>
                           <li>In the left panel, open <strong>Integrations</strong> → connect <strong>GitHub</strong> and authorize access (one or all repos).</li>
                           <li>Open your project (e.g., <em>HelloColorful</em>).</li>
@@ -410,9 +410,9 @@ const Website = () => {
                       </div>
                     </AccordionTrigger>
                     <AccordionContent className="px-5 md:px-6">
-                      <div className="mt-4 space-y-3 text-sm md:text-base text-muted-foreground">
+                      <div className="mt-3 md:mt-4 text-sm md:text-base leading-relaxed text-muted-foreground pl-7">
                         <p>Follow these steps to push your Lovable project to GitHub, then select the repo in Kreyo.</p>
-                        <ol className="list-decimal pl-5 space-y-2">
+                        <ol className="list-decimal list-inside space-y-2">
                           <li>Open your Lovable project.</li>
                           <li>Navigate to the GitHub connection settings.</li>
                           <li>Authorize Lovable to access your GitHub account.</li>
@@ -435,9 +435,9 @@ const Website = () => {
                       </div>
                     </AccordionTrigger>
                     <AccordionContent className="px-5 md:px-6">
-                      <div className="mt-4 space-y-3 text-sm md:text-base text-muted-foreground">
+                      <div className="mt-3 md:mt-4 text-sm md:text-base leading-relaxed text-muted-foreground pl-7">
                         <p>Follow these steps to connect your Vercel project with GitHub, then scan with Kreyo.</p>
-                        <ol className="list-decimal pl-5 space-y-2">
+                        <ol className="list-decimal list-inside space-y-2">
                           <li>Log in to your Vercel account.</li>
                           <li>Navigate to your project settings.</li>
                           <li>Find the Git integration section.</li>
