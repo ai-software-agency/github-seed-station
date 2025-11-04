@@ -62,9 +62,9 @@ export const TopNav = () => {
           </button>
         </nav>
 
-        <Button onClick={() => navigate('/waitlist')} variant="default" size="sm" className="rounded-full">
+        {/* <Button onClick={() => navigate('/waitlist')} variant="default" size="sm" className="rounded-full">
           Connect with GitHub
-        </Button>
+        </Button> */}
       </div>
     </header>
   );

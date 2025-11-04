@@ -65,9 +65,9 @@ const Website = () => {
               </div>
 
               <div className="flex flex-col items-start gap-2">
-                <Button onClick={() => navigate("/waitlist")} size="lg" className="rounded-full">
+                {/* <Button onClick={() => navigate("/waitlist")} size="lg" className="rounded-full">
                   Join Waitlist
-                </Button>
+                </Button> */}
               </div>
             </div>
 

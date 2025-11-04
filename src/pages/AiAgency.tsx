@@ -54,9 +54,9 @@ const AiAgency = () => {
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-3 mb-4">
-            <Button size="lg" className="rounded-full" onClick={() => navigate("/waitlist")}>
+            {/* <Button size="lg" className="rounded-full" onClick={() => navigate("/waitlist")}>
               ⚡ Connect via GitHub
-            </Button>
+            </Button> */}
             <Button size="lg" variant="outline" className="rounded-full" onClick={() => {
               document.getElementById('how')?.scrollIntoView({ behavior: 'smooth' });
             }}>
@@ -106,9 +106,9 @@ const AiAgency = () => {
               <p className="text-sm italic text-muted-foreground mb-4">
                 "Your AI code reviewer that actually keeps your app safe. No mystery edits — just clean, secure, reviewed code."
               </p>
-              <Button className="w-full rounded-full" onClick={() => navigate("/waitlist")}>
+              {/* <Button className="w-full rounded-full" onClick={() => navigate("/waitlist")}>
                 Connect Your App
-              </Button>
+              </Button> */}
             </div>
 
             {/* Application Quality Reviewer */}
