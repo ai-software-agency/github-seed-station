@@ -326,40 +326,6 @@ const Website = () => {
         </div>
       </section>
 
-      {/* CTA */}
-      <section id="cta" className="relative py-16 md:py-24 bg-blue-50/30">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="grid md:grid-cols-12 gap-10 items-center">
-            <div className="md:col-span-6">
-              <h2 className="text-3xl font-bold font-display">Stay ahead of every new release.</h2>
-              <p className="mt-3 text-muted-foreground font-sans">
-                Sign up to get early updates, product drops, and invite-only access when we roll out new scanning and fix tools.
-              </p>
-            </div>
-
-            <div className="md:col-span-6">
-              <div className="rounded-2xl overflow-hidden bg-card border border-border transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)]">
-                <div data-tf-live="01K83NFP5ZQCW1JAF8JGA3GDXF"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Integration logos */}
-      <section id="integrations" className="py-4 md:py-6 bg-muted/30">
-        <div className="mx-auto max-w-7xl px-[15%]">
-          <h2 className="text-2xl font-bold font-display text-center mb-4">Kreyo works seamlessly with</h2>
-          <div className="flex items-center justify-between gap-6">
-            <img src={vercelLogo} alt="Vercel" className="h-32 object-contain opacity-60 hover:opacity-100 transition-opacity" />
-            <img src={replitLogo} alt="Replit" className="h-32 object-contain opacity-60 hover:opacity-100 transition-opacity" />
-            <img src={figmaLogo} alt="Figma" className="h-32 object-contain opacity-60 hover:opacity-100 transition-opacity" />
-            <img src={githubLogo} alt="GitHub" className="h-32 object-contain opacity-60 hover:opacity-100 transition-opacity" />
-            <img src={lovableLogo} alt="Lovable" className="h-32 object-contain opacity-60 hover:opacity-100 transition-opacity" />
-          </div>
-        </div>
-      </section>
-
       {/* FAQ Section */}
       <section id="faq" className="relative py-20 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
@@ -643,6 +609,40 @@ const Website = () => {
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Integration logos */}
+      <section id="integrations" className="py-4 md:py-6 bg-muted/30">
+        <div className="mx-auto max-w-7xl px-[15%]">
+          <h2 className="text-2xl font-bold font-display text-center mb-4">Kreyo works seamlessly with</h2>
+          <div className="flex items-center justify-between gap-6">
+            <img src={vercelLogo} alt="Vercel" className="h-32 object-contain opacity-60 hover:opacity-100 transition-opacity" />
+            <img src={replitLogo} alt="Replit" className="h-32 object-contain opacity-60 hover:opacity-100 transition-opacity" />
+            <img src={figmaLogo} alt="Figma" className="h-32 object-contain opacity-60 hover:opacity-100 transition-opacity" />
+            <img src={githubLogo} alt="GitHub" className="h-32 object-contain opacity-60 hover:opacity-100 transition-opacity" />
+            <img src={lovableLogo} alt="Lovable" className="h-32 object-contain opacity-60 hover:opacity-100 transition-opacity" />
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section id="cta" className="relative py-16 md:py-24 bg-blue-50/30">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="grid md:grid-cols-12 gap-10 items-center">
+            <div className="md:col-span-6">
+              <h2 className="text-3xl font-bold font-display">Stay ahead of every new release.</h2>
+              <p className="mt-3 text-muted-foreground font-sans">
+                Sign up to get early updates, product drops, and invite-only access when we roll out new scanning and fix tools.
+              </p>
+            </div>
+
+            <div className="md:col-span-6">
+              <div className="rounded-2xl overflow-hidden bg-card border border-border transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)]">
+                <div data-tf-live="01K83NFP5ZQCW1JAF8JGA3GDXF"></div>
               </div>
             </div>
           </div>
