@@ -28,15 +28,15 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Website />} />
-          <Route path="/ai-agency" element={<AiAgency />} />
-          <Route path="/start" element={<Start />} />
+          {/* <Route path="/ai-agency" element={<AiAgency />} /> */}
+          {/* <Route path="/start" element={<Start />} /> */}
           {/* <Route path="/waitlist" element={<Waitlist />} /> */}
-          <Route path="/aisec" element={<Aisec />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/dashboard2" element={<Dashboard2 />} />
-          <Route path="/dashboard3" element={<Dashboard3 />} />
-          <Route path="/scanning" element={<Scanning />} />
-          <Route path="/results" element={<Results />} />
+          {/* <Route path="/aisec" element={<Aisec />} /> */}
+          {/* <Route path="/dashboard" element={<Dashboard />} /> */}
+          {/* <Route path="/dashboard2" element={<Dashboard2 />} /> */}
+          {/* <Route path="/dashboard3" element={<Dashboard3 />} /> */}
+          {/* <Route path="/scanning" element={<Scanning />} /> */}
+          {/* <Route path="/results" element={<Results />} /> */}
           <Route path="/results2" element={<Results2 />} />
           <Route path="/activity" element={<Activity />} />
           <Route path="/done" element={<Done />} />
