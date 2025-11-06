@@ -618,12 +618,12 @@ const Website = () => {
       <section id="integrations" className="py-4 md:py-6">
         <div className="mx-auto max-w-7xl px-[15%]">
           <h2 className="text-2xl font-bold font-display text-center mb-4">Kreyo works seamlessly with</h2>
-          <div className="flex items-center justify-between gap-6">
-            <img src={vercelLogo} alt="Vercel" className="h-32 object-contain opacity-60 hover:opacity-100 transition-opacity" />
-            <img src={replitLogo} alt="Replit" className="h-32 object-contain opacity-60 hover:opacity-100 transition-opacity" />
-            <img src={figmaLogo} alt="Figma" className="h-32 object-contain opacity-60 hover:opacity-100 transition-opacity" />
-            <img src={githubLogo} alt="GitHub" className="h-32 object-contain opacity-60 hover:opacity-100 transition-opacity" />
-            <img src={lovableLogo} alt="Lovable" className="h-32 object-contain opacity-60 hover:opacity-100 transition-opacity" />
+          <div className="flex items-center justify-center flex-wrap gap-4 md:gap-6">
+            <img src={vercelLogo} alt="Vercel" className="h-16 md:h-24 lg:h-32 object-contain opacity-60 hover:opacity-100 transition-opacity" />
+            <img src={replitLogo} alt="Replit" className="h-16 md:h-24 lg:h-32 object-contain opacity-60 hover:opacity-100 transition-opacity" />
+            <img src={figmaLogo} alt="Figma" className="h-16 md:h-24 lg:h-32 object-contain opacity-60 hover:opacity-100 transition-opacity" />
+            <img src={githubLogo} alt="GitHub" className="h-16 md:h-24 lg:h-32 object-contain opacity-60 hover:opacity-100 transition-opacity" />
+            <img src={lovableLogo} alt="Lovable" className="h-16 md:h-24 lg:h-32 object-contain opacity-60 hover:opacity-100 transition-opacity" />
           </div>
         </div>
       </section>
