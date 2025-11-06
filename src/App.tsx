@@ -16,6 +16,7 @@ import Done from "./pages/Done";
 import Website from "./pages/Website";
 import AiAgency from "./pages/AiAgency";
 import Aisec from "./pages/Aisec";
+import Pricing from "./pages/Pricing";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Website />} />
+          <Route path="/pricing" element={<Pricing />} />
           {/* <Route path="/ai-agency" element={<AiAgency />} /> */}
           {/* <Route path="/start" element={<Start />} /> */}
           {/* <Route path="/waitlist" element={<Waitlist />} /> */}
