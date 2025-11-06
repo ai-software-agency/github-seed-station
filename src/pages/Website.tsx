@@ -33,22 +33,22 @@ const Website = () => {
       <TopNav />
 
       {/* Hero Section */}
-      <section id="top" className="relative isolate pt-28 md:pt-36 pb-16 md:pb-24 overflow-hidden">
+      <section id="top" className="relative isolate pt-28 md:pt-36 xl:pt-44 2xl:pt-52 pb-16 md:pb-24 xl:pb-32 overflow-hidden">
         {/* Background gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-secondary/5 to-transparent pointer-events-none" />
 
         {/* Grid pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(transparent_23px,rgba(255,255,255,.03)_24px),linear-gradient(90deg,transparent_23px,rgba(255,255,255,.03)_24px)] bg-[length:24px_24px] [mask-image:radial-gradient(65%_55%_at_50%_0%,black,transparent_70%)] pointer-events-none" />
 
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 relative">
-          <div className="grid lg:grid-cols-12 gap-10 items-center">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 relative">
+          <div className="grid lg:grid-cols-12 gap-10 xl:gap-16 2xl:gap-20 items-center">
             <div className="lg:col-span-7 space-y-6">
               <div className="inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-3 py-1 text-xs">
                 <span className="inline-block h-1.5 w-1.5 rounded-full bg-gradient-to-r from-primary to-secondary"></span>
                 <span className="text-muted-foreground">AI partner for serious builders</span>
               </div>
 
-               <h1 className="text-4xl sm:text-6xl font-extrabold font-display leading-[1.05] tracking-tight">
+               <h1 className="text-4xl sm:text-6xl xl:text-7xl 2xl:text-8xl font-extrabold font-display leading-[1.05] tracking-tight">
                 Ship vibe‑coded apps with{" "}
                 <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
                   production‑grade confidence
@@ -113,8 +113,8 @@ const Website = () => {
       </div>
 
       {/* How Kreyo fits your stack */}
-      <section id="fit" className="relative py-16 md:py-24" style={{ backgroundColor: '#a084dc' }}>
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+      <section id="fit" className="relative py-16 md:py-24 xl:py-32 2xl:py-40" style={{ backgroundColor: '#a084dc' }}>
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
           <div className="max-w-3xl mb-8">
             <h2 className="text-3xl font-bold font-display text-white">How Kreyo fits your stack</h2>
             <p className="mt-3 text-white font-sans">
@@ -122,7 +122,7 @@ const Website = () => {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-8 2xl:gap-10">
             {[
               { 
                 title: "Plan & Design", 
@@ -162,8 +162,8 @@ const Website = () => {
       </section>
 
       {/* What we do */}
-      <section id="services" className="relative py-16 md:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+      <section id="services" className="relative py-16 md:py-24 xl:py-32 2xl:py-40">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
           <div className="max-w-3xl mb-8">
             <h2 className="text-3xl font-bold font-display">What we do</h2>
             <p className="mt-3 text-muted-foreground font-sans">
@@ -171,7 +171,7 @@ const Website = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-6 xl:gap-8 2xl:gap-10">
             {[
               {
                 title: "Code Reviews",
@@ -224,14 +224,14 @@ const Website = () => {
       </section>
 
       {/* How it works */}
-      <section id="how" className="relative py-16 md:py-24 bg-blue-50/30">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+      <section id="how" className="relative py-16 md:py-24 xl:py-32 2xl:py-40 bg-blue-50/30">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
           <div className="max-w-3xl mb-8">
             <h2 className="text-3xl font-bold font-display">How it works</h2>
             <p className="mt-3 text-muted-foreground font-sans">Get started in minutes — Kreyo connects, checks, and secures your app automatically.</p>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-4 gap-6 xl:gap-8 2xl:gap-10">
             {[
               {
                 num: "01",
@@ -270,8 +270,8 @@ const Website = () => {
       </section>
 
       {/* Why Kreyo / Trust */}
-      <section id="trust" className="relative py-16 md:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+      <section id="trust" className="relative py-16 md:py-24 xl:py-32 2xl:py-40">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
           <div className="max-w-3xl mb-8">
             <h2 className="text-3xl font-bold font-display">Why Kreyo</h2>
             <p className="mt-3 text-muted-foreground font-sans">
@@ -326,8 +326,8 @@ const Website = () => {
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="relative py-20 md:py-24 bg-blue-50/30">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+      <section id="faq" className="relative py-20 md:py-24 xl:py-32 2xl:py-40 bg-blue-50/30">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
           <div className="max-w-3xl mb-8">
             <h2 className="text-3xl font-bold font-display">Get Help & Connect Kreyo</h2>
             <p className="mt-3 text-muted-foreground font-sans">
@@ -615,22 +615,22 @@ const Website = () => {
       </section>
 
       {/* Integration logos */}
-      <section id="integrations" className="py-4 md:py-6">
-        <div className="mx-auto max-w-7xl px-[15%]">
-          <h2 className="text-2xl font-bold font-display text-center mb-4">Kreyo works seamlessly with</h2>
-          <div className="flex items-center justify-center flex-wrap gap-4 md:gap-6">
-            <img src={vercelLogo} alt="Vercel" className="h-16 md:h-24 lg:h-32 object-contain opacity-60 hover:opacity-100 transition-opacity" />
-            <img src={replitLogo} alt="Replit" className="h-16 md:h-24 lg:h-32 object-contain opacity-60 hover:opacity-100 transition-opacity" />
-            <img src={figmaLogo} alt="Figma" className="h-16 md:h-24 lg:h-32 object-contain opacity-60 hover:opacity-100 transition-opacity" />
-            <img src={githubLogo} alt="GitHub" className="h-16 md:h-24 lg:h-32 object-contain opacity-60 hover:opacity-100 transition-opacity" />
-            <img src={lovableLogo} alt="Lovable" className="h-16 md:h-24 lg:h-32 object-contain opacity-60 hover:opacity-100 transition-opacity" />
+      <section id="integrations" className="py-4 md:py-6 xl:py-8">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
+          <h2 className="text-2xl xl:text-3xl 2xl:text-4xl font-bold font-display text-center mb-6 xl:mb-8">Kreyo works seamlessly with</h2>
+          <div className="flex items-center justify-center flex-wrap gap-4 md:gap-6 xl:gap-8 2xl:gap-10">
+            <img src={vercelLogo} alt="Vercel" className="h-16 md:h-24 lg:h-32 xl:h-36 2xl:h-40 object-contain opacity-60 hover:opacity-100 transition-opacity" />
+            <img src={replitLogo} alt="Replit" className="h-16 md:h-24 lg:h-32 xl:h-36 2xl:h-40 object-contain opacity-60 hover:opacity-100 transition-opacity" />
+            <img src={figmaLogo} alt="Figma" className="h-16 md:h-24 lg:h-32 xl:h-36 2xl:h-40 object-contain opacity-60 hover:opacity-100 transition-opacity" />
+            <img src={githubLogo} alt="GitHub" className="h-16 md:h-24 lg:h-32 xl:h-36 2xl:h-40 object-contain opacity-60 hover:opacity-100 transition-opacity" />
+            <img src={lovableLogo} alt="Lovable" className="h-16 md:h-24 lg:h-32 xl:h-36 2xl:h-40 object-contain opacity-60 hover:opacity-100 transition-opacity" />
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section id="cta" className="relative py-16 md:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+      <section id="cta" className="relative py-16 md:py-24 xl:py-32 2xl:py-40">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
           <div className="grid md:grid-cols-12 gap-10 items-center">
             <div className="md:col-span-6">
               <h2 className="text-3xl font-bold font-display">Stay ahead of every new release</h2>
@@ -650,7 +650,7 @@ const Website = () => {
 
       {/* Footer */}
       <footer className="relative border-t border-border">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
           <div className="flex items-center gap-2">
             <span>Kreyo — intelligent flow for production‑grade apps</span>
           </div>
