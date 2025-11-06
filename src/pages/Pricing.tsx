@@ -136,7 +136,7 @@ const Pricing = () => {
             {plans.map((plan) => (
               <Card
                 key={plan.name}
-                className={`relative flex flex-col ${
+                className={`relative flex flex-col h-full ${
                   plan.popular ? "border-primary shadow-lg scale-105" : ""
                 }`}
               >
@@ -184,7 +184,7 @@ const Pricing = () => {
                     ))}
                   </ul>
                 </CardContent>
-                <CardFooter>
+                <CardFooter className="mt-6">
                   <Button
                     className="w-full"
                     variant={plan.popular ? "default" : "outline"}
