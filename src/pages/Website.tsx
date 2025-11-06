@@ -48,13 +48,10 @@ const Website = () => {
                 <span className="text-muted-foreground">AI partner for builders</span>
               </div>
 
-              <h1 className="text-4xl sm:text-6xl xl:text-7xl 2xl:text-8xl font-extrabold font-display leading-[1.05] xl:leading-[1.1] tracking-tight max-w-5xl">
+              <h1 className="max-w-4xl md:max-w-5xl xl:max-w-6xl text-4xl sm:text-6xl xl:text-7xl 2xl:text-8xl font-extrabold font-display leading-tight xl:leading-[1.1] tracking-tight">
                 Ship vibe‑coded apps with{" "}
-                <span className="inline bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-                  production‑grade
-                </span>
-                <span className="block bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-                  confidence
+                <span className="whitespace-nowrap bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+                  production‑grade confidence
                 </span>
               </h1>
 
