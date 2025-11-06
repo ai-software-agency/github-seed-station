@@ -13,7 +13,7 @@ const Pricing = () => {
   const plans = [
     {
       name: "Free",
-      subtitle: "Try Kreyo on a small project.",
+      subtitle: "Try Kreyo risk-free.",
       tier: "TRY",
       priceMonthly: 0,
       priceYearly: 0,
@@ -30,7 +30,7 @@ const Pricing = () => {
     },
     {
       name: "Pro",
-      subtitle: "For coders shipping weekly.",
+      subtitle: "For builders shipping regularly.",
       tier: "BUILD",
       priceMonthly: 19,
       priceYearly: 190,
@@ -48,7 +48,7 @@ const Pricing = () => {
     },
     {
       name: "Production",
-      subtitle: "For apps with real users & uptime risk.",
+      subtitle: "For apps with real users.",
       tier: "SHIP",
       priceMonthly: 49,
       priceYearly: 490,
@@ -72,7 +72,7 @@ const Pricing = () => {
     },
     {
       question: "Do you change my code?",
-      answer: "No. Kreyo is read-only. We generate precise prompts you paste into Replit, Lovable, or Vercel to apply fixes.",
+      answer: "No. Kreyo runs read-only scans. We generate fix prompts you apply in your own environment.",
     },
     {
       question: "Can I cancel anytime?",
@@ -97,7 +97,7 @@ const Pricing = () => {
             </span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Start free. Upgrade for unlimited scans, advanced detections, and team controls.
+            Start free. Upgrade for unlimited scans and production features.
           </p>
 
           {/* Billing Toggle */}
@@ -232,7 +232,7 @@ const Pricing = () => {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <p className="text-lg font-medium text-center md:text-left">
-              Secure your repo in minutes. No code changes.
+              Ship with confidence. No code changes.
             </p>
             <div className="flex gap-4">
               <Button size="lg" data-plan="cta" data-billing={billingPeriod}>

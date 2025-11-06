@@ -45,7 +45,7 @@ const Website = () => {
             <div className="lg:col-span-7 space-y-6">
               <div className="inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-3 py-1 text-xs">
                 <span className="inline-block h-1.5 w-1.5 rounded-full bg-gradient-to-r from-primary to-secondary"></span>
-                <span className="text-muted-foreground">AI partner for serious builders</span>
+                <span className="text-muted-foreground">AI partner for builders</span>
               </div>
 
               <h1 className="text-4xl sm:text-6xl xl:text-7xl 2xl:text-8xl font-extrabold font-display leading-[1.05] xl:leading-[1.1] tracking-tight max-w-5xl">
@@ -60,7 +60,7 @@ const Website = () => {
 
               <div className="text-lg font-sans max-w-2xl space-y-1.5">
                 <p className="text-muted-foreground">
-                  You've planned, designed, and coded with AI tools — ChatGPT, Figma, Cursor, Replit, v0, Lovable. Now it's time to ship.
+                  You build with AI tools like ChatGPT, Figma, Cursor, Replit, v0, Lovable. Now it's time to ship.
                 </p>
                 <p className="font-bold text-primary">
                   Kreyo makes your app production-ready — tested, secured, monitored, and maintained.
@@ -77,20 +77,20 @@ const Website = () => {
             <div className="lg:col-span-5">
               <div className="relative rounded-2xl p-6 bg-card border border-border shadow-lg transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)]">
                 <h3 className="text-sm font-semibold font-display text-muted-foreground mb-4">
-                  From Repo to Ready
+                  From connect to confident
                 </h3>
                 <ol className="space-y-3 text-sm">
                   {[
-                    { num: "1", title: "Connect your app", desc: "Link your Vercel, Replit, or GitHub project — no setup needed." },
+                    { num: "1", title: "Connect your app", desc: "Link your GitHub, Replit, or Lovable project in seconds." },
                     {
                       num: "2",
-                      title: "We run 150+ checks",
-                      desc: "Kreyo scans everything and finds what could go wrong.",
+                      title: "Scan for issues",
+                      desc: "Kreyo runs 150+ checks to find security and quality issues.",
                     },
                     {
                       num: "3",
                       title: "Get clear next steps",
-                      desc: "See simple fixes or let Kreyo handle them for you.",
+                      desc: "Get fix prompts you can apply in your own environment.",
                     },
                   ].map((step) => (
                     <li key={step.num} className="flex items-start gap-3">
@@ -142,7 +142,7 @@ const Website = () => {
               {
                 title: "Production Readiness",
                 tools: "Kreyo",
-                desc: "Make your app safe, stable, and ready for real customers — with reviews, testing, and monitoring built in.",
+                desc: "Make your app safe, stable, and ready to ship — with automated checks, testing, and monitoring.",
                 isHighlighted: true,
                 whiteText: true
               },
@@ -169,7 +169,7 @@ const Website = () => {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
           <div className="max-w-3xl mb-8">
             <h2 className="text-3xl font-bold font-display">How Kreyo works</h2>
-            <p className="mt-3 text-muted-foreground font-sans">Get started in minutes — from connection to continuous protection.</p>
+            <p className="mt-3 text-muted-foreground font-sans">From connection to continuous protection in minutes.</p>
           </div>
 
           <div className="grid md:grid-cols-4 gap-6 xl:gap-8 2xl:gap-10">
@@ -177,25 +177,25 @@ const Website = () => {
               {
                 num: "01",
                 title: "Connect your app",
-                desc: "Link your GitHub, Replit, or Lovable project — no setup needed. We only read your code, nothing changes without your approval.",
+                desc: "Link your GitHub, Replit, or Lovable project in seconds. Read-only access.",
                 comingSoon: false,
               },
               {
                 num: "02",
-                title: "Run automatic checks",
-                desc: "Kreyo runs 150+ quality and security tests on your code — checking for vulnerabilities, code quality issues, and production readiness.",
+                title: "Scan for issues",
+                desc: "Kreyo runs 150+ checks to find security and quality issues in your code.",
                 comingSoon: false,
               },
               {
                 num: "03",
                 title: "Review & prepare to ship",
-                desc: "Get clear fix prompts and audit reports. Address issues with one-click actions or re-scan to verify your changes.",
+                desc: "Get fix prompts and clear reports. Apply fixes in your environment, then re-scan to verify.",
                 comingSoon: true,
               },
               {
                 num: "04",
                 title: "Stay protected",
-                desc: "Continuous monitoring tracks performance and uptime. Get instant alerts and compliance-ready reports for your live app.",
+                desc: "Continuous monitoring tracks uptime and performance. Get instant alerts and compliance-ready reports.",
                 comingSoon: true,
               },
             ].map((item) => (
@@ -227,7 +227,7 @@ const Website = () => {
           <div className="max-w-3xl mb-8">
             <h2 className="text-3xl font-bold font-display">Why Kreyo</h2>
             <p className="mt-3 text-muted-foreground font-sans">
-              Kreyo helps small teams ship confidently — without needing a full dev or security team.
+              Kreyo helps builders ship confidently — no security team required.
             </p>
           </div>
 
@@ -236,7 +236,7 @@ const Website = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="rounded-2xl p-5 bg-blue-50/30 border border-border transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)] hover:-translate-y-0.5">
                 <h3 className="font-semibold font-display mb-2">🏗️  Made for serious builders</h3>
-                <p className="text-sm text-muted-foreground font-sans">Practical production-grade protection</p>
+                <p className="text-sm text-muted-foreground font-sans">Production-grade protection for real apps</p>
               </div>
 
               <div className="rounded-2xl p-5 bg-blue-50/30 border border-border transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)] hover:-translate-y-0.5">
@@ -261,15 +261,15 @@ const Website = () => {
               <ul className="space-y-3 text-sm text-muted-foreground font-sans">
                 <li className="flex items-start gap-2">
                   <span className="text-primary mt-0.5">✔</span>
-                  <span>Your app passes a full security scan before launch</span>
+                  <span>Your app passes security and quality checks before shipping</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-primary mt-0.5">✔</span>
-                  <span>You can share it with customers confidently</span>
+                  <span>You ship with confidence</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-primary mt-0.5">✔</span>
-                  <span>You stay protected — with auto-checks, updates, and peace of mind</span>
+                  <span>You stay protected with continuous monitoring</span>
                 </li>
               </ul>
             </div>
@@ -312,7 +312,7 @@ const Website = () => {
                           <li>Return to Kreyo and select the new GitHub repo to start your scan.</li>
                         </ol>
                         <p className="text-xs text-muted-foreground mt-3">
-                          Read-only scans. We never write to your repo.
+                          Read-only access. No code changes.
                         </p>
                       </div>
                     </AccordionContent>
@@ -385,7 +385,7 @@ const Website = () => {
                   </AccordionTrigger>
                   <AccordionContent className="px-5 md:px-6">
                     <div className="mt-3 md:mt-4 text-sm md:text-base leading-relaxed text-muted-foreground max-w-prose pl-7">
-                      Kreyo is your AI security co-pilot. It works with your coding environment to find and help fix vulnerabilities — without ever touching your code.
+                      Kreyo helps you find and fix security issues in your app — without ever changing your code.
                     </div>
                   </AccordionContent>
                 </AccordionItem>
@@ -401,7 +401,7 @@ const Website = () => {
                   </AccordionTrigger>
                   <AccordionContent className="px-5 md:px-6">
                     <div className="mt-3 md:mt-4 text-sm md:text-base leading-relaxed text-muted-foreground max-w-prose pl-7">
-                      Kreyo is built for vibe coders — builders who create apps in Replit, Lovable, or any similar platform, and want to keep their code secure with minimal friction.
+                      Kreyo is built for builders who create apps with AI tools and want to ship production-ready apps.
                     </div>
                   </AccordionContent>
                 </AccordionItem>
@@ -420,14 +420,13 @@ const Website = () => {
                       <ol className="list-decimal list-inside space-y-2">
                         <li>Back up your app to GitHub (we'll guide you if you're new to that).</li>
                         <li>Visit app.kreyo.ai and log in with your GitHub ID.</li>
-                        <li>Connect your repository with Kreyo.</li>
-                        <li>Choose your favorite AI model — OpenAI, Anthropic, Meta, or others.</li>
-                        <li>Kreyo scans your code for security vulnerabilities using AI.</li>
-                        <li>We show you what we found, along with a ready-to-use prompt.</li>
-                        <li>Copy that prompt into your coding app (Replit, Lovable, etc.) — your app will handle the fix itself.</li>
-                        <li>Once done, scan again to confirm everything's secure.</li>
+                        <li>Connect your project with Kreyo.</li>
+                        <li>Kreyo scans your code for security issues.</li>
+                        <li>We show you what we found, along with fix prompts.</li>
+                        <li>Apply fixes in your own environment.</li>
+                        <li>Re-scan to confirm everything's secure.</li>
                       </ol>
-                      <p className="mt-3">No code leaves your environment. No code is ever changed by us.</p>
+                      <p className="mt-3">Read-only access. No code changes.</p>
                     </div>
                   </AccordionContent>
                 </AccordionItem>
@@ -443,7 +442,7 @@ const Website = () => {
                   </AccordionTrigger>
                   <AccordionContent className="px-5 md:px-6">
                     <div className="mt-3 md:mt-4 text-sm md:text-base leading-relaxed text-muted-foreground max-w-prose pl-7">
-                      No. Kreyo never edits or stores your code. We only read it during a scan to analyze potential security issues. All fixes happen within your own development environment.
+                      No. Kreyo runs read-only scans. All fixes happen in your own environment.
                     </div>
                   </AccordionContent>
                 </AccordionItem>
@@ -459,7 +458,7 @@ const Website = () => {
                   </AccordionTrigger>
                   <AccordionContent className="px-5 md:px-6">
                     <div className="mt-3 md:mt-4 text-sm md:text-base leading-relaxed text-muted-foreground max-w-prose pl-7">
-                      Once connected, Kreyo scans your repository safely and privately. It identifies vulnerabilities and provides simple, copyable prompts that guide your coding tool to apply secure fixes.
+                      Once connected, Kreyo scans your project and provides fix prompts you can apply in your own environment.
                     </div>
                   </AccordionContent>
                 </AccordionItem>
@@ -523,7 +522,7 @@ const Website = () => {
                   </AccordionTrigger>
                   <AccordionContent className="px-5 md:px-6">
                     <div className="mt-3 md:mt-4 text-sm md:text-base leading-relaxed text-muted-foreground max-w-prose pl-7">
-                      Yes — fully. Kreyo runs read-only scans, never uploads or modifies your files, and never retains your code. Your project remains entirely under your control.
+                      Yes. Kreyo runs read-only scans and never modifies your code.
                     </div>
                   </AccordionContent>
                 </AccordionItem>
