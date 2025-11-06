@@ -56,7 +56,7 @@ const Pricing = () => {
       dataPlans: "production",
       features: [
         "Everything in Pro",
-        "Scheduled scans & GitHub PR checks",
+        "Scheduled scans and automatic checks",
         "Compliance-ready reports (audit trail)",
         "Priority support & faster queue",
         "Slack/email incident notifications",
