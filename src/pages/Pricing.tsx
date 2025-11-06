@@ -101,17 +101,31 @@ const Pricing = () => {
           </p>
 
           {/* Billing Toggle */}
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <span className={`text-sm font-medium transition-colors ${billingPeriod === "monthly" ? "text-foreground" : "text-muted-foreground"}`}>
-              Monthly
-            </span>
-            <Switch
-              checked={billingPeriod === "yearly"}
-              onCheckedChange={(checked) => setBillingPeriod(checked ? "yearly" : "monthly")}
-            />
-            <span className={`text-sm font-medium transition-colors ${billingPeriod === "yearly" ? "text-foreground" : "text-muted-foreground"}`}>
-              Yearly <span className="text-xs">(save 2 months)</span>
-            </span>
+          <div className="flex flex-col items-center gap-2 mb-4">
+            <div className="relative inline-flex items-center bg-muted rounded-full p-1">
+              <button
+                onClick={() => setBillingPeriod("monthly")}
+                className={`relative z-10 px-6 py-2 text-sm font-medium rounded-full transition-colors ${
+                  billingPeriod === "monthly" ? "text-primary-foreground" : "text-muted-foreground"
+                }`}
+              >
+                Monthly
+              </button>
+              <button
+                onClick={() => setBillingPeriod("yearly")}
+                className={`relative z-10 px-6 py-2 text-sm font-medium rounded-full transition-colors ${
+                  billingPeriod === "yearly" ? "text-primary-foreground" : "text-muted-foreground"
+                }`}
+              >
+                Yearly
+              </button>
+              <div
+                className={`absolute top-1 bottom-1 bg-primary rounded-full transition-all duration-300 ${
+                  billingPeriod === "monthly" ? "left-1 right-[calc(50%+0.125rem)]" : "left-[calc(50%+0.125rem)] right-1"
+                }`}
+              />
+            </div>
+            <span className="text-xs text-muted-foreground">(save 2 months)</span>
           </div>
 
           {/* Trust Row */}
