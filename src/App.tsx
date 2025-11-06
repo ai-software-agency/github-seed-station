@@ -10,9 +10,6 @@ import Dashboard2 from "./pages/Dashboard2";
 import Dashboard3 from "./pages/Dashboard3";
 import Scanning from "./pages/Scanning";
 import Results from "./pages/Results";
-import Results2 from "./pages/Results2";
-import Activity from "./pages/Activity";
-import Done from "./pages/Done";
 import Website from "./pages/Website";
 import AiAgency from "./pages/AiAgency";
 import Aisec from "./pages/Aisec";
@@ -39,9 +36,6 @@ const App = () => (
           {/* <Route path="/dashboard3" element={<Dashboard3 />} /> */}
           {/* <Route path="/scanning" element={<Scanning />} /> */}
           {/* <Route path="/results" element={<Results />} /> */}
-          <Route path="/results2" element={<Results2 />} />
-          <Route path="/activity" element={<Activity />} />
-          <Route path="/done" element={<Done />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
