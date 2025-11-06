@@ -97,7 +97,7 @@ const Pricing = () => {
             </span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Start free. Upgrade for unlimited scans and production features.
+            Start free. Upgrade anytime for unlimited scans. No credit card needed.
           </p>
 
           {/* Billing Toggle */}
