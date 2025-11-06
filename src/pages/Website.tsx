@@ -41,16 +41,16 @@ const Website = () => {
         <div className="absolute inset-0 bg-[linear-gradient(transparent_23px,rgba(255,255,255,.03)_24px),linear-gradient(90deg,transparent_23px,rgba(255,255,255,.03)_24px)] bg-[length:24px_24px] [mask-image:radial-gradient(65%_55%_at_50%_0%,black,transparent_70%)] pointer-events-none" />
 
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 relative">
-          <div className="grid md:grid-cols-12 gap-8 items-start">
-            <div className="col-span-12 md:col-span-7 space-y-6">
+          <div className="grid lg:grid-cols-12 gap-10 xl:gap-16 2xl:gap-20 items-center">
+            <div className="lg:col-span-7 space-y-6">
               <div className="inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-3 py-1 text-xs">
                 <span className="inline-block h-1.5 w-1.5 rounded-full bg-gradient-to-r from-primary to-secondary"></span>
                 <span className="text-muted-foreground">AI partner for builders</span>
               </div>
 
-              <h1 className="max-w-4xl md:max-w-5xl xl:max-w-6xl text-4xl sm:text-6xl xl:text-7xl 2xl:text-8xl font-extrabold font-display leading-tight xl:leading-[1.1] tracking-tight break-normal hyphens-none">
+              <h1 className="max-w-4xl md:max-w-5xl xl:max-w-6xl text-4xl sm:text-6xl xl:text-7xl 2xl:text-8xl font-extrabold font-display leading-tight xl:leading-[1.1] tracking-tight">
                 Ship vibe‑coded apps with{" "}
-                <span className="inline md:whitespace-nowrap bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+                <span className="whitespace-nowrap bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
                   production‑grade confidence
                 </span>
               </h1>
@@ -71,8 +71,8 @@ const Website = () => {
               </div>
             </div>
 
-            <div className="col-span-12 md:col-span-5 md:sticky md:top-24">
-              <div className="rounded-2xl p-6 bg-card border border-border shadow-lg transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)]">
+            <div className="lg:col-span-5">
+              <div className="relative rounded-2xl p-6 bg-card border border-border shadow-lg transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)]">
                 <h3 className="text-sm font-semibold font-display text-muted-foreground mb-4">
                   From connect to confident
                 </h3>
