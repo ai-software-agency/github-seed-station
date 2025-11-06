@@ -125,7 +125,6 @@ const Pricing = () => {
                 }`}
               />
             </div>
-            <span className="text-xs text-muted-foreground">(save 2 months)</span>
           </div>
 
           {/* Trust Row */}
