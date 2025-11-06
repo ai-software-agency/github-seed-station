@@ -183,11 +183,6 @@ const Pricing = () => {
                       </li>
                     ))}
                   </ul>
-                  <div className="mt-6 pt-6 border-t">
-                    <p className="text-xs text-muted-foreground">
-                      Read-only · No code changes · Cancel anytime
-                    </p>
-                  </div>
                 </CardContent>
                 <CardFooter>
                   <Button
