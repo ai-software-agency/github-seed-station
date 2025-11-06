@@ -126,11 +126,6 @@ const Pricing = () => {
               />
             </div>
           </div>
-
-          {/* Trust Row */}
-          <p className="text-sm text-muted-foreground">
-            Takes under a minute · Read-only access · No code changes · Cancel anytime
-          </p>
         </div>
       </section>
 
