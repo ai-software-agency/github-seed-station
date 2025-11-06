@@ -60,7 +60,7 @@ const Pricing = () => {
         "Compliance-ready reports (audit trail)",
         "Priority support & faster queue",
         "Slack/email incident notifications",
-        "Optional SOC2-style evidence pack",
+        "Optional audit evidence pack",
       ],
     },
   ];
