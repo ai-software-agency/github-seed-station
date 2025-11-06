@@ -42,7 +42,7 @@ const Pricing = () => {
         "AI fix prompts for every issue",
         "Re-scan verification",
         "Email alerts when scans finish",
-        "Export MD/PDF report",
+        "Downloadable reports",
         "Read-only GitHub access",
       ],
     },
