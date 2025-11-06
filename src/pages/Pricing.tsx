@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { TopNav } from "@/components/TopNav";
 
 const Pricing = () => {
   const [billingPeriod, setBillingPeriod] = useState<"monthly" | "yearly">("monthly");
@@ -84,6 +85,7 @@ const Pricing = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <TopNav />
       {/* Hero Section */}
       <section className="pt-28 md:pt-36 xl:pt-44 pb-16 md:pb-20 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
         <div className="max-w-7xl mx-auto text-center">
