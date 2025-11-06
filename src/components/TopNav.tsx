@@ -14,6 +14,13 @@ export const TopNav = () => {
   const navigate = useNavigate();
 
   const scrollToSection = (id: string) => {
+    // Check if we're on the home page
+    if (window.location.pathname !== '/') {
+      // Navigate to home page with hash
+      navigate(`/#${id}`);
+      return;
+    }
+    
     const element = document.getElementById(id);
     if (element) {
       const offset = 80; // Account for fixed header
