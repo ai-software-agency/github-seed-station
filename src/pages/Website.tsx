@@ -164,52 +164,44 @@ const Website = () => {
         </div>
       </section>
 
-      {/* What we do */}
-      <section id="services" className="relative py-16 md:py-24 xl:py-32 2xl:py-40">
+      {/* How Kreyo works */}
+      <section id="how" className="relative py-16 md:py-24 xl:py-32 2xl:py-40 bg-blue-50/30">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
           <div className="max-w-3xl mb-8">
-            <h2 className="text-3xl font-bold font-display">What we do</h2>
-            <p className="mt-3 text-muted-foreground font-sans">
-              Everything between your AI‑written code and a resilient production app.
-            </p>
+            <h2 className="text-3xl font-bold font-display">How Kreyo works</h2>
+            <p className="mt-3 text-muted-foreground font-sans">Get started in minutes — from connection to continuous protection.</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 xl:gap-8 2xl:gap-10">
+          <div className="grid md:grid-cols-4 gap-6 xl:gap-8 2xl:gap-10">
             {[
               {
-                title: "Code Reviews",
-                desc: "We read your code so you don't have to — checking that it's clean, organized, and ready for the real world.",
+                num: "01",
+                title: "Connect your app",
+                desc: "Link your GitHub, Replit, or Lovable project — no setup needed. We only read your code, nothing changes without your approval.",
                 comingSoon: false,
               },
               {
-                title: "Security Checks",
-                desc: "We scan for hidden risks — from exposed passwords to weak logins — and make sure your customer data stays safe.",
+                num: "02",
+                title: "Run automatic checks",
+                desc: "Kreyo runs 150+ quality and security tests on your code — checking for vulnerabilities, code quality issues, and production readiness.",
                 comingSoon: false,
               },
               {
-                title: "Testing",
-                desc: "We try your app the way real users will — finding bugs, slow screens, and anything that breaks under pressure.",
+                num: "03",
+                title: "Review & prepare to ship",
+                desc: "Get clear fix prompts and audit reports. Address issues with one-click actions or re-scan to verify your changes.",
                 comingSoon: true,
               },
               {
-                title: "Deployments",
-                desc: "We set up the right environments so your app runs smoothly in production — with safe backups and easy rollbacks if something goes wrong.",
-                comingSoon: true,
-              },
-              {
-                title: "Monitoring",
-                desc: "We keep an eye on your live app — tracking performance, uptime, and errors so you can focus on your business.",
-                comingSoon: true,
-              },
-              {
-                title: "Incident Response",
-                desc: "If something does break, we handle it fast — diagnose, fix, and document what happened so it doesn't happen again.",
+                num: "04",
+                title: "Stay protected",
+                desc: "Continuous monitoring tracks performance and uptime. Get instant alerts and compliance-ready reports for your live app.",
                 comingSoon: true,
               },
             ].map((item) => (
               <div
-                key={item.title}
-                className="rounded-2xl p-5 bg-blue-50/30 border border-border transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)] relative"
+                key={item.num}
+                className="rounded-2xl p-5 bg-card border border-border transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)] relative"
               >
                 {item.comingSoon && (
                   <div className="absolute top-4 right-4">
@@ -218,49 +210,6 @@ const Website = () => {
                     </span>
                   </div>
                 )}
-                <h3 className="font-semibold font-display">{item.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground font-sans">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* How it works */}
-      <section id="how" className="relative py-16 md:py-24 xl:py-32 2xl:py-40 bg-blue-50/30">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
-          <div className="max-w-3xl mb-8">
-            <h2 className="text-3xl font-bold font-display">How it works</h2>
-            <p className="mt-3 text-muted-foreground font-sans">Get started in minutes — Kreyo connects, checks, and secures your app automatically.</p>
-          </div>
-
-          <div className="grid md:grid-cols-4 gap-6 xl:gap-8 2xl:gap-10">
-            {[
-              {
-                num: "01",
-                title: "Connect your app",
-                desc: "Sign in with your GitHub, Replit, or Vercel account. We only read your project — nothing changes without your OK.",
-              },
-              {
-                num: "02",
-                title: "Run automatic checks",
-                desc: "Kreyo runs over 150 quality and security tests — spotting risks and weak points before launch.",
-              },
-              {
-                num: "03",
-                title: "Review & prepare to launch",
-                desc: "You'll see a clear report with suggested fixes. We help you lock down what matters — performance, security, and reliability.",
-              },
-              {
-                num: "04",
-                title: "Stay protected",
-                desc: "After launch, Kreyo monitors your app 24/7 and alerts you if something breaks or needs updating.",
-              },
-            ].map((item) => (
-              <div
-                key={item.num}
-                className="rounded-2xl p-5 bg-card border border-border transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(255,140,66,0.15)]"
-              >
                 <div className="w-[30px] h-[30px] rounded-full bg-gradient-to-br from-primary via-secondary to-accent flex items-center justify-center mb-3">
                   <span className="text-sm font-bold text-gray-900">{item.num}</span>
                 </div>
