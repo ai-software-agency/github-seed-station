@@ -91,9 +91,9 @@ const Pricing = () => {
       <section className="pt-28 md:pt-36 xl:pt-44 pb-16 md:pb-20 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl xl:text-6xl 2xl:text-7xl font-extrabold font-display tracking-tight mb-6">
-            Straightforward pricing.{" "}
+            Simple pricing.{" "}
             <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-              Pay for work, not seats.
+              Pay for results, not seats.
             </span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
