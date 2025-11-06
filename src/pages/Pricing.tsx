@@ -136,8 +136,8 @@ const Pricing = () => {
             {plans.map((plan) => (
               <Card
                 key={plan.name}
-                className={`relative flex flex-col h-full ${
-                  plan.popular ? "border-primary shadow-lg scale-105" : ""
+                className={`relative flex flex-col h-full transition-all hover:shadow-xl ${
+                  plan.popular ? "border-primary shadow-lg scale-105" : "shadow-sm hover:border-accent/30"
                 }`}
               >
                 {plan.popular && (
