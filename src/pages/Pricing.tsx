@@ -5,9 +5,10 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { TopNav } from "@/components/TopNav";
+import { Switch } from "@/components/ui/switch";
 
 const Pricing = () => {
-  const [billingPeriod, setBillingPeriod] = useState<"monthly" | "yearly">("monthly");
+  const [billingPeriod, setBillingPeriod] = useState<"monthly" | "yearly">("yearly");
 
   const plans = [
     {
@@ -100,27 +101,17 @@ const Pricing = () => {
           </p>
 
           {/* Billing Toggle */}
-          <div className="flex items-center justify-center gap-4 mb-4">
-            <button
-              onClick={() => setBillingPeriod("monthly")}
-              className={`px-6 py-2 rounded-md font-medium transition-colors ${
-                billingPeriod === "monthly"
-                  ? "bg-primary text-primary-foreground"
-                  : "bg-muted text-muted-foreground hover:bg-muted/80"
-              }`}
-            >
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <span className={`text-sm font-medium transition-colors ${billingPeriod === "monthly" ? "text-foreground" : "text-muted-foreground"}`}>
               Monthly
-            </button>
-            <button
-              onClick={() => setBillingPeriod("yearly")}
-              className={`px-6 py-2 rounded-md font-medium transition-colors ${
-                billingPeriod === "yearly"
-                  ? "bg-primary text-primary-foreground"
-                  : "bg-muted text-muted-foreground hover:bg-muted/80"
-              }`}
-            >
-              Yearly <span className="text-xs ml-1">(save 2 months)</span>
-            </button>
+            </span>
+            <Switch
+              checked={billingPeriod === "yearly"}
+              onCheckedChange={(checked) => setBillingPeriod(checked ? "yearly" : "monthly")}
+            />
+            <span className={`text-sm font-medium transition-colors ${billingPeriod === "yearly" ? "text-foreground" : "text-muted-foreground"}`}>
+              Yearly <span className="text-xs">(save 2 months)</span>
+            </span>
           </div>
 
           {/* Trust Row */}
