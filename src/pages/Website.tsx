@@ -50,8 +50,11 @@ const Website = () => {
 
               <h1 className="text-4xl sm:text-6xl xl:text-7xl 2xl:text-8xl font-extrabold font-display leading-[1.05] xl:leading-[1.1] tracking-tight max-w-5xl">
                 Ship vibe‑coded apps with{" "}
-                <span className="inline-block bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-                  production‑grade confidence
+                <span className="block bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+                  production‑grade
+                </span>
+                <span className="block bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+                  confidence
                 </span>
               </h1>
 
