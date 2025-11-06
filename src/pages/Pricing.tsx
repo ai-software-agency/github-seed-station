@@ -206,16 +206,6 @@ const Pricing = () => {
         </div>
       </section>
 
-      {/* Founder Credits Banner */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 bg-accent/10">
-        <div className="max-w-7xl mx-auto text-center">
-          <p className="text-lg font-medium mb-2">
-            Early builders perk: first 100 teams get 10 scans free — forever on one repo.
-          </p>
-          <p className="text-sm text-muted-foreground">Applied automatically at signup.</p>
-        </div>
-      </section>
-
       {/* FAQ Section */}
       <section className="py-16 md:py-20 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
         <div className="max-w-3xl mx-auto">
