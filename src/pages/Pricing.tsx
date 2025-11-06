@@ -30,7 +30,7 @@ const Pricing = () => {
     },
     {
       name: "Pro",
-      subtitle: "For builders shipping regularly.",
+      subtitle: "For builders improving products every week.",
       tier: "BUILD",
       priceMonthly: 19,
       priceYearly: 190,
