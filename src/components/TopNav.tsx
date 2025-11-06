@@ -60,6 +60,12 @@ export const TopNav = () => {
           >
             Why Kreyo
           </button>
+          <button 
+            onClick={() => navigate('/pricing')} 
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Pricing
+          </button>
         </nav>
 
         <Button 
