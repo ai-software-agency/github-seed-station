@@ -12,9 +12,9 @@ const Pricing = () => {
 
   const plans = [
     {
-      name: "Free",
+      name: "Try",
       subtitle: "For solo builders and side projects",
-      tier: "TRY",
+      
       priceMonthly: 0,
       priceYearly: 0,
       cta: "Get started",
@@ -29,9 +29,9 @@ const Pricing = () => {
       ],
     },
     {
-      name: "Pro",
+      name: "Build",
       subtitle: "For makers turning projects into products",
-      tier: "BUILD",
+      
       priceMonthly: 19,
       priceYearly: 190,
       popular: true,
@@ -47,9 +47,9 @@ const Pricing = () => {
       ],
     },
     {
-      name: "Production",
+      name: "Ship",
       subtitle: "For teams with live users and real risk",
-      tier: "SHIP",
+     
       priceMonthly: 49,
       priceYearly: 490,
       cta: "Get started",
