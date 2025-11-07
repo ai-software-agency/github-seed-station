@@ -148,7 +148,6 @@ const Pricing = () => {
                   </div>
                 )}
                 <CardHeader>
-                  <div className="text-sm font-medium text-muted-foreground mb-1">{plan.tier}</div>
                   <CardTitle className="text-2xl">{plan.name}</CardTitle>
                   <CardDescription>{plan.subtitle}</CardDescription>
                   <div className="pt-4">
