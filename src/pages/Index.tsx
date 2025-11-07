@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Shield, CheckCircle, Settings, Lock, Check } from "lucide-react";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Shield, CheckCircle, Settings, Lock, Check, TrendingUp, Target, Clock } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const Index = () => {
@@ -87,6 +88,80 @@ const Index = () => {
               </div>
               <h3 className="font-semibold font-display text-foreground mb-1">Enterprise secure</h3>
               <p className="text-sm text-muted-foreground font-sans">Bank-level encryption protects your data</p>
+            </div>
+          </div>
+        </div>
+
+        {/* How It Works Section with Metrics and Video */}
+        <div className="mt-16 md:mt-20">
+          <div className="container mx-auto px-6 md:px-8 max-w-6xl">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              {/* Left Column - Metrics */}
+              <div className="space-y-6">
+                <h2 className="text-3xl md:text-4xl font-bold font-display text-foreground mb-8">
+                  By the Numbers
+                </h2>
+                
+                {/* Metric Cards */}
+                <div className="space-y-4">
+                  {/* Projects Scanned Today */}
+                  <div className="bg-card border border-border rounded-xl p-6 shadow-sm hover:shadow-md transition-all hover:border-accent/30">
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <TrendingUp className="w-6 h-6 text-accent" />
+                      </div>
+                      <div>
+                        <div className="text-4xl font-bold text-accent animate-fade-in">1,247+</div>
+                        <p className="text-sm text-muted-foreground font-medium">Projects Scanned Today</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Issues Fixed */}
+                  <div className="bg-card border border-border rounded-xl p-6 shadow-sm hover:shadow-md transition-all hover:border-accent/30">
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Target className="w-6 h-6 text-green-600" />
+                      </div>
+                      <div>
+                        <div className="text-4xl font-bold text-green-600 animate-fade-in">12,489+</div>
+                        <p className="text-sm text-muted-foreground font-medium">Issues Fixed</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Average Scan Time */}
+                  <div className="bg-card border border-border rounded-xl p-6 shadow-sm hover:shadow-md transition-all hover:border-accent/30">
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Clock className="w-6 h-6 text-purple-600" />
+                      </div>
+                      <div>
+                        <div className="text-4xl font-bold text-purple-600 animate-fade-in">&lt; 60s</div>
+                        <p className="text-sm text-muted-foreground font-medium">Average Scan Time</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Column - Video Embed */}
+              <div className="w-full">
+                <div className="rounded-xl overflow-hidden shadow-lg border border-border">
+                  <AspectRatio ratio={16 / 9}>
+                    <iframe
+                      src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&loop=1&playlist=dQw4w9WgXcQ&controls=0&modestbranding=1&rel=0&showinfo=0"
+                      title="How It Works Demo Video"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="w-full h-full"
+                    />
+                  </AspectRatio>
+                </div>
+                <p className="text-sm text-muted-foreground text-center mt-4">
+                  See how our AI security agent works in under 60 seconds
+                </p>
+              </div>
             </div>
           </div>
         </div>
