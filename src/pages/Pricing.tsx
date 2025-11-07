@@ -13,7 +13,7 @@ const Pricing = () => {
   const plans = [
     {
       name: "Free",
-      subtitle: "Try Kreyo risk-free.",
+      subtitle: "For solo builders and side projects",
       tier: "TRY",
       priceMonthly: 0,
       priceYearly: 0,
@@ -30,7 +30,7 @@ const Pricing = () => {
     },
     {
       name: "Pro",
-      subtitle: "For builders improving products every week.",
+      subtitle: "For makers turning projects into products",
       tier: "BUILD",
       priceMonthly: 19,
       priceYearly: 190,
@@ -48,7 +48,7 @@ const Pricing = () => {
     },
     {
       name: "Production",
-      subtitle: "For apps with real users.",
+      subtitle: "For teams with live users and real risk",
       tier: "SHIP",
       priceMonthly: 49,
       priceYearly: 490,
@@ -80,7 +80,8 @@ const Pricing = () => {
     },
     {
       question: "What's the difference between Pro and Production?",
-      answer: "Production adds scheduled scans, PR checks, compliance-ready reports, faster queues, and priority support.",
+      answer:
+        "Production adds scheduled scans, PR checks, compliance-ready reports, faster queues, and priority support.",
     },
   ];
 
@@ -121,7 +122,9 @@ const Pricing = () => {
               </button>
               <div
                 className={`absolute top-1 bottom-1 bg-primary rounded-full transition-all duration-300 ${
-                  billingPeriod === "monthly" ? "left-1 right-[calc(50%+0.125rem)]" : "left-[calc(50%+0.125rem)] right-1"
+                  billingPeriod === "monthly"
+                    ? "left-1 right-[calc(50%+0.125rem)]"
+                    : "left-[calc(50%+0.125rem)] right-1"
                 }`}
               />
             </div>
@@ -155,9 +158,7 @@ const Pricing = () => {
                     ) : (
                       <div className="flex items-baseline gap-2">
                         {billingPeriod === "yearly" && (
-                          <span className="text-2xl text-muted-foreground line-through">
-                            ${plan.priceMonthly}
-                          </span>
+                          <span className="text-2xl text-muted-foreground line-through">${plan.priceMonthly}</span>
                         )}
                         <span className="text-4xl font-bold">
                           ${billingPeriod === "monthly" ? plan.priceMonthly : Math.round(plan.priceYearly / 12)}
@@ -168,9 +169,7 @@ const Pricing = () => {
                       </div>
                     )}
                     {billingPeriod === "yearly" && plan.priceYearly > 0 && (
-                      <div className="text-sm text-muted-foreground mt-1">
-                        ${plan.priceYearly}/year
-                      </div>
+                      <div className="text-sm text-muted-foreground mt-1">${plan.priceYearly}/year</div>
                     )}
                   </div>
                 </CardHeader>
@@ -203,9 +202,7 @@ const Pricing = () => {
       {/* FAQ Section */}
       <section className="py-16 md:py-20 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold font-display mb-8 text-center">
-            Frequently Asked Questions
-          </h2>
+          <h2 className="text-3xl font-bold font-display mb-8 text-center">Frequently Asked Questions</h2>
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, idx) => (
               <AccordionItem key={idx} value={`item-${idx}`}>
@@ -221,9 +218,7 @@ const Pricing = () => {
       <section className="py-16 md:py-20 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 border-t">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <p className="text-lg font-medium text-center md:text-left">
-              Ship with confidence. No code changes.
-            </p>
+            <p className="text-lg font-medium text-center md:text-left">Ship with confidence. No code changes.</p>
             <div className="flex gap-4">
               <Button size="lg" data-plan="cta" data-billing={billingPeriod}>
                 Get started
