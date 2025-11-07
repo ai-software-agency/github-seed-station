@@ -14,8 +14,8 @@ const AiAgency = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const script = document.createElement('script');
-    script.src = '//embed.typeform.com/next/embed.js';
+    const script = document.createElement("script");
+    script.src = "//embed.typeform.com/next/embed.js";
     script.async = true;
     document.body.appendChild(script);
 
@@ -39,9 +39,9 @@ const AiAgency = () => {
 
         <div className="mx-auto max-w-4xl px-4 sm:px-6 relative text-center">
           <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20 mb-6">
-            Your AI Agency for Production-Grade Apps
+            Your AI Agency for Production Grade Apps
           </span>
-          
+
           <h1 className="text-5xl sm:text-7xl font-extrabold font-display leading-[1.05] tracking-tight mb-6">
             Ship fast. Stay safe.{" "}
             <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
@@ -50,16 +50,23 @@ const AiAgency = () => {
           </h1>
 
           <p className="text-xl font-sans text-muted-foreground max-w-3xl mx-auto mb-8">
-            Vibe coding platforms like Vercel, Replit, and Lovable make it easy to ship apps fast. But fast doesn't mean safe or stable. <strong className="text-foreground">Kreyo is your AI Agency</strong> — AI reviewers that secure, test, and stabilize your vibe-coded projects so you can move fast without fear.
+            Vibe coding platforms like Vercel, Replit, and Lovable make it easy to ship apps fast. But fast doesn't mean
+            safe or stable. <strong className="text-foreground">Kreyo is your AI Agency</strong> — AI reviewers that
+            secure, test, and stabilize your vibe-coded projects so you can move fast without fear.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-3 mb-4">
             {/* <Button size="lg" className="rounded-full" onClick={() => navigate("/waitlist")}>
               ⚡ Connect via GitHub
             </Button> */}
-            <Button size="lg" variant="outline" className="rounded-full" onClick={() => {
-              document.getElementById('how')?.scrollIntoView({ behavior: 'smooth' });
-            }}>
+            <Button
+              size="lg"
+              variant="outline"
+              className="rounded-full"
+              onClick={() => {
+                document.getElementById("how")?.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
               See how it works
             </Button>
           </div>
@@ -96,15 +103,22 @@ const AiAgency = () => {
                 </span>
               </div>
               <div className="mb-3">
-                <span className="text-xs uppercase tracking-wider text-muted-foreground font-semibold">Stage: Build</span>
+                <span className="text-xs uppercase tracking-wider text-muted-foreground font-semibold">
+                  Stage: Build
+                </span>
               </div>
               <p className="text-sm text-muted-foreground mb-4">
-                <strong className="text-foreground">AI Code Reviews</strong> — style, maintainability, best practices<br/>
-                <strong className="text-foreground">Code Security Checks</strong> — scans source files for security flaws<br/>
-                <strong className="text-foreground">Dependency Safety</strong> — audits for outdated or hijacked packages
+                <strong className="text-foreground">AI Code Reviews</strong> — style, maintainability, best practices
+                <br />
+                <strong className="text-foreground">Code Security Checks</strong> — scans source files for security
+                flaws
+                <br />
+                <strong className="text-foreground">Dependency Safety</strong> — audits for outdated or hijacked
+                packages
               </p>
               <p className="text-sm italic text-muted-foreground mb-4">
-                "Your AI code reviewer that actually keeps your app safe. No mystery edits — just clean, secure, reviewed code."
+                "Your AI code reviewer that actually keeps your app safe. No mystery edits — just clean, secure,
+                reviewed code."
               </p>
               {/* <Button className="w-full rounded-full" onClick={() => navigate("/waitlist")}>
                 Connect Your App
@@ -118,8 +132,11 @@ const AiAgency = () => {
                 <span className="text-xs uppercase tracking-wider text-muted-foreground font-semibold">Stage: Run</span>
               </div>
               <p className="text-sm text-muted-foreground mb-4">
-                <strong className="text-foreground">Live Smoke Tests</strong> — real user flow tests pre- and post-deploy<br/>
-                <strong className="text-foreground">Automated QA</strong> — regression and UI verification<br/>
+                <strong className="text-foreground">Live Smoke Tests</strong> — real user flow tests pre- and
+                post-deploy
+                <br />
+                <strong className="text-foreground">Automated QA</strong> — regression and UI verification
+                <br />
                 <strong className="text-foreground">Stability & Performance</strong> — ensure every release still works
               </p>
               <p className="text-sm italic text-muted-foreground mb-4">
@@ -150,21 +167,21 @@ const AiAgency = () => {
             <div className="rounded-xl bg-background/50 border border-dashed border-border p-5">
               <strong className="block mb-2 text-foreground">1) Connect Your Repo</strong>
               <p className="text-sm text-muted-foreground">
-                One agent keeps your codebase clean and secure — reviews every push for vulnerabilities, code quality, and dependency risks.
+                One agent keeps your codebase clean and secure — reviews every push for vulnerabilities, code quality,
+                and dependency risks.
               </p>
             </div>
             <div className="rounded-xl bg-background/50 border border-dashed border-border p-5">
               <strong className="block mb-2 text-foreground">2) Run Your App Live</strong>
               <p className="text-sm text-muted-foreground">
-                One agent ensures your app behaves correctly in production — runs real user flows, catches what breaks before your users do.
+                One agent ensures your app behaves correctly in production — runs real user flows, catches what breaks
+                before your users do.
               </p>
             </div>
           </div>
-          
+
           <div className="mt-8 text-center">
-            <p className="text-lg font-semibold text-foreground mb-2">
-              That's it. Two agents, zero noise.
-            </p>
+            <p className="text-lg font-semibold text-foreground mb-2">That's it. Two agents, zero noise.</p>
             <p className="text-sm text-muted-foreground">
               No dashboards. No complexity. Just AI reviewers that work — live, safe, explainable.
             </p>
@@ -183,19 +200,22 @@ const AiAgency = () => {
             <div className="rounded-2xl bg-card border border-border p-6 shadow-lg">
               <h3 className="text-lg font-semibold font-display mb-3">Why Two Agents?</h3>
               <p className="text-sm text-muted-foreground">
-                You don't need a 'platform'. You need clarity and trust. One agent keeps your codebase clean and secure. One agent ensures your app behaves correctly. That's it.
+                You don't need a 'platform'. You need clarity and trust. One agent keeps your codebase clean and secure.
+                One agent ensures your app behaves correctly. That's it.
               </p>
             </div>
             <div className="rounded-2xl bg-card border border-border p-6 shadow-lg">
               <h3 className="text-lg font-semibold font-display mb-3">Who is this for?</h3>
               <p className="text-sm text-muted-foreground">
-                Prosumer coders like Lemkin and Bhaskar who ship fast but hate when AI tools break their app or silently add risk. Move fast without fear.
+                Prosumer coders like Lemkin and Bhaskar who ship fast but hate when AI tools break their app or silently
+                add risk. Move fast without fear.
               </p>
             </div>
             <div className="rounded-2xl bg-card border border-border p-6 shadow-lg">
               <h3 className="text-lg font-semibold font-display mb-3">The Promise</h3>
               <p className="text-sm text-muted-foreground">
-                Ship fast. Stay safe. Sleep well. Kreyo gives you the speed of vibe coding with the confidence of production-grade software.
+                Ship fast. Stay safe. Sleep well. Kreyo gives you the speed of vibe coding with the confidence of
+                production-grade software.
               </p>
             </div>
           </div>
