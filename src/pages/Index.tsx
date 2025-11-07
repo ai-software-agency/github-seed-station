@@ -349,11 +349,11 @@ const Website = () => {
             </div>
 
             {/* Right Column - Video */}
-            <div className="lg:col-span-2 flex justify-center">
-              <div className="relative rounded-2xl overflow-hidden shadow-lg border border-border w-full max-w-2xl">
-                <div className="relative pb-[75%]">
+            <div className="lg:col-span-2">
+              <div className="relative rounded-2xl overflow-hidden shadow-lg border border-border">
+                <div className="relative pb-[56.25%]">
                   <iframe
-                    className="absolute top-0 left-0 w-full h-full"
+                    className="absolute top-0 left-0 w-full h-full object-cover"
                     src="https://www.youtube.com/embed/4t_mc4kl-04?autoplay=1&mute=1&loop=1&playlist=4t_mc4kl-04&controls=0&modestbranding=1&rel=0"
                     title="Kreyo Demo"
                     allow="autoplay; encrypted-media"
