@@ -350,7 +350,7 @@ const Website = () => {
 
             {/* Right Column - Video */}
             <div className="lg:col-span-2">
-              <div className="relative rounded-2xl overflow-hidden shadow-lg">
+              <div className="relative rounded-2xl overflow-hidden shadow-lg bg-white">
                 <div className="relative pb-[67.2%]">
                   <iframe
                     className="absolute top-0 left-0 w-full h-full"
