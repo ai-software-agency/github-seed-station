@@ -21,10 +21,10 @@ const Pricing = () => {
       dataPlans: "free",
       features: [
         "Scan your code up to 10 times/month",
-        "AI security prompts (limited) — see how Kreyo helps fix issues",
+        "AI security prompts",
         "Severity grouping & basic reports",
         "Email notifications when scans finish",
-        "Read-only GitHub access — we never touch your code",
+        "Read-only GitHub access",
       ],
     },
     {
@@ -38,9 +38,9 @@ const Pricing = () => {
       dataPlans: "pro",
       features: [
         "Unlimited scans across your repos",
-        "AI fix prompts for every issue — ready to copy into Replit, Lovable, or Vercel",
-        "Re-scan verification to confirm fixes worked",
-        "Detailed vulnerability reports you can share with teammates",
+        "AI fix prompts for every issue",
+        "Re-scan verification to confirm fixes",
+        "Detailed shareable vulnerability reports",
         "Email & dashboard alerts for scan results",
         "Read-only GitHub access",
       ],
@@ -55,11 +55,11 @@ const Pricing = () => {
       dataPlans: "production",
       features: [
         "Everything in BUILD",
-        "Scheduled scans & GitHub PR checks — continuous protection",
+        "Continuous and scheduled scans, GitHub PR checks",
         "Compliance-ready audit trail reports",
-        "Priority queue & faster scan times",
+        "Priority queue & faster scans",
         "Slack/email incident notifications",
-        "Optional audit evidence pack for SOC2 or ISO prep",
+        "Optional audit evidence pack for SOC2 or ISO",
       ],
     },
   ];
