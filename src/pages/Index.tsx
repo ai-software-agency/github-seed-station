@@ -342,7 +342,7 @@ const Website = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-3 gap-8 xl:gap-10 items-center">
             {/* Left Column - Metrics */}
-            <div className="lg:col-span-1 space-y-6">
+            <div className="lg:col-span-1 space-y-6 flex flex-col items-center justify-center">
               <MetricCounter label="Projects scanned today" end={2458} />
               <MetricCounter label="Issues fixed" end={8123} />
               <MetricCounter label="Active integrations" end={312} />
