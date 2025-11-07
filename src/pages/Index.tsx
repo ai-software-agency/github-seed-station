@@ -735,7 +735,7 @@ const Website = () => {
       <footer className="relative border-t border-border">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
           <div className="flex items-center gap-2">
-            <span>Kreyo — intelligent flow for production‑grade apps</span>
+            <span>Kreyo — intelligent flow for production‑grade apps; © 2025, Kreyo, Inc.</span>
           </div>
           <div className="flex items-center gap-4">
             <a className="hover:text-foreground" href="#fit">
