@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -6,6 +6,59 @@ import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { TopNav } from "@/components/TopNav";
 import { Switch } from "@/components/ui/switch";
+
+const MetricCounter = ({ label, end }: { label: string; end: number }) => {
+  const [count, setCount] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
+    const duration = 2000;
+    const steps = 60;
+    const increment = end / steps;
+    let current = 0;
+
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= end) {
+        setCount(end);
+        clearInterval(timer);
+      } else {
+        setCount(Math.floor(current));
+      }
+    }, duration / steps);
+
+    return () => clearInterval(timer);
+  }, [isVisible, end]);
+
+  return (
+    <div ref={ref} className="space-y-1">
+      <h3 className="text-4xl xl:text-5xl font-extrabold font-display tracking-tight bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+        {count.toLocaleString()}
+      </h3>
+      <p className="text-sm text-muted-foreground font-sans">{label}</p>
+    </div>
+  );
+};
 
 const Pricing = () => {
   const [billingPeriod, setBillingPeriod] = useState<"monthly" | "yearly">("yearly");
@@ -197,8 +250,37 @@ const Pricing = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
+      {/* Metrics & Video Section */}
       <section className="py-16 md:py-20 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-3 gap-8 xl:gap-10 items-center">
+            {/* Left Column - Metrics */}
+            <div className="lg:col-span-1 space-y-6">
+              <MetricCounter label="Projects scanned today" end={2458} />
+              <MetricCounter label="Issues fixed" end={8123} />
+              <MetricCounter label="Active integrations" end={312} />
+            </div>
+
+            {/* Right Column - Video */}
+            <div className="lg:col-span-2">
+              <div className="relative rounded-2xl overflow-hidden shadow-lg border border-border">
+                <div className="relative pb-[56.25%]">
+                  <iframe
+                    className="absolute top-0 left-0 w-full h-full"
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&loop=1&playlist=dQw4w9WgXcQ&controls=0&modestbranding=1&rel=0"
+                    title="Kreyo Demo"
+                    allow="autoplay; encrypted-media"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16 md:py-20 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 bg-blue-50/30">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold font-display mb-8 text-center">Frequently Asked Questions</h2>
           <Accordion type="single" collapsible className="w-full">
