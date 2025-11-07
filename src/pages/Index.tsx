@@ -57,7 +57,7 @@ const MetricCounter = ({ label, end }: { label: string; end: number }) => {
   }, [isVisible, end]);
 
   return (
-    <div ref={ref} className="space-y-1">
+    <div ref={ref} className="space-y-1 text-center">
       <h3 className="text-4xl xl:text-5xl font-extrabold font-display tracking-tight bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
         {count.toLocaleString()}
       </h3>
@@ -350,7 +350,7 @@ const Website = () => {
 
             {/* Right Column - Video */}
             <div className="lg:col-span-2">
-              <div className="relative rounded-2xl overflow-hidden shadow-lg border border-border">
+              <div className="relative rounded-2xl overflow-hidden shadow-lg border-2 border-black">
                 <div className="relative pb-[67%]">
                   <iframe
                     className="absolute top-0 left-0 w-full h-full"
