@@ -354,7 +354,7 @@ const Website = () => {
                 <div className="relative pb-[56.25%]">
                   <iframe
                     className="absolute top-0 left-0 w-full h-full"
-                    src="https://www.youtube.com/embed/4t_mc4kl-04?autoplay=1&mute=1&loop=1&playlist=dQw4w9WgXcQ&controls=0&modestbranding=1&rel=0"
+                    src="https://www.youtube.com/embed/4t_mc4kl-04?autoplay=1&mute=1&loop=1&playlist=4t_mc4kl-04&controls=0&modestbranding=1&rel=0"
                     title="Kreyo Demo"
                     allow="autoplay; encrypted-media"
                     allowFullScreen
