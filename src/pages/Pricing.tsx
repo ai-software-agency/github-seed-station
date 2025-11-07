@@ -14,53 +14,52 @@ const Pricing = () => {
     {
       name: "Try",
       subtitle: "For solo builders and side projects",
-      
+
       priceMonthly: 0,
       priceYearly: 0,
       cta: "Get started",
       dataPlans: "free",
       features: [
-        "1 repo",
-        "Up to 10 scans / month",
-        "AI-generated fix prompts (limited)",
-        "Severity grouping & basic report",
-        "Email notifications",
-        "Read-only GitHub access",
+        "Scan your code up to 10 times/month",
+        "AI security prompts (limited) — see how Kreyo helps fix issues",
+        "Severity grouping & basic reports",
+        "Email notifications when scans finish",
+        "Read-only GitHub access — we never touch your code",
       ],
     },
     {
       name: "Build",
       subtitle: "For makers turning projects into products",
-      
+
       priceMonthly: 19,
       priceYearly: 190,
       popular: true,
       cta: "Get started",
       dataPlans: "pro",
       features: [
-        "Unlimited scans",
-        "AI fix prompts for every issue",
-        "Re-scan verification",
-        "Email alerts when scans finish",
-        "Downloadable reports",
+        "Unlimited scans across your repos",
+        "AI fix prompts for every issue — ready to copy into Replit, Lovable, or Vercel",
+        "Re-scan verification to confirm fixes worked",
+        "Detailed vulnerability reports you can share with teammates",
+        "Email & dashboard alerts for scan results",
         "Read-only GitHub access",
       ],
     },
     {
       name: "Ship",
       subtitle: "For teams with live users and real risk",
-     
+
       priceMonthly: 49,
       priceYearly: 490,
       cta: "Get started",
       dataPlans: "production",
       features: [
-        "Everything in Pro",
-        "Scheduled scans and automatic checks",
-        "Compliance-ready reports (audit trail)",
-        "Priority support & faster queue",
+        "Everything in BUILD",
+        "Scheduled scans & GitHub PR checks — continuous protection",
+        "Compliance-ready audit trail reports",
+        "Priority queue & faster scan times",
         "Slack/email incident notifications",
-        "Optional audit evidence pack",
+        "Optional audit evidence pack for SOC2 or ISO prep",
       ],
     },
   ];
