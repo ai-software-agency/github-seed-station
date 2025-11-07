@@ -750,9 +750,6 @@ const Website = () => {
             <a className="hover:text-foreground" href="#trust">
               Why Kreyo
             </a>
-            <a className="hover:text-foreground" href="#cta">
-              Start
-            </a>
           </div>
         </div>
       </footer>
