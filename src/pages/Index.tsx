@@ -356,6 +356,7 @@ const Website = () => {
                     className="absolute top-0 left-0 w-full h-full"
                     src="https://www.youtube.com/embed/4t_mc4kl-04?autoplay=1&mute=1&loop=1&playlist=4t_mc4kl-04&controls=0&modestbranding=1&rel=0"
                     title="Kreyo Demo"
+                    height="100%"
                     allow="autoplay; encrypted-media"
                     allowFullScreen
                   />
