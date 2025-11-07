@@ -215,7 +215,7 @@ const AiAgency = () => {
               <h3 className="text-lg font-semibold font-display mb-3">The Promise</h3>
               <p className="text-sm text-muted-foreground">
                 Ship fast. Stay safe. Sleep well. Kreyo gives you the speed of vibe coding with the confidence of
-                production-grade software.
+                production grade software.
               </p>
             </div>
           </div>
