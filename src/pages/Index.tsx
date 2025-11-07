@@ -58,7 +58,7 @@ const MetricCounter = ({ label, end }: { label: string; end: number }) => {
 
   return (
     <div ref={ref} className="space-y-1">
-      <h3 className="text-4xl xl:text-5xl font-extrabold font-display tracking-tight bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+      <h3 className="text-4xl xl:text-5xl font-extrabold font-display tracking-tight text-primary">
         {count.toLocaleString()}
       </h3>
       <p className="text-sm text-muted-foreground font-sans">{label}</p>
