@@ -63,13 +63,9 @@ export const ConnectRepositoryModal = ({ open, onOpenChange }: ConnectRepository
             <div className="space-y-6 py-6">
               {/* Primary Action */}
               <div className="space-y-3">
-                <Button 
-                  size="lg" 
-                  className="w-full text-base h-12"
-                  onClick={handleConnect}
-                >
+                <Button size="lg" className="w-full text-base h-12" onClick={handleConnect}>
                   <Github className="w-5 h-5 mr-2" />
-                  Connect with GitHub
+                  Continue with GitHub
                 </Button>
                 <p className="text-sm text-muted-foreground text-center">
                   Takes less than a minute. You'll return here when the connection is complete.
@@ -82,14 +78,10 @@ export const ConnectRepositoryModal = ({ open, onOpenChange }: ConnectRepository
                   onClick={() => setIsAdvancedOpen(!isAdvancedOpen)}
                   className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors w-full"
                 >
-                  {isAdvancedOpen ? (
-                    <ChevronUp className="w-4 h-4" />
-                  ) : (
-                    <ChevronDown className="w-4 h-4" />
-                  )}
+                  {isAdvancedOpen ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
                   Choose specific repo access
                 </button>
-                
+
                 {isAdvancedOpen && (
                   <div className="mt-4 space-y-3 pl-6">
                     <RadioGroup value={accessType} onValueChange={setAccessType}>
@@ -148,7 +140,7 @@ export const ConnectRepositoryModal = ({ open, onOpenChange }: ConnectRepository
             <div className="text-center space-y-3">
               <h3 className="text-xl font-semibold">Connecting to GitHub...</h3>
               <div className="w-3/5 mx-auto bg-muted rounded-full h-2 overflow-hidden">
-                <div className="h-full bg-primary animate-[slide-in-right_2s_ease-in-out]" style={{ width: '60%' }} />
+                <div className="h-full bg-primary animate-[slide-in-right_2s_ease-in-out]" style={{ width: "60%" }} />
               </div>
             </div>
           </div>
@@ -164,9 +156,7 @@ export const ConnectRepositoryModal = ({ open, onOpenChange }: ConnectRepository
             </div>
             <div className="text-center space-y-3">
               <h3 className="text-xl font-semibold">Repository connected successfully.</h3>
-              <p className="text-muted-foreground">
-                Your agent will begin the first scan automatically.
-              </p>
+              <p className="text-muted-foreground">Your agent will begin the first scan automatically.</p>
               <Button onClick={handleClose} className="mt-4">
                 Return to Dashboard
               </Button>
