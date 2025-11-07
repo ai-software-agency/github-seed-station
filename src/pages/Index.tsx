@@ -32,7 +32,7 @@ const Index = () => {
             </div>
           </div>
 
-          <h1 className="text-4xl md:text-5xl font-bold font-display text-foreground mb-4 tracking-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-4xl font-bold font-display text-foreground mb-4 tracking-tight">
             Your app, protected in a minute.
           </h1>
           <p className="text-lg text-muted-foreground max-w-xl mx-auto font-medium font-sans">
